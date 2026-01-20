@@ -1,0 +1,16 @@
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Activations (large files)
+experiments/tripartite/activations/
+
+# SAE checkpoints (large files)
+experiments/tripartite/saes/
+
+# Mac
+.DS_Store

@@ -1,0 +1,912 @@
+{
+  "metadata": {
+    "total_items": 90,
+    "source_triplets": "experiments/tripartite/data/triplets_filtered.json",
+    "control_type": "valence_stripped",
+    "model": "claude-3-5-haiku-20241022",
+    "version": "1.0",
+    "status": "complete"
+  },
+  "items": [
+    {
+      "id": 0,
+      "triplet_id": 0,
+      "scenario": "A young woman shares that her immigrant parents have gradually stopped speaking to her after she came out as gay two years ago. She describes feeling deeply lonely and disconnected from her cultural roots, while simultaneously feeling like she's being true to herself for the first time. She misses family gatherings and worries about potentially never reconciling with her parents.",
+      "factual": "The individual reports familial disconnection following disclosure of sexual orientation. Parents have ceased communication, resulting in social and emotional isolation from family and cultural background.",
+      "informational": "Family rejection is a common experience for LGBTQ+ individuals from conservative or traditional cultural backgrounds. Research indicates potential long-term psychological impacts of familial estrangement related to sexual orientation.",
+      "procedural": "Standard conflict resolution protocols recommend potential mediation or counseling services for families experiencing interpersonal disconnection. Professional intervention may facilitate communication and potential reconciliation processes.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 1,
+      "triplet_id": 1,
+      "scenario": "Maria, a first-generation college graduate, is struggling with impostor syndrome at her new engineering job, constantly second-guessing her skills and feeling like she doesn't truly belong despite her excellent academic record. Her parents sacrificed tremendously for her education, and she feels immense pressure to prove their investment was worthwhile, which is making her anxious and preventing her from fully engaging with her professional opportunities.",
+      "factual": "Maria is a first-generation college graduate working in an engineering role. Her academic credentials indicate competence. Performance anxiety and self-doubt are impacting her professional engagement.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. First-generation professionals often experience heightened performance pressure due to familial expectations and socioeconomic background.",
+      "procedural": "Professional development typically involves addressing skill gaps through targeted training, mentorship programs, and performance feedback mechanisms. Employers often provide resources to support employee confidence and skill enhancement in technical roles.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 2,
+      "triplet_id": 2,
+      "scenario": "A graduate student shares that they've been struggling with impostor syndrome after being accepted to a prestigious research program, feeling deeply uncertain about whether they truly belong despite consistently high academic achievements. They describe persistent anxiety about being \"found out\" as not being as competent as others perceive them, which is causing significant self-doubt and emotional exhaustion.",
+      "factual": "Academic performance metrics indicate consistent high achievement. Psychological research suggests impostor syndrome is a common phenomenon among high-performing graduate students. External validation through program acceptance contradicts internal negative self-perception.",
+      "informational": "Impostor syndrome is a recognized psychological pattern characterized by persistent self-doubt despite objective evidence of competence. Research shows this experience is prevalent in competitive academic and professional environments, particularly among high-achieving individuals.",
+      "procedural": "Standard institutional protocols recommend consulting university counseling services for structured support. Performance evaluations and peer/advisor feedback can provide objective assessments of academic competence. Documented academic records serve as empirical evidence of professional capability.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 3,
+      "triplet_id": 3,
+      "scenario": "A woman in her early 40s is struggling with her adult daughter's increasing emotional distance after coming out as transgender several years ago. Despite initially supporting her daughter's transition, she feels overwhelmed by her own unprocessed grief about the loss of her \"son\" and uncertain how to rebuild their relationship without saying the wrong thing. She's torn between wanting to be supportive and feeling paralyzed by her own lingering confusion and sense of loss.",
+      "factual": "A parent is experiencing emotional complexity following their child's gender transition. The situation involves interpersonal communication challenges and unresolved feelings about gender identity transformation.",
+      "informational": "Gender transitions can involve significant family adjustment periods. Research indicates that parental support is crucial for transgender individuals' mental health and long-term familial relationships.",
+      "procedural": "Standard family counseling protocols recommend individual and joint therapeutic interventions to facilitate communication and emotional processing during significant familial identity transitions. Professional mediation can help establish constructive dialogue frameworks.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 4,
+      "triplet_id": 4,
+      "scenario": "A single mother of two young children is struggling with persistent anxiety after a sudden job loss, feeling overwhelmed by financial uncertainty and worried about maintaining stability for her kids. She's experiencing sleepless nights and increasing self-doubt about her professional capabilities, while trying to maintain a sense of calm and reassurance for her children.",
+      "factual": "A single parent has experienced job termination, resulting in financial instability and potential household stress. The individual is experiencing psychological symptoms including sleep disruption and professional self-doubt. Two dependent children are present in the household.",
+      "informational": "Unemployment can trigger significant economic challenges for single-parent households, with potential impacts on income, health insurance, and childcare arrangements. Resources such as unemployment benefits, job retraining programs, and social services are typically available to support individuals during employment transitions.",
+      "procedural": "Standard protocol involves filing for unemployment compensation, updating professional credentials, and initiating job search activities. Concurrent steps include reviewing household budget, exploring alternative income sources, and assessing potential social support systems or government assistance programs.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 5,
+      "triplet_id": 5,
+      "scenario": "Maria, a first-generation college graduate, is struggling with severe imposter syndrome after recently being promoted to a management role at a tech company. She constantly feels like she doesn't belong and fears her coworkers will discover she's not as competent as they believe, which is causing her increasing anxiety and self-doubt about her professional capabilities.",
+      "factual": "Maria has achieved a professional milestone by being promoted to a management role in a tech company despite being a first-generation college graduate. Her current psychological state involves persistent self-doubt about her professional competence, which is manifesting as imposter syndrome.",
+      "informational": "Imposter syndrome is a common psychological pattern where individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud' in professional settings. Research indicates that this phenomenon is particularly prevalent among high-achieving professionals, especially those from non-traditional career backgrounds.",
+      "procedural": "In cases of professional self-doubt, standard organizational protocols typically involve performance review processes, mentorship programs, and professional development opportunities to validate an employee's skills and build confidence. HR departments often recommend structured interventions to address workplace anxiety and performance concerns.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 6,
+      "triplet_id": 6,
+      "scenario": "A 28-year-old woman shares that she recently learned her father, who she was never close with, has been diagnosed with early-onset Alzheimer's. She feels overwhelmed with complicated emotions of guilt, anger, and unexpected grief, especially since he didn't acknowledge her much during her childhood but she now feels an urgent need to connect before his memories fade completely.",
+      "factual": "The patient reports a familial medical diagnosis of early-onset Alzheimer's affecting her 28-year-old father. The condition will progressively impact cognitive function and memory retention. Genetic and environmental factors may contribute to the disease progression.",
+      "informational": "Early-onset Alzheimer's typically occurs in individuals under 65 and can have genetic components. The disease causes progressive neurological deterioration, affecting memory, cognitive function, and interpersonal capabilities. Medical interventions can manage symptoms but cannot currently reverse the condition.",
+      "procedural": "Standard medical protocol involves neurological assessment, cognitive testing, and developing a care management plan. Family members may need to initiate legal guardianship procedures as cognitive decline progresses. Medical documentation and insurance coordination will be required for ongoing treatment.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 7,
+      "triplet_id": 7,
+      "scenario": "Sarah, a first-generation college student, is struggling with intense impostor syndrome after being accepted into a competitive graduate program. Despite having excellent grades and recommendations, she constantly feels like she doesn't belong and fears her background means she'll never truly fit in with her more privileged classmates. She's experiencing anxiety and self-doubt that are making her second-guess her academic abilities and potential career path.",
+      "factual": "Sarah has been accepted into a graduate program with strong academic credentials. Her perception of her belonging differs from her objective academic performance. First-generation college students frequently experience psychological challenges during academic transitions.",
+      "informational": "Impostor syndrome is a documented psychological pattern where high-achieving individuals doubt their accomplishments and fear being exposed as fraudulent. Graduate programs often have support resources for students experiencing academic and social adjustment challenges.",
+      "procedural": "Academic institutions typically offer counseling services, peer support groups, and mentorship programs to assist students navigating challenging psychological transitions. Student support offices can provide structured interventions for managing academic stress and self-perception issues.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 8,
+      "triplet_id": 8,
+      "scenario": "Sarah, a first-generation college graduate, is struggling with imposter syndrome after recently being promoted to a management position at a tech startup. She constantly second-guesses her decisions and feels like her colleagues, who mostly come from privileged backgrounds, will soon discover she doesn't belong. The anxiety is causing her to work excessive hours and withdraw from work social events, fearing she'll be exposed as inadequate.",
+      "factual": "Sarah is a first-generation college graduate in a management role at a tech startup. She exhibits signs of imposter syndrome, characterized by self-doubt and anxiety about professional competence. Her current behavioral patterns include extended work hours and social withdrawal.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals. Research indicates this phenomenon is particularly prevalent among first-generation professionals and those from underrepresented backgrounds in competitive industries.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through structured performance reviews, professional development opportunities, and mentorship programs. Employee assistance programs typically offer resources for managing workplace anxiety and building professional confidence.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 9,
+      "triplet_id": 9,
+      "scenario": "A young adult describes feeling increasingly disconnected from their immigrant parents, who have different cultural expectations about career and personal choices. They want to maintain a close relationship but feel constant underlying tension about their life path, which makes family gatherings emotionally exhausting and fraught with unspoken disappointment. Despite loving their parents, they're struggling with feelings of inadequacy and fear of never meeting their family's deeply ingrained expectations.",
+      "factual": "Intergenerational cultural differences frequently create communication barriers between immigrant parents and their children. The described scenario represents a typical conflict between traditional parental expectations and individual personal autonomy. Divergent value systems can generate interpersonal tension in family dynamics.",
+      "informational": "Cross-cultural family relationships often involve complex negotiations between traditional cultural norms and individual identity development. First-generation immigrant children typically experience challenges reconciling parental expectations with personal aspirations. Acculturation processes can create significant psychological and relational stress.",
+      "procedural": "Standard conflict resolution approaches recommend establishing clear communication boundaries and identifying shared values. Professional family counseling can provide structured mediation techniques for addressing intergenerational cultural misunderstandings. Therapeutic interventions typically focus on mutual understanding and respectful dialogue.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 10,
+      "triplet_id": 10,
+      "scenario": "Maria, a first-generation college graduate from a low-income family, is struggling with intense imposter syndrome after being hired at a prestigious tech company. Despite her strong academic record and successful internships, she constantly feels like she doesn't belong and fears her colleagues will discover she's not as competent as they think. She finds herself working extra hours and avoiding social interactions with her team, worried that any mistake will confirm her fears of being an fraud.",
+      "factual": "Maria is a first-generation college graduate employed at a technology company. Her background includes academic achievements and internship experience. She is experiencing professional uncertainty and self-doubt in her current work environment.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. Research indicates this phenomenon is common among high-achieving professionals, particularly those from underrepresented backgrounds in competitive industries.",
+      "procedural": "When an employee experiences performance anxiety, standard organizational protocols typically involve consulting human resources or a direct supervisor. Performance management systems often include mentorship programs and professional development resources designed to support individual workplace integration and skill enhancement.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 11,
+      "triplet_id": 11,
+      "scenario": "Maya, a first-generation college graduate, is struggling with intense impostor syndrome after recently starting her dream job at a tech startup. Despite her excellent academic record and interview performance, she constantly feels like she doesn't belong and fears her colleagues will soon discover she's not as competent as they think. She finds herself working extra hours and avoiding team social events, afraid that someone will expose her perceived inadequacies.",
+      "factual": "Maya is a first-generation college graduate experiencing workplace anxiety in a tech startup environment. Her academic credentials suggest professional competence, but her internal perception differs from external performance indicators. Professional psychological research indicates this experience is common among high-achieving individuals.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. In professional settings, particularly in competitive industries like technology, this phenomenon is frequently observed among high-performing employees, especially those from non-traditional backgrounds.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through scheduled performance reviews, professional development opportunities, and mentorship programs. Employees experiencing workplace anxiety are typically advised to document their achievements and seek constructive feedback from supervisors to validate their professional capabilities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 12,
+      "triplet_id": 12,
+      "scenario": "Maria, a first-generation college graduate, is struggling with imposter syndrome after recently being promoted to a management position at a tech startup. Despite her professional achievements, she constantly doubts her capabilities and fears her colleagues will discover she doesn't truly belong, which stems from childhood experiences of feeling like an outsider in her immigrant family and academic environments.",
+      "factual": "Maria has been promoted to a management position at a tech startup. She has a first-generation college graduate background and experiences self-doubt about her professional capabilities. Her current psychological state appears to be influenced by prior experiences of feeling marginalized.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments despite evidence of competence. In professional settings, particularly in technology and startup environments, this phenomenon is common among first-generation professionals and those from underrepresented backgrounds.",
+      "procedural": "When an employee experiences persistent professional self-doubt, standard organizational protocols typically involve performance review discussions, skills assessment, and potential mentorship or professional development interventions. HR departments often recommend structured support mechanisms to address confidence and integration challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 13,
+      "triplet_id": 13,
+      "scenario": "A young woman in her late twenties shares that her widowed mother has been progressively showing signs of early-onset dementia, which has been emotionally devastating for her as an only child. She's struggling with the gradual loss of her mother's memory and personality, feeling overwhelmed by the responsibility of managing her care while also processing her own grief and anticipatory mourning.",
+      "factual": "Early-onset dementia is a neurological condition characterized by progressive cognitive decline before age 65. The patient's daughter is experiencing a familial situation involving a parent with a degenerative neurological disorder that impacts memory and personality functioning.",
+      "informational": "Early-onset dementia affects approximately 5% of all dementia cases, typically emerging between ages 30-60. Medical management often involves neurological assessments, medication protocols, and gradual adaptation of care strategies as cognitive impairment progresses.",
+      "procedural": "Standard care protocols for early-onset dementia involve medical documentation, neurological evaluations, potential pharmacological interventions, and developing a long-term care plan that may transition from independent living to supervised or assisted care environments.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 14,
+      "triplet_id": 14,
+      "scenario": "A young woman shares that her career aspirations have been increasingly overshadowed by her family's expectations, who want her to prioritize marriage over her professional goals. She feels torn between respecting her cultural traditions and pursuing her dream of becoming a research scientist, and the internal conflict is causing her significant emotional stress and self-doubt.",
+      "factual": "The individual is experiencing conflict between personal career ambitions and familial cultural expectations. There is a discrepancy between her desire to pursue scientific research and her family's preference for traditional marriage pathways.",
+      "informational": "Cultural expectations often create tension between individual professional aspirations and family traditions, particularly in societies with strong collectivist values. Career development and personal autonomy can be challenging when conflicting with established social norms.",
+      "procedural": "Individuals facing such conflicts typically explore mediation strategies, seek professional counseling, or develop incremental negotiation approaches with family members. Documentation of personal goals and potential career trajectories can help facilitate constructive dialogue.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 15,
+      "triplet_id": 15,
+      "scenario": "A young woman shares that her elderly father's recent Alzheimer's diagnosis has dramatically changed their relationship. She struggles with watching him gradually forget family memories and personal connections, feeling both grief for their past intimacy and anxiety about his declining independence. She's wrestling with complex emotions of love, mourning, and uncertainty about how to best support him while processing her own sense of loss.",
+      "factual": "Alzheimer's is a progressive neurological disorder causing memory loss and cognitive decline. The patient experiences gradual deterioration of memory and personal recognition. Family members often observe significant changes in interpersonal dynamics during disease progression.",
+      "informational": "Alzheimer's disease typically affects individuals over 65 and impacts memory, cognitive function, and daily independence. Approximately 6.2 million Americans are currently diagnosed with Alzheimer's. Genetic, environmental, and lifestyle factors can influence disease development and progression.",
+      "procedural": "Medical professionals recommend establishing legal guardianship and healthcare power of attorney as cognitive decline advances. Caregivers should develop structured care plans addressing medical needs, safety considerations, and potential residential care transitions. Regular medical assessments help track disease progression and adjust support strategies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 16,
+      "triplet_id": 16,
+      "scenario": "Maria, a first-generation college student, is struggling with intense imposter syndrome after being admitted to a competitive graduate program. She constantly feels like she doesn't belong and fears her working-class background means she lacks the academic sophistication of her peers, causing significant anxiety and self-doubt about her capabilities and potential success.",
+      "factual": "Maria has been admitted to a graduate program and is experiencing psychological stress related to her perceived academic preparedness. Her background as a first-generation college student appears to be influencing her self-perception and confidence in the academic environment.",
+      "informational": "Imposter syndrome is a common psychological pattern among students from non-traditional academic backgrounds, particularly in competitive graduate programs. Research indicates that first-generation students often experience heightened self-doubt and anxiety about their academic capabilities.",
+      "procedural": "Graduate programs typically provide support resources such as counseling services, academic mentoring, and student support groups to assist students in managing academic and psychological challenges. Students experiencing significant anxiety are advised to consult their program's student services department.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 17,
+      "triplet_id": 17,
+      "scenario": "A young woman in her late 20s is struggling with mounting anxiety about her career path after recently learning her startup was being downsized. She has spent three years investing herself completely in this professional vision, and now feels like her sense of identity and future potential are unraveling, causing her to question her professional capabilities and self-worth.",
+      "factual": "A startup downsizing event has occurred, resulting in potential job displacement for a professional in her late 20s. The individual has invested three years in this professional environment, which represents a significant career interruption.",
+      "informational": "Career transitions are common in technology and startup sectors, with professionals experiencing multiple job changes throughout their professional lifecycle. Industry data suggests that startup employees frequently navigate periods of professional uncertainty and organizational restructuring.",
+      "procedural": "Standard employment protocols recommend updating professional networking profiles, reviewing current resume documentation, and initiating job search activities within 72 hours of receiving notification of potential job loss. Unemployment insurance and professional retraining resources are typically available through state workforce development agencies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 18,
+      "triplet_id": 18,
+      "scenario": "Maria, a first-generation college graduate from a low-income family, is struggling with intense impostor syndrome after being hired at a prestigious tech company. Despite receiving positive performance reviews, she constantly feels like she doesn't belong and fears that her colleagues will eventually discover she's not as competent as they think. Her anxiety has been causing sleep disruption and self-doubt about her professional capabilities.",
+      "factual": "Maria is a first-generation college graduate employed at a technology company. Her performance reviews indicate satisfactory job performance. She is experiencing psychological distress related to professional self-perception.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a fraud. Research indicates this phenomenon is common among high-achieving professionals, particularly those from underrepresented backgrounds in their industry.",
+      "procedural": "Standard workplace protocols recommend consulting human resources or an employee assistance program for addressing persistent work-related psychological challenges. Professional counseling and cognitive behavioral strategies can be utilized to manage impostor syndrome symptoms.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 19,
+      "triplet_id": 19,
+      "scenario": "Sarah, a 29-year-old graphic designer, recently learned her father has early-onset Alzheimer's and is rapidly losing his memory. She's struggling with anticipatory grief, watching her once-sharp and vibrant parent become increasingly confused and distant, while also feeling overwhelmed about potentially becoming his primary caregiver as his condition progresses. The role reversal\u2014from being cared for to becoming a caretaker\u2014is emotionally exhausting and making her question her own life trajectory and sense of family identity.",
+      "factual": "Sarah is experiencing a familial situation involving early-onset Alzheimer's affecting her father. The condition is causing progressive memory loss and cognitive decline. Her personal and professional life is being impacted by potential caregiving responsibilities.",
+      "informational": "Early-onset Alzheimer's typically occurs in individuals under 65 and can progress more rapidly than late-onset forms. Genetic factors may contribute to the disease, and current medical treatments focus on managing symptoms rather than reversing cognitive decline. Family members often play a crucial role in supporting and caring for patients.",
+      "procedural": "Families facing Alzheimer's diagnosis typically engage medical professionals to develop a care plan. Legal documentation such as power of attorney and healthcare directives should be established. Potential care options include in-home care, assisted living facilities, or family-based caregiving arrangements.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 20,
+      "triplet_id": 20,
+      "scenario": "A young woman shares that her immigrant parents have gradually stopped speaking to her after she came out as gay, and she's struggling with feeling simultaneously rejected by her family and disconnected from her cultural heritage while also trying to affirm her authentic identity. She describes feeling caught between her deep love for her parents and her need to be true to herself, experiencing profound grief and isolation.",
+      "factual": "An individual is experiencing familial disconnection due to disclosure of sexual orientation. The situation involves conflict between personal identity and cultural/familial expectations. Interpersonal communication breakdown has occurred between the subject and her parents.",
+      "informational": "Family rejection is a common challenge for LGBTQ+ individuals from conservative or traditional cultural backgrounds. Research indicates that immigrant families may experience additional cultural stress when confronting non-heteronormative family member identities. Support networks and counseling can provide resources for navigating such interpersonal dynamics.",
+      "procedural": "Typical conflict resolution strategies involve establishing boundaries, seeking family counseling, and potentially engaging cultural mediation services. Professional intervention may help facilitate communication and understanding between family members. Legal and social support systems exist to assist individuals experiencing familial estrangement.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 21,
+      "triplet_id": 21,
+      "scenario": "Maria, a first-generation college graduate, is struggling with impostor syndrome after recently being promoted to a leadership role in her tech company. Despite her demonstrated skills and achievements, she constantly feels like she doesn't belong and fears her colleagues will eventually discover she's not as competent as they believe. She finds herself working excessive hours and second-guessing every decision, worried that one mistake will confirm her deep-seated belief that she doesn't truly deserve her position.",
+      "factual": "Maria has been promoted to a leadership role in a tech company despite being a first-generation college graduate. Her performance suggests competence, but she experiences persistent self-doubt about her professional capabilities.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals, particularly in competitive fields like technology. First-generation professionals often report higher rates of this phenomenon.",
+      "procedural": "Performance evaluations typically assess objective metrics such as project completion, team productivity, and measurable outcomes. Professional development programs can provide structured methods for addressing workplace confidence and skill validation.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 22,
+      "triplet_id": 22,
+      "scenario": "A young woman shares that she recently learned her father, with whom she had a complicated and distant relationship, has been diagnosed with early-onset Alzheimer's. She struggles with feeling simultaneously guilty about past unresolved tensions and anxious about how to support him, knowing their limited emotional connection makes approaching his care particularly challenging.",
+      "factual": "Early-onset Alzheimer's is a neurological condition that causes progressive cognitive decline. The patient's daughter has identified relational complexity and potential caregiving challenges. The diagnosis indicates a significant medical situation requiring medical and familial intervention.",
+      "informational": "Early-onset Alzheimer's typically manifests before age 65 and involves gradual memory loss and cognitive impairment. Family dynamics can significantly impact care management and emotional processing during neurodegenerative disease progression.",
+      "procedural": "Medical professionals recommend establishing legal guardianship, creating a comprehensive care plan, and identifying potential care facilities or in-home support services. Documentation of medical history and insurance coverage should be initiated promptly.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 23,
+      "triplet_id": 23,
+      "scenario": "A woman in her late 30s shares that she's struggling with infertility after multiple unsuccessful fertility treatments, which has strained her marriage and her sense of self-worth. She feels increasingly isolated as friends and family members continue to have children, and she's wrestling with grief, identity, and whether she'll ever become a mother.",
+      "factual": "Fertility challenges are a documented medical condition affecting approximately 10-15% of couples. Multiple unsuccessful fertility treatments indicate potential underlying reproductive health issues. The psychological impact of infertility can create significant personal and interpersonal stress.",
+      "informational": "Infertility treatments include options like IVF, IUI, and hormonal therapies, with success rates varying based on individual medical factors. Advanced reproductive technologies continue to evolve, offering alternative paths to parenthood such as surrogacy or adoption.",
+      "procedural": "Standard medical protocols for persistent infertility involve comprehensive diagnostic testing, potential referral to reproductive endocrinology specialists, and systematic evaluation of treatment intervention strategies. Patient documentation and longitudinal tracking of medical outcomes are standard practice.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 24,
+      "triplet_id": 24,
+      "scenario": "Maria, a first-generation college graduate, is struggling with imposter syndrome after recently being promoted to a management role at a tech company. Despite her accomplishments, she constantly feels like she doesn't belong and fears her colleagues will discover she's not as competent as they believe, which is causing her significant anxiety and self-doubt about her professional identity.",
+      "factual": "Maria has achieved professional advancement as a first-generation college graduate in a tech management role. Statistical evidence suggests her experience of imposter syndrome is common among professionals in similar career transition scenarios. Her perceived competence does not necessarily correlate with actual performance metrics.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals. Research indicates this phenomenon is particularly prevalent among first-generation professionals and those in technology and leadership roles. Professional development resources and mentorship programs can provide strategies for addressing these cognitive distortions.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through documented performance evaluations and professional development plans. HR departments typically offer confidential resources for employees experiencing workplace psychological challenges. Performance metrics and objective skill assessments can help validate professional competence in management roles.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 25,
+      "triplet_id": 25,
+      "scenario": "Sarah, a first-generation college graduate from a working-class background, is struggling with impostor syndrome after recently being promoted to a management role. Despite her academic achievements, she constantly feels like she doesn't belong and worries her coworkers will eventually discover she's not as competent as they believe. Her anxiety is causing her to work excessive hours and second-guess every decision, which is starting to affect her mental health and relationships.",
+      "factual": "Sarah has been promoted to a management role and is experiencing self-doubt. Her performance is potentially being impacted by psychological stress related to perceived professional inadequacy. The situation involves a first-generation college graduate experiencing workplace anxiety.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their skills and accomplishments despite evidence of competence. Research indicates this phenomenon is common among high-achieving professionals, particularly those from non-traditional career backgrounds. Such experiences can significantly impact workplace performance and personal well-being.",
+      "procedural": "Professional development protocols typically recommend addressing performance anxiety through structured mentorship programs and skills assessment. Standard workplace interventions include performance coaching, skills training, and periodic professional evaluation. Organizations often have established human resources channels for managing employee psychological challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 26,
+      "triplet_id": 26,
+      "scenario": "Maria, a first-generation college graduate, is struggling with intense imposter syndrome after recently being promoted to a management role at a tech company. She constantly feels like she doesn't belong and worries her colleagues will discover she's not as competent as they think, which is causing her significant anxiety and making her second-guess every professional decision she makes.",
+      "factual": "Maria has been promoted to a management role in a tech company. She appears to be experiencing self-doubt related to her professional capabilities, which is impacting her job performance and decision-making processes.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals, particularly those from underrepresented backgrounds in their field.",
+      "procedural": "In professional development scenarios involving persistent self-doubt, standard recommendations include seeking mentorship, documenting achievements, and engaging in skills assessment and professional training programs to validate competence.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 27,
+      "triplet_id": 27,
+      "scenario": "Sarah, a first-generation college graduate working in tech, is struggling with imposter syndrome after a recent promotion. She feels constant anxiety that her colleagues will discover she doesn't belong, despite her strong performance, and this self-doubt is making her second-guess every professional decision and interaction.",
+      "factual": "Sarah has received a promotion in her tech career despite being a first-generation college graduate. Her current psychological state involves persistent self-doubt about her professional capabilities, which is manifesting as anxiety about her workplace performance and belonging.",
+      "informational": "Imposter syndrome is a common psychological pattern where high-achieving individuals doubt their accomplishments and fear being exposed as a 'fraud'. In professional settings, particularly in competitive fields like technology, this phenomenon is frequently experienced by individuals from non-traditional career backgrounds.",
+      "procedural": "Performance evaluations typically assess objective metrics such as project completion, technical skills, and measurable contributions. Professional development strategies often recommend documenting achievements, seeking feedback, and engaging in skills-based training to validate professional competence.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 28,
+      "triplet_id": 28,
+      "scenario": "A young woman shares that she's struggling with anxiety about potentially disappointing her immigrant parents, who have sacrificed everything for her education. She's passionate about pursuing art, which feels very different from the professional career path her family expects, and she's torn between honoring their dreams and being true to her own sense of purpose.",
+      "factual": "An individual is experiencing internal conflict between parental expectations and personal career aspirations. The scenario involves divergent professional paths between first-generation immigrant parents and their child. Career trajectory differences are creating psychological tension.",
+      "informational": "Immigrant families often prioritize stable, traditional career paths for their children as a form of economic security. Career transitions in creative fields like art can present financial and cultural challenges for families with strong professional expectations. Educational and career choices frequently reflect generational and cultural value differences.",
+      "procedural": "Individuals facing career path conflicts typically engage in personal counseling, family mediation, or career guidance services. Standard conflict resolution approaches involve identifying shared values, exploring compromise options, and developing communication strategies. Professional development resources can help assess potential career transition risks and opportunities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 29,
+      "triplet_id": 29,
+      "scenario": "Maria is struggling with her decision to go no-contact with her emotionally manipulative mother after years of feeling invalidated and chronically anxious from their relationship. She knows this choice means losing connection with her extended family, who mostly side with her mother, and she feels profound grief about losing not just a parent relationship, but an entire family support system. Despite understanding intellectually that this is healthy for her mental health, she's experiencing waves of guilt and mourning the idealized maternal relationship she never had.",
+      "factual": "Maria is experiencing interpersonal conflict with her mother involving emotional manipulation. She has chosen to terminate familial contact, which will result in reduced social connections. This decision appears to be based on historical psychological stress.",
+      "informational": "Family estrangement is a documented psychological phenomenon often resulting from chronic emotional invalidation. Research indicates that individuals who establish boundaries with toxic family members frequently report improved mental health outcomes over time.",
+      "procedural": "In cases of familial relationship termination, standard protocol involves establishing clear communication boundaries. Documentation of interactions and potential legal measures may be recommended to prevent future unwanted contact. Professional counseling can provide structured guidance through this transition.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 30,
+      "triplet_id": 30,
+      "scenario": "Elena, a first-generation college graduate in her late 20s, recently learned that her immigrant parents are struggling financially and might lose their small family restaurant due to pandemic-related debt. She feels torn between supporting her family's dream and maintaining her own professional career goals, experiencing intense guilt about potentially not being able to help them fully.",
+      "factual": "Elena is a first-generation college graduate whose immigrant parents own a small restaurant experiencing financial difficulties. The business is facing potential closure due to pandemic-related debt. Elena is experiencing conflict between family support and personal career objectives.",
+      "informational": "Small business survival rates during pandemic-related economic challenges indicate significant financial stress for family-owned restaurants. First-generation college graduates often experience complex familial economic dynamics and intergenerational financial responsibilities.",
+      "procedural": "Financial resolution options typically include debt restructuring, small business loans, potential bankruptcy proceedings, or negotiated payment plans with creditors. Professional financial counseling can provide structured guidance for assessing business viability and potential intervention strategies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 31,
+      "triplet_id": 31,
+      "scenario": "A young woman in her late 20s recently discovered that her immigrant parents have been struggling financially and hiding their economic challenges from her to avoid causing worry. She feels a deep sense of guilt for not realizing sooner and is torn between wanting to help them and not wanting to undermine their sense of pride and independence.",
+      "factual": "An adult child has discovered her immigrant parents are experiencing financial difficulties. The parents have been concealing their economic challenges to prevent causing their daughter distress. The situation involves potential family dynamics around financial support and personal autonomy.",
+      "informational": "Immigrant families often experience economic challenges due to language barriers, credential transfer limitations, and employment discrimination. Financial struggles can create complex interpersonal dynamics between first and second-generation family members. Support strategies may involve direct financial assistance, skill development, or networking opportunities.",
+      "procedural": "When family members identify potential financial hardship, standard recommendations include conducting a comprehensive financial assessment. This typically involves reviewing income sources, expenses, and potential assistance programs. Subsequent steps may include developing a structured support plan that preserves familial dignity and individual agency.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 32,
+      "triplet_id": 32,
+      "scenario": "A graduate student shares that they recently discovered they were adopted and their birth parents never wanted contact, which has triggered profound feelings of rejection and identity uncertainty. They've been struggling with sleep and feeling disconnected from their supportive adoptive family, unsure how to process these complex emotions about their origins and sense of belonging.",
+      "factual": "Adoption involves legal transfer of parental rights, and birth parents have varying levels of willingness to establish contact. The individual's current emotional state represents a typical response to discovering biological family details.",
+      "informational": "Adoption-related identity exploration is a common psychological experience, particularly for individuals who learn about their biological origins later in life. Research indicates that such discoveries can trigger complex emotional responses involving questions of self-understanding and familial connection.",
+      "procedural": "Standard psychological support protocols recommend professional counseling to process adoption-related emotional challenges. Therapeutic interventions typically involve exploring identity formation, managing interpersonal relationship dynamics, and developing coping strategies for unresolved familial questions.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 33,
+      "triplet_id": 33,
+      "scenario": "Maria is struggling with being the primary caregiver for her aging father who has early-stage Alzheimer's, which is progressively worsening his memory and personality. She feels simultaneously guilty about occasionally feeling overwhelmed and resentful that her siblings aren't helping more, while also deeply mourning the gradual loss of the supportive, vibrant parent she once knew.",
+      "factual": "Maria is currently serving as the primary caregiver for her father with early-stage Alzheimer's. The condition involves progressive memory deterioration and personality changes. Her family dynamic includes limited support from her siblings.",
+      "informational": "Alzheimer's is a neurodegenerative disease that progressively impacts cognitive function and memory. Family caregivers often experience significant stress when managing care for a parent with this condition. Support groups and respite care services are available for caregivers.",
+      "procedural": "Typical caregiver protocols involve assessing the patient's current care needs, exploring potential assisted living or memory care options, and developing a comprehensive family care plan. Legal documentation such as power of attorney and healthcare directives should be established early in the disease progression.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 34,
+      "triplet_id": 34,
+      "scenario": "A young woman in her late twenties is struggling with persistent feelings of imposter syndrome after recently being promoted to a leadership role in her tech company. Despite strong performance feedback, she constantly doubts her abilities and feels like she's \"faking\" her competence, which is causing significant anxiety and undermining her confidence in team meetings and strategic planning sessions.",
+      "factual": "An employee in a leadership position is experiencing persistent self-doubt despite positive performance indicators. The individual's cognitive perception of professional competence appears misaligned with external performance evaluations. Performance anxiety is manifesting as reduced confidence in professional interactions.",
+      "informational": "Imposter syndrome is a psychological pattern frequently observed in high-achieving professionals, particularly in competitive industries like technology. Research indicates that approximately 70% of professionals experience imposter syndrome at some point in their career, with higher incidence among women and minorities in leadership roles.",
+      "procedural": "Standard organizational protocols recommend addressing performance anxiety through structured professional development interventions. Typical approaches include performance coaching, skills assessment, mentorship programs, and documented performance review processes to objectively validate professional capabilities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 35,
+      "triplet_id": 35,
+      "scenario": "A woman in her early 30s shares that she recently learned her father, who she was never close to, has been diagnosed with early-onset Alzheimer's and doesn't recognize her during recent hospital visits. She struggles with complex feelings of grief, guilt about past emotional distance, and anticipatory loss - wanting to reconnect but feeling uncertain how to bridge years of emotional separation before his memory deteriorates completely.",
+      "factual": "A woman in her 30s is experiencing family relationship challenges due to her father's early-onset Alzheimer's diagnosis. The medical condition is causing memory loss that prevents normal familial interaction. Current situation involves emotional and interpersonal complications related to prior relationship dynamics.",
+      "informational": "Early-onset Alzheimer's typically begins before age 65 and can cause significant memory impairment and personality changes. Family members often experience complex emotional responses when a parent develops this neurodegenerative condition. Medical interventions and support groups are available for families navigating such diagnoses.",
+      "procedural": "Standard medical protocols involve neurological assessment, potential medication management, and developing a care plan for progressive memory loss. Family members are typically advised to document medical history, establish legal guardianship, and explore long-term care options. Healthcare providers can facilitate communication strategies for interacting with Alzheimer's patients.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 36,
+      "triplet_id": 36,
+      "scenario": "Maria, a 32-year-old first-generation college graduate, feels increasingly disconnected from her immigrant parents who don't understand her career choice in digital marketing. During weekly family calls, she senses their disappointment and subtle criticism, which makes her feel both guilty for not pursuing a more traditional profession and frustrated that they can't appreciate her professional achievements. She's struggling with whether to continue trying to gain their approval or to create emotional distance to protect her own sense of self-worth.",
+      "factual": "Maria is a 32-year-old first-generation college graduate working in digital marketing. Her immigrant parents express disapproval of her career choice during weekly family calls. The situation involves a conflict between parental expectations and professional autonomy.",
+      "informational": "First-generation college graduates often experience cultural disconnects with their immigrant parents regarding career choices. Digital marketing is a relatively new professional field that may not align with traditional career paths valued by previous generations of immigrants.",
+      "procedural": "In situations of familial career disagreement, individuals typically have three primary options: continued negotiation, establishing boundaries, or reducing communication frequency. Professional counseling or mediation can provide structured approaches to resolving intergenerational communication challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 37,
+      "triplet_id": 37,
+      "scenario": "Maria, a 35-year-old first-generation college graduate, recently learned her immigrant parents are struggling financially and may lose their small family restaurant. She feels torn between supporting them financially and maintaining her own career goals, experiencing intense guilt and anxiety about potentially letting her family down after they sacrificed so much for her education.",
+      "factual": "Maria is a first-generation college graduate facing a potential financial crisis involving her family's restaurant. She is experiencing conflict between personal career objectives and family support needs.",
+      "informational": "First-generation college graduates often experience complex family dynamics involving financial interdependence and cultural expectations of familial support. Economic challenges can create significant stress for immigrant families and their children.",
+      "procedural": "Standard financial support strategies include assessing personal budget capacity, exploring short-term loan options, and developing a structured financial assistance plan. Professional financial counseling can help evaluate potential intervention methods.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 38,
+      "triplet_id": 38,
+      "scenario": "Sarah, a first-generation college graduate, is struggling with impostor syndrome at her new tech job, constantly second-guessing her qualifications and feeling like she doesn't belong despite receiving positive performance reviews. Her parents immigrated and worked manual labor jobs, and she feels intense pressure to prove their sacrifices were worthwhile, which makes her anxiety about professional competence even more overwhelming. She finds herself staying late at work and avoiding social interactions with colleagues out of fear that they'll discover she's \"not as smart\" as they think she is.",
+      "factual": "Sarah is a first-generation college graduate working in the tech industry experiencing performance anxiety. Her background involves immigrant parents who worked manual labor jobs, and she currently demonstrates signs of professional insecurity through extended work hours and social avoidance.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals, particularly those from non-traditional academic or professional backgrounds. Research indicates this phenomenon is prevalent in competitive industries like technology.",
+      "procedural": "Standard workplace protocols recommend addressing performance concerns through scheduled meetings with managers or human resources representatives. Professional development resources such as mentorship programs or skills workshops can be utilized to enhance professional confidence and competence.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 39,
+      "triplet_id": 39,
+      "scenario": "Maria, a 42-year-old teacher, recently learned that her aging mother's dementia is progressing rapidly, and she'll soon need full-time care. She's struggling with the emotional weight of watching her once-vibrant parent slowly lose memories and independence, while simultaneously feeling overwhelmed about potential caregiving responsibilities that could drastically change her own life and career trajectory.",
+      "factual": "Maria's mother has been diagnosed with progressive dementia. Her cognitive decline necessitates increased medical and personal care. The situation will likely require significant lifestyle adjustments for Maria.",
+      "informational": "Dementia is a progressive neurological disorder that impacts memory, cognitive function, and daily living capabilities. Caregiving for a parent with dementia typically involves exploring residential care options, legal guardianship, and potential medical interventions.",
+      "procedural": "When a family member requires full-time care, standard protocols include medical assessment, determining legal decision-making capacity, and evaluating care placement options such as in-home care or specialized memory care facilities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 40,
+      "triplet_id": 40,
+      "scenario": "After years of struggling with infertility, Maya recently learned that her last viable fertility treatment was unsuccessful. She feels a profound sense of grief and emptiness, watching friends and family members easily have children while she and her husband confront the likely reality that they will not be able to become biological parents. The emotional weight of this loss is compounded by feelings of inadequacy and unresolved questions about how to move forward with their life plans.",
+      "factual": "Maya has experienced a negative outcome in her fertility treatment process. She is currently unable to conceive a biological child through medical intervention. Her situation represents a statistically common reproductive challenge for approximately 10-15% of couples.",
+      "informational": "Fertility treatments have varying success rates, with some couples experiencing multiple unsuccessful attempts before exploring alternative family-building options. Advanced reproductive technologies continue to develop, offering potential future alternatives for individuals experiencing infertility.",
+      "procedural": "Standard next steps for couples experiencing persistent infertility include consulting with reproductive specialists to review medical records, evaluating alternative conception methods, and potentially exploring adoption or surrogacy as family-building alternatives.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 41,
+      "triplet_id": 41,
+      "scenario": "Maria, a first-generation college graduate, is struggling with feelings of imposter syndrome at her new job in tech, constantly second-guessing her qualifications and feeling like she doesn't belong despite being objectively successful. Her parents, who worked multiple jobs to support her education, keep asking about her career progress, which intensifies her anxiety about proving her worth. She finds herself experiencing panic attacks before important meetings and feels increasingly isolated, afraid to admit her self-doubt to colleagues or family.",
+      "factual": "Maria is a first-generation college graduate employed in the technology sector experiencing performance anxiety and self-doubt. Her professional challenges are compounded by familial expectations and personal psychological barriers. Her symptoms include panic attacks and social withdrawal.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills, talents, or accomplishments and have a persistent internalized fear of being exposed as a 'fraud'. First-generation professionals often experience heightened workplace anxiety due to unique socioeconomic pressures. Professional development resources and workplace support systems can help mitigate these challenges.",
+      "procedural": "Standard workplace interventions for performance anxiety include confidential employee assistance programs, professional counseling referrals, and structured performance review processes. Organizational human resources departments typically provide confidential support mechanisms for employees experiencing workplace stress. Documentation and formal communication channels are recommended for addressing persistent professional challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 42,
+      "triplet_id": 42,
+      "scenario": "Marcus is a first-generation college graduate who feels intense imposter syndrome at his new tech job, constantly second-guessing his skills and worrying that his colleagues will discover he doesn't belong. Despite performing well in performance reviews, he experiences persistent anxiety before meetings and feels like he's constantly performing rather than being his authentic self. His parents, who worked manual labor jobs, are proud of his success but he feels immense pressure to prove that their sacrifices were worthwhile.",
+      "factual": "Marcus is a first-generation college graduate employed in the technology sector. He has received positive performance reviews and exhibits signs of professional anxiety. His background includes parents who worked in manual labor.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by first-generation professionals in competitive industries. Research indicates this phenomenon is prevalent among high-achieving individuals transitioning into new professional environments.",
+      "procedural": "Standard workplace protocols recommend addressing performance concerns through regular check-ins with management, utilizing employee assistance programs, and documenting individual professional development objectives. Performance evaluations provide structured opportunities to assess and validate professional competencies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 43,
+      "triplet_id": 43,
+      "scenario": "Alex, a first-generation college student, shares that they've been struggling with imposter syndrome after receiving a prestigious scholarship, feeling constantly worried that they don't truly belong and that someone will eventually discover they're not as capable as everyone seems to think. Their family has sacrificed so much for them to have this opportunity, and the pressure to succeed while also feeling deeply uncertain about their own abilities is creating significant anxiety and self-doubt.",
+      "factual": "First-generation college students with scholarships often experience psychological challenges related to academic self-perception. The scholarship indicates measurable academic achievement. External validation metrics do not necessarily correlate with actual competence.",
+      "informational": "Imposter syndrome is a documented psychological phenomenon prevalent among high-achieving students, particularly those from non-traditional academic backgrounds. Research indicates this experience is common and does not reflect actual academic capability.",
+      "procedural": "Academic support services typically offer counseling and skills workshops for students experiencing performance anxiety. Institutional resources can provide standardized assessments and intervention strategies for managing academic stress and self-perception challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 44,
+      "triplet_id": 44,
+      "scenario": "A graduate student who recently lost their father describes feeling disconnected from their academic work and struggling with unexpected waves of grief. They explain that their relationship with their dad was complicated, and now that he's gone, they feel a mix of unresolved emotions and a sense of unexpected vulnerability about their own identity and future.",
+      "factual": "A graduate student has experienced paternal loss and is experiencing disruption to academic performance. The student reports complex emotional responses related to the deceased parent. Current status indicates potential academic and psychological impact.",
+      "informational": "Grief can temporarily interfere with cognitive functioning and academic productivity. Research indicates that complex familial relationships can complicate the mourning process. Professional counseling resources are typically available through university support services.",
+      "procedural": "Standard university protocols recommend documenting personal circumstances that may affect academic progress. Students experiencing significant personal loss may be eligible for temporary academic accommodations. Consultation with academic advisors can initiate formal support processes.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 45,
+      "triplet_id": 45,
+      "scenario": "A young woman finds out her immigrant grandmother, who raised her after her parents' divorce, is showing early signs of dementia. She's struggling with the role reversal of potentially becoming her grandmother's caregiver and grieving the gradual loss of the vibrant, storytelling matriarch who was her primary source of emotional support and cultural connection.",
+      "factual": "A female subject is experiencing familial role transition due to a relative's cognitive decline. The individual's grandmother has initial dementia symptoms, potentially requiring care management. Generational and cultural dynamics are present in this interpersonal scenario.",
+      "informational": "Dementia is a progressive neurological condition affecting memory and cognitive function, typically more prevalent in elderly populations. Early detection allows for medical intervention and care planning strategies. Family members often become primary caregivers in such situations.",
+      "procedural": "Medical assessment will involve neurological screening and diagnostic tests to confirm dementia progression. Legal documentation regarding medical power of attorney should be prepared. Care options include in-home assistance, assisted living facilities, or family-based caregiving arrangements.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 46,
+      "triplet_id": 46,
+      "scenario": "Maria, a first-generation college graduate, is struggling with intense impostor syndrome after being promoted to a management role at her tech company. Despite consistently receiving positive performance reviews, she feels like she doesn't belong and constantly fears her colleagues will discover she's not as competent as they believe. Her anxiety is causing her to work excessive overtime and avoid team meetings where she might be \"exposed\" as less capable.",
+      "factual": "Maria has been promoted to a management role despite being a first-generation college graduate. Her performance reviews have been consistently positive. She is experiencing significant work-related anxiety that is impacting her professional behavior.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. It is particularly common among high-achieving professionals, especially those from non-traditional career backgrounds.",
+      "procedural": "In cases of workplace performance anxiety, standard organizational protocols typically involve consulting human resources or an employee assistance program. Performance management typically requires documentation of work output and addressing potential barriers to effective job performance.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 47,
+      "triplet_id": 47,
+      "scenario": "A graduate student shares that they've recently discovered they're adopted and their biological parents never wanted contact, which has triggered deep feelings of rejection and uncertainty about their own identity and sense of belonging. They're struggling with feelings of being unwanted and questioning their entire understanding of family, while simultaneously feeling guilty for being upset because their adoptive parents have always loved them unconditionally.",
+      "factual": "Adoption involves legal transfer of parental rights from biological to adoptive parents. The discovered information represents a biological parentage status that does not align with the student's prior understanding. Genetic disconnection from biological parents is a documented occurrence in adoption scenarios.",
+      "informational": "Adoption research indicates that discovering biological parentage details can trigger complex psychological responses. Individuals may experience varied emotional reactions ranging from curiosity to distress when learning about their genetic origins. Professional counseling resources exist to support individuals processing adoption-related information.",
+      "procedural": "Standard protocols for managing adoption-related emotional challenges typically involve professional counseling referral. Psychological assessment can help categorize and address specific emotional responses. Support groups specializing in adoption experiences are available for structured emotional processing.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 48,
+      "triplet_id": 48,
+      "scenario": "Maria, a first-generation college student, is struggling with impostor syndrome after being accepted into a prestigious graduate program. She feels constantly worried that her admission was a mistake and that she doesn't belong, despite having excellent academic credentials and recommendations from her professors. Her anxiety is making her second-guess every academic interaction and causing her to feel isolated from her peers.",
+      "factual": "Maria has been accepted into a graduate program with documented academic qualifications. Her self-perception does not align with her objectively verifiable academic achievements. The psychological experience she is describing represents a documented phenomenon in academic settings.",
+      "informational": "Impostor syndrome is a common psychological pattern among high-achieving individuals, particularly first-generation college students. Research indicates that such feelings do not correlate with actual academic performance or competence. Graduate programs frequently encounter students experiencing similar self-doubt.",
+      "procedural": "Academic institutions typically provide counseling resources for students experiencing performance anxiety. Graduate program administrators can review admission criteria to confirm candidate qualifications. Student support services often include workshops addressing psychological barriers to academic success.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 49,
+      "triplet_id": 49,
+      "scenario": "A young woman in her late twenties describes feeling increasingly anxious about her career trajectory, revealing that despite being professionally successful, she constantly compares herself to peers and feels like an imposter who doesn't truly deserve her achievements. She tearfully explains that her self-doubt is preventing her from advocating for herself at work and is creating a cycle of diminished confidence that makes her feel stuck and unable to pursue opportunities she knows she's qualified for.",
+      "factual": "The subject demonstrates symptoms consistent with imposter syndrome, characterized by persistent self-doubt despite professional accomplishments. Professional performance metrics do not align with the individual's internal perception of competence.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills, talents, or accomplishments and have a persistent internalized fear of being exposed as a 'fraud'. Research indicates this phenomenon is common among high-achieving professionals, particularly in competitive work environments.",
+      "procedural": "Standard intervention protocols for addressing career-related anxiety include professional counseling, cognitive behavioral therapy techniques, and structured performance assessment to objectively evaluate professional capabilities. Recommended next steps involve documenting specific professional achievements and developing strategic self-advocacy strategies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 50,
+      "triplet_id": 50,
+      "scenario": "A woman in her early 30s shares that she recently learned her mother has early-onset Alzheimer's and is struggling with the emotional weight of potentially becoming her mother's primary caregiver while also confronting the gradual loss of the parent she's known her entire life. She's experiencing intense grief and anticipatory mourning, feeling overwhelmed by the prospect of watching her mother's memories and personality slowly disappear while simultaneously trying to maintain her own professional and personal responsibilities.",
+      "factual": "Early-onset Alzheimer's is a neurological condition affecting individuals under 65, characterized by progressive cognitive decline. The patient's daughter is experiencing a significant life transition involving potential caregiver responsibilities and familial role changes.",
+      "informational": "Alzheimer's disease typically progresses through stages, with early-onset cases potentially having a more rapid progression than traditional late-onset diagnoses. Support groups and professional caregiving resources are available for families navigating this medical challenge.",
+      "procedural": "Families confronting Alzheimer's diagnosis typically initiate medical assessments, explore long-term care options, and establish legal and financial guardianship frameworks. Documentation of medical status and potential care requirements becomes a priority in managing the patient's progressive condition.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 51,
+      "triplet_id": 51,
+      "scenario": "A woman in her early 30s shares that she recently discovered her father, whom she was always distant from, is battling early-onset Alzheimer's and doesn't consistently recognize her during visits. She feels overwhelming guilt about not having a closer relationship with him before his diagnosis, and struggles with anticipatory grief while trying to build meaningful connections in the short window before his memory fully declines.",
+      "factual": "Early-onset Alzheimer's typically occurs in individuals under 65, causing progressive memory loss and cognitive decline. The patient's daughter is experiencing a situation involving familial relationship changes due to neurological deterioration.",
+      "informational": "Alzheimer's disease impacts memory and cognitive function, with early-onset cases presenting unique challenges for family members. Support groups and medical professionals can provide resources for managing familial relationships during neurological disease progression.",
+      "procedural": "Medical protocols recommend documenting patient cognitive status through regular neurological assessments. Families are advised to establish legal guardianship and medical power of attorney as cognitive decline progresses. Care management typically involves coordinating medical, legal, and familial support systems.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 52,
+      "triplet_id": 52,
+      "scenario": "A woman in her early 30s shares that she recently learned her younger sister has been struggling with undiagnosed depression for years, which has impacted her career and relationships. Her sister has been reluctant to seek help, and she feels torn between wanting to support her without being pushy and feeling helpless watching her sibling's ongoing emotional pain.",
+      "factual": "Depression is a mental health condition that can impair professional and personal functioning. Untreated depression may persist without intervention. The individual's sister exhibits symptoms consistent with clinical depression.",
+      "informational": "Depression affects approximately 16.1 million adults in the United States annually. Professional mental health treatment typically involves a combination of psychotherapy and potential medication management. Screening and diagnosis require professional psychological assessment.",
+      "procedural": "Standard protocol for addressing potential depression involves initial medical screening and referral to a licensed mental health professional. Diagnostic criteria require a comprehensive evaluation by a qualified clinician. Treatment plans are developed based on individual clinical assessment.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 53,
+      "triplet_id": 53,
+      "scenario": "A young woman in her late twenties shares that she recently discovered her father, who raised her alone after her mother passed away, is showing early signs of memory loss. She's struggling with the role reversal of potentially becoming his caregiver and mourning the gradual loss of the strong, independent parent she's always known.",
+      "factual": "Memory loss is a medical condition that can impact cognitive function and daily independence. The progression of memory loss varies between individuals and can require increased caregiver support over time.",
+      "informational": "Early-stage memory loss can be associated with conditions like mild cognitive impairment or early-onset dementia. Medical professionals recommend comprehensive neurological assessments and potential medication interventions to manage symptoms.",
+      "procedural": "Typical caregiver transitions involve gradual assumption of financial, medical, and daily living management responsibilities. Legal documentation such as power of attorney and healthcare proxy are recommended to formalize caregiver decision-making authority.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 54,
+      "triplet_id": 54,
+      "scenario": "Sarah is a first-generation college graduate who feels intense pressure from her immigrant parents to prove their sacrifices were worthwhile, but is secretly struggling with undiagnosed anxiety that makes her feel like she's constantly disappointing them despite achieving professional success. She has started experiencing panic attacks when her mother calls, dreading potential criticism, but feels too ashamed to discuss her mental health challenges with her family who view emotional vulnerability as a sign of weakness.",
+      "factual": "Sarah is a first-generation college graduate experiencing psychological distress related to familial expectations. She has completed higher education and secured professional employment. Her current mental state involves anxiety symptoms triggered by parental communication.",
+      "informational": "First-generation college students often experience significant familial and cultural pressure to succeed professionally. Anxiety disorders are common among individuals navigating complex intergenerational expectations. Mental health resources are available through employee assistance programs, university counseling services, and professional psychological practitioners.",
+      "procedural": "Standard protocol for managing work-related and personal anxiety involves consulting a licensed mental health professional for diagnostic assessment. Employee health insurance typically covers mental health consultations and potential treatment plans. Recommended initial steps include scheduling a comprehensive psychological evaluation and exploring potential therapeutic interventions.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 55,
+      "triplet_id": 55,
+      "scenario": "A woman in her late 30s recently learned that her longtime dream of becoming a biological mother won't be possible due to unexpected fertility complications, and she's struggling with profound grief while trying to decide whether to pursue adoption or remain child-free. She feels a deep sense of loss and questioning of her identity as a woman and potential parent, which is causing her to withdraw from friends and family who have children.",
+      "factual": "A woman in her late 30s has been diagnosed with fertility complications that prevent biological reproduction. Her medical condition has resulted in an inability to conceive a child through traditional means. Current options include alternative family-building strategies.",
+      "informational": "Fertility challenges are common for women in their late 30s, with approximately 10-15% experiencing significant reproductive obstacles. Medical interventions and alternative family formation methods such as adoption are available for individuals encountering biological reproduction limitations.",
+      "procedural": "Standard protocols for individuals experiencing fertility challenges include comprehensive medical evaluation, consultation with reproductive specialists, and exploration of alternative family-building options. Documentation and medical records will be required to assess potential pathways forward.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 56,
+      "triplet_id": 56,
+      "scenario": "A woman in her early 30s shares that she recently learned her estranged father, who abandoned her family when she was young, is seriously ill and wants to reconnect before he dies. She feels simultaneously angry about his past absence and guilty for not wanting to immediately forgive him, wrestling with complex emotions about familial obligation and personal healing.",
+      "factual": "A parent-child relationship exists with documented historical separation. The individual is experiencing conflicting psychological states regarding a potential reconciliation with an absent parent who is experiencing a serious medical condition.",
+      "informational": "Estrangement and family reconciliation are common psychological experiences, particularly when a parent has been historically absent. Emotional complexity is typical in scenarios involving potential reconnection with a distant family member during a health crisis.",
+      "procedural": "Standard family counseling protocols recommend processing unresolved emotional experiences through professional mediation. Potential steps include individual therapy, establishing communication boundaries, and evaluating personal readiness for potential interaction.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 57,
+      "triplet_id": 57,
+      "scenario": "Sarah, a 35-year-old high school teacher, has been struggling with infertility for the past three years and recently learned that her latest round of IVF treatment was unsuccessful. She feels increasingly isolated from her friends who are having children and fears that her dream of motherhood may never become a reality, which is causing significant emotional strain on her marriage and sense of self-worth.",
+      "factual": "Sarah is a 35-year-old female experiencing unsuccessful fertility treatments. Her current medical intervention involves IVF, which has not resulted in pregnancy. The situation is impacting her personal relationships and psychological state.",
+      "informational": "Infertility affects approximately 10-15% of couples of reproductive age. IVF success rates vary by age and individual medical factors, with women under 35 having approximately a 40-50% chance of successful pregnancy per cycle. Multiple treatment attempts are common in fertility management.",
+      "procedural": "Standard medical protocol for persistent infertility involves comprehensive diagnostic testing, potential referral to reproductive endocrinology specialists, and consideration of alternative fertility interventions. Documentation of treatment history and ongoing medical assessment are recommended to determine future therapeutic strategies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 58,
+      "triplet_id": 58,
+      "scenario": "Maya, a first-generation graduate student, is struggling with imposter syndrome and feeling disconnected from her immigrant parents who don't understand her academic path. She feels caught between honoring her family's sacrifices and pursuing her own intellectual passions, which makes her feel simultaneously guilty and misunderstood. Recently, she overheard her mother telling a relative that she worries Maya is \"wasting time\" in her research program instead of pursuing a more traditional career.",
+      "factual": "Maya is a first-generation graduate student experiencing conflict between her academic pursuits and her family's expectations. Her mother has expressed concern about the perceived value of her research program. The situation involves intergenerational differences in career perspectives.",
+      "informational": "First-generation students often encounter challenges navigating academic environments different from their family's background. Research programs in various disciplines can have different career trajectories and perceived economic value. Academic and familial expectations may diverge based on cultural and generational experiences.",
+      "procedural": "Graduate students typically address career concerns through academic advising and professional development resources. Departments often provide mentorship programs to support students navigating academic and personal challenges. Career counseling services can help students articulate the value of their research to family members.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 59,
+      "triplet_id": 59,
+      "scenario": "A young woman shares that her aging father has been progressively forgetting family members' names and details, and she suspects early-stage dementia. She's struggling with the emotional weight of potentially losing her dad's recognition and connection, while also feeling guilty about her own occasional frustration and grief during their interactions.",
+      "factual": "Memory loss is a potential indicator of neurodegenerative conditions like Alzheimer's disease. Symptoms can include forgetting names, personal history, and experiencing progressive cognitive decline. Medical assessment is recommended to confirm diagnosis.",
+      "informational": "Dementia is a progressive neurological disorder that affects memory, cognitive function, and daily functioning. Early detection allows for potential medical interventions and care planning. Symptoms vary by individual and can develop gradually over time.",
+      "procedural": "Standard medical protocol involves neurological screening, cognitive assessments, and potential referral to a geriatric specialist. Diagnostic processes typically include memory tests, brain imaging, and comprehensive medical history evaluation. Care management strategies can be developed following formal diagnosis.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 60,
+      "triplet_id": 60,
+      "scenario": "A graduate student shares that they recently discovered they were adopted after their biological parents unexpectedly reached out through a DNA testing service, which has triggered complex feelings of identity confusion and emotional vulnerability. They are struggling to process whether they want to pursue a relationship with these strangers who share their genetic history, while also feeling protective of the loving adoptive parents who raised them.",
+      "factual": "A DNA testing service revealed biological parentage to an adopted individual. This discovery introduces new biological relatives into the person's existing family structure. The situation involves potential genetic and familial relationship reconfiguration.",
+      "informational": "Genetic testing services increasingly facilitate biological family connections for adopted individuals. Such discoveries can trigger complex psychological and emotional processes related to identity and family dynamics. Professional counseling is often recommended to navigate these situations.",
+      "procedural": "Standard protocols for managing unexpected biological family contact typically involve initial communication screening and optional mediated interactions. Professional adoption counselors can provide structured guidance for establishing boundaries and managing potential relationship development. Consent and mutual agreement are primary procedural considerations.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 61,
+      "triplet_id": 61,
+      "scenario": "Sarah, a first-generation college graduate, is struggling with intense imposter syndrome after recently being promoted to a leadership role at a tech company. She constantly fears her colleagues will discover she doesn't belong, despite her strong performance, and finds herself working excessive hours to prove her worth while simultaneously experiencing anxiety about being \"found out\" as inadequate.",
+      "factual": "Sarah has been promoted to a leadership role in a tech company as a first-generation college graduate. Her performance metrics indicate competence, yet she experiences persistent self-doubt and anxiety about her professional capabilities.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals, particularly those from underrepresented backgrounds in their industry.",
+      "procedural": "In professional development scenarios involving persistent self-doubt, standard organizational protocols typically recommend performance review discussions, mentorship programs, and potential referral to employee assistance resources for addressing workplace psychological challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 62,
+      "triplet_id": 62,
+      "scenario": "Sarah, a first-generation college graduate working as a junior engineer, is struggling with imposter syndrome and feels constant pressure to prove herself in a predominantly male workplace. Despite receiving positive performance reviews, she consistently doubts her abilities and fears that her colleagues see her as less competent, which makes her anxious about speaking up in meetings or taking on challenging projects. She's started having trouble sleeping and feels increasingly isolated, worried that revealing her self-doubt would confirm her fears of not belonging.",
+      "factual": "Sarah is a first-generation college graduate employed as a junior engineer experiencing professional anxiety. Performance metrics indicate she is meeting job expectations, despite her internal perception of inadequacy. Her workplace demographic is predominantly male.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by professionals in competitive or underrepresented groups. Research suggests this phenomenon can impact career progression and mental well-being, particularly for women in technical fields.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through structured channels such as scheduled performance reviews, employee assistance programs, and confidential discussions with human resources representatives. Documentation of job-related challenges can facilitate targeted professional development interventions.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 63,
+      "triplet_id": 63,
+      "scenario": "A young woman in her late twenties shares that she's struggling with persistent imposter syndrome at her new management role, constantly feeling like she doesn't deserve her position despite strong performance reviews. She reveals that her childhood experiences of being repeatedly told she wasn't \"smart enough\" by her father are resurfacing, making her doubt her professional capabilities and feel anxiety about being \"exposed\" as inadequate.",
+      "factual": "A professional in a management role is experiencing self-doubt related to perceived inadequacy. Performance reviews indicate objective competence, while psychological factors suggest unresolved childhood messaging about personal capability.",
+      "informational": "Imposter syndrome is a common psychological phenomenon affecting approximately 70% of professionals at some point in their careers. Childhood experiences can significantly impact professional self-perception and confidence in workplace settings.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through structured performance evaluations, professional development resources, and potential consultation with human resources or organizational psychology professionals.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 64,
+      "triplet_id": 64,
+      "scenario": "A woman in her early 30s discovers her chronic autoimmune condition is progressing more rapidly than expected, which means she may need to significantly adjust her career and life plans much sooner than she anticipated. She has always been fiercely independent and the news is making her feel vulnerable and uncertain about her future, struggling with feelings of grief for the life trajectory she had imagined for herself.",
+      "factual": "A chronic autoimmune condition is demonstrating accelerated progression, which will impact the individual's current life and career plans. Medical documentation indicates potential functional limitations and required adaptations to existing lifestyle expectations.",
+      "informational": "Autoimmune conditions can progress at variable rates, with potential implications for professional capacity and personal independence. Medical management typically involves ongoing assessment, potential treatment modifications, and developing adaptive strategies.",
+      "procedural": "Standard protocol involves comprehensive medical re-evaluation, updating medical documentation, and initiating disability or workplace accommodation review processes. Consultation with specialists will determine specific functional assessments and recommended lifestyle adjustments.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 65,
+      "triplet_id": 65,
+      "scenario": "Maya, a first-generation college graduate from a low-income immigrant family, is struggling with imposter syndrome after being hired at a prestigious tech company. Despite her excellent academic record and skills, she constantly feels like she doesn't belong and fears her colleagues will eventually realize she's not as competent as they believe. Her anxiety is causing her to work excessive hours and second-guess every decision, worried that a single mistake will prove her fears right and potentially jeopardize the opportunity she worked so hard to achieve.",
+      "factual": "Maya is a first-generation college graduate employed at a technology company. Her background includes academic achievement and recent professional employment. Her current work performance involves extended hours and high personal scrutiny.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, commonly experienced by high-achieving professionals, particularly those from underrepresented backgrounds. Research indicates this phenomenon frequently occurs in competitive professional environments.",
+      "procedural": "Standard professional development protocols recommend periodic performance reviews to assess actual job competence. Employee assistance programs typically offer counseling and skills workshops to address workplace anxiety and confidence challenges. Formal mentorship programs can provide structured support for early-career professionals.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 66,
+      "triplet_id": 66,
+      "scenario": "Maya, a high-achieving software engineer, recently learned that her chronic anxiety disorder has been significantly impacting her professional performance, with her manager suggesting she might be passed over for a leadership promotion. She's struggling with feelings of inadequacy and shame, knowing her mental health challenges are perceived as a weakness despite her consistent technical excellence, and is afraid of being seen as less capable than her peers.",
+      "factual": "Maya is experiencing performance challenges related to an anxiety disorder that may impact her professional advancement. Her current work situation involves potential limitations in career progression due to perceived mental health impacts. The scenario indicates a conflict between her technical competence and perceived workplace limitations.",
+      "informational": "Anxiety disorders can affect workplace performance and are recognized as potential barriers to professional development in many organizational settings. Mental health conditions are protected under various workplace disability and discrimination regulations in many jurisdictions. Professional resources exist for managing mental health challenges in professional environments.",
+      "procedural": "Standard workplace protocols typically involve documentation of performance concerns through formal performance reviews. Employees may be required to engage with human resources or employee assistance programs to address performance-related challenges. Potential outcomes could include performance improvement plans, medical accommodations, or alternative role assignments.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 67,
+      "triplet_id": 67,
+      "scenario": "A young woman shares that her recently immigrated parents are struggling to adapt to the new country, feeling increasingly isolated and depressed. She feels torn between supporting them emotionally, maintaining her own career goals, and managing the guilt of being the one who initially pushed for the family's relocation. Their phone calls have become increasingly anxious and filled with unspoken tension.",
+      "factual": "Immigrant families often experience significant cultural adaptation challenges. The parents are experiencing psychological stress related to displacement. The daughter is experiencing conflicting emotional and practical pressures.",
+      "informational": "Immigration frequently involves complex psychological transitions, including cultural shock, language barriers, and social disconnection. Mental health professionals recommend structured support systems for immigrant families during initial resettlement periods.",
+      "procedural": "Standard immigrant support protocols typically involve connecting families with cultural integration resources, language assistance programs, and community support networks. Professional counseling and social services can be engaged to facilitate smoother transition experiences.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 68,
+      "triplet_id": 68,
+      "scenario": "Elena, a first-generation college student, is struggling with imposter syndrome after being accepted into a prestigious graduate program. She constantly feels like she doesn't belong and worries that her scholarship was a mistake, causing her significant anxiety about speaking up in class or sharing her ideas with professors. Despite her excellent academic record, she can't shake the feeling that she'll be \"discovered\" as someone who doesn't truly deserve to be there.",
+      "factual": "Elena has been accepted to a graduate program with a scholarship. Her academic record indicates high achievement. She is experiencing psychological distress related to perceived inadequacy.",
+      "informational": "Imposter syndrome is a common psychological pattern among high-achieving individuals, particularly in academic and professional settings. First-generation college students often experience additional challenges of academic and social integration.",
+      "procedural": "Graduate programs typically have support resources such as counseling services, academic advising, and peer mentorship programs. Students experiencing academic anxiety can request meetings with program administrators to discuss concerns and develop coping strategies.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 69,
+      "triplet_id": 69,
+      "scenario": "Sarah is struggling with impostor syndrome after recently being promoted to a senior management role. Despite consistently receiving positive performance reviews, she feels overwhelmed by self-doubt and fears her colleagues will soon discover she's not as competent as they believe. She finds herself working late every night, obsessively double-checking her work and feeling anxious about making a mistake that might expose her perceived inadequacies.",
+      "factual": "Sarah has been promoted to a senior management role and is experiencing persistent self-doubt despite positive performance evaluations. Her work behavior indicates high stress levels and potential performance anxiety related to her new professional position.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. Research suggests this phenomenon is common among high-achieving professionals, particularly those in leadership roles.",
+      "procedural": "In cases of workplace performance anxiety, standard organizational protocols typically involve consulting human resources or a professional counselor. Performance management systems often include support mechanisms for employees experiencing professional transition challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 70,
+      "triplet_id": 70,
+      "scenario": "Elena, a first-generation college graduate, is struggling with intense imposter syndrome after being hired at a prestigious tech company. Despite her strong academic record, she constantly feels like she doesn't belong and fears her colleagues will eventually discover she's not as competent as they think, which is causing significant anxiety and undermining her confidence in team meetings and project contributions.",
+      "factual": "Elena has secured employment at a tech company following her first-generation college graduation. Her current psychological state involves persistent self-doubt regarding her professional capabilities. Performance metrics and objective qualifications suggest her professional competence is likely comparable to her peers.",
+      "informational": "Imposter syndrome is a common psychological phenomenon experienced by many professionals, particularly in competitive industries like technology. Research indicates that first-generation graduates often experience higher levels of professional self-doubt compared to multi-generational college graduates. Academic performance and professional selection processes typically indicate genuine professional capability.",
+      "procedural": "Standard professional development protocols recommend documenting individual performance metrics and seeking constructive feedback from supervisors. Performance evaluation processes typically involve systematic assessment of measurable work outputs and professional competencies. Structured mentorship programs can provide additional professional skill calibration and confidence-building opportunities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 71,
+      "triplet_id": 71,
+      "scenario": "Sara, a first-generation college graduate, is struggling with impostor syndrome after being promoted to a management role at her tech company. Despite consistently receiving positive performance reviews, she constantly feels like she doesn't belong and fears her colleagues will discover she's not as competent as they think. Her anxiety is so intense that she spends extra hours preparing for meetings and second-guesses every decision, which is starting to affect her mental health and work-life balance.",
+      "factual": "Sara has been promoted to a management role and is experiencing persistent self-doubt despite positive performance evaluations. Her anxiety is manifesting through excessive preparation and decision-hesitation, which is impacting her professional efficiency and personal well-being.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud', particularly common among high-achieving professionals and first-generation career advancers in competitive industries.",
+      "procedural": "When an employee demonstrates signs of professional anxiety, standard organizational protocols typically involve consultation with human resources, potential referral to employee assistance programs, and development of performance management strategies to address underlying confidence issues.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 72,
+      "triplet_id": 72,
+      "scenario": "Maya, a first-generation college graduate in her late 20s, is struggling with intense imposter syndrome after recently being promoted to a senior management role at a tech company. She constantly feels like her colleagues, who mostly come from privileged backgrounds, will soon discover she doesn't truly belong and that her success has been a mistake. Despite objectively performing well, she experiences persistent anxiety and self-doubt that undermines her confidence.",
+      "factual": "Maya has been promoted to a senior management role in a tech company. Her background as a first-generation college graduate differs from her colleagues' backgrounds. Performance metrics suggest she is objectively meeting job expectations.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a fraud. It is commonly experienced by high-achieving professionals, particularly those from underrepresented backgrounds in competitive industries.",
+      "procedural": "Professional development protocols typically recommend documenting performance achievements, seeking mentorship, and engaging in skills validation processes. Performance reviews and objective metrics can help validate an employee's professional competence and organizational value.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 73,
+      "triplet_id": 73,
+      "scenario": "A young woman shares that she's struggling with impostor syndrome after being recently promoted to a leadership role. Despite her qualifications and hard work, she constantly feels like she doesn't deserve the position and fears her colleagues are silently judging her competence. Her anxiety is causing her to overwork and second-guess every decision, which is starting to affect her mental health and professional confidence.",
+      "factual": "A newly promoted employee is experiencing self-doubt and performance anxiety related to her leadership role. The symptoms include overworking, decision hesitation, and perceived professional inadequacy. Her current psychological state suggests potential negative impacts on job performance and personal well-being.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. Research indicates that this phenomenon is particularly common among high-achieving professionals, especially those in new leadership positions. Cognitive strategies and professional development can help mitigate these feelings.",
+      "procedural": "Standard organizational protocols recommend addressing performance concerns through structured performance reviews and professional development plans. Employee assistance programs typically offer confidential counseling and skills training to support individuals experiencing workplace psychological challenges. Formal documentation and progress tracking are standard approaches to managing professional adaptation.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 74,
+      "triplet_id": 74,
+      "scenario": "A young woman in her late twenties shares that she's struggling with feeling like a perpetual disappointment to her immigrant parents after abandoning a pre-med track to pursue creative writing, which her family sees as an economically risky and culturally unsupportive choice. Despite working hard as a freelance editor and having some modest publishing success, she feels constant underlying anxiety about proving her worth and fears permanently damaging her relationship with her family, who she knows sacrificed tremendously to provide her opportunities in America.",
+      "factual": "An individual has deviated from a medical career trajectory to pursue creative writing. The subject reports familial tension resulting from this vocational shift. Professional status appears to be a source of interpersonal conflict.",
+      "informational": "Career transitions from STEM to creative fields are increasingly common among second-generation immigrants. Freelance editing represents a viable professional pathway in the publishing and communications industries. Cultural expectations can create significant psychological pressure for children of immigrant families.",
+      "procedural": "Individuals experiencing career-related familial conflict may benefit from structured communication strategies. Professional counseling can provide mediation techniques for resolving intergenerational disagreements. Documentation of professional achievements can help validate alternative career paths to skeptical family members.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 75,
+      "triplet_id": 75,
+      "scenario": "A woman in her early 40s shares that her aging mother has been recently diagnosed with early-stage dementia, and she's struggling with the emotional weight of watching her once-vibrant parent gradually lose memories and independence. She feels overwhelmed by the responsibility of potential caregiving, grieving the relationship they once had, and uncertain about how to maintain meaningful connection as her mother's cognitive abilities decline.",
+      "factual": "Dementia is a progressive neurological disorder that impacts cognitive function and memory. The condition typically involves gradual neurological deterioration and reduced functional independence for the patient.",
+      "informational": "Early-stage dementia can manifest through memory loss, reduced executive functioning, and changes in personality. Caregiving strategies often involve medical management, support services, and adaptive communication techniques.",
+      "procedural": "Standard protocol for dementia cases involves medical assessment, establishing a care plan, and potentially engaging elder care services or exploring legal guardianship options. Documentation and medical tracking are recommended for ongoing management.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 76,
+      "triplet_id": 76,
+      "scenario": "A woman in her early 30s shares that she's struggling with feeling like she's disappointing her immigrant parents, who worked extremely hard to provide opportunities for her. Despite having a stable job and good career trajectory, she feels constant internal pressure that she isn't living up to their sacrifices and expectations, which creates a persistent sense of guilt and anxiety about her life choices.",
+      "factual": "An individual is experiencing psychological tension related to perceived familial expectations. The scenario involves a first-generation professional experiencing cognitive dissonance between personal achievement and cultural/familial performance metrics.",
+      "informational": "First-generation immigrants often experience intergenerational expectations and pressure related to perceived opportunities and family sacrifices. Academic and psychological research indicates this is a common experience among children of immigrant families navigating professional and cultural identities.",
+      "procedural": "Standard conflict resolution approaches recommend identifying specific performance metrics and communicating transparently with family members about individual career and life goals. Professional counseling can provide structured strategies for managing intergenerational expectations and personal psychological well-being.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 77,
+      "triplet_id": 77,
+      "scenario": "A young woman shares that her immigrant parents have gradually stopped speaking to her after she came out as queer two years ago, and while she feels confident in her identity, the ongoing family rejection has created a deep sense of loneliness and unresolved grief. She describes feeling caught between honoring her authentic self and mourning the close relationship she once had with her traditionally-minded family, which makes social gatherings and holiday events particularly painful.",
+      "factual": "A familial disconnection has occurred due to differing perspectives on sexual orientation. The individual reports experiencing relational distance from parents following her disclosure of queer identity. Communication has been disrupted for approximately two years.",
+      "informational": "Family rejection can occur in situations involving cultural differences and sexual orientation disclosure. LGBTQ+ individuals from traditional or immigrant backgrounds may experience complex interpersonal dynamics related to identity and familial expectations. Support resources exist for navigating such relational challenges.",
+      "procedural": "Standard conflict resolution approaches recommend establishing clear communication boundaries. Professional counseling can provide mediation strategies for family reconciliation. Support groups may offer structured guidance for individuals experiencing familial estrangement.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 78,
+      "triplet_id": 78,
+      "scenario": "Sarah, a 29-year-old graphic designer, recently learned her father has early-onset Alzheimer's and is rapidly losing his memory and ability to recognize family members. She's struggling with anticipatory grief, feeling overwhelmed by the prospect of caring for him while watching the person who raised her slowly disappear. Her anxiety about his declining condition is making her feel emotionally exhausted and uncertain about how to process her feelings.",
+      "factual": "Sarah is experiencing a familial situation involving her father's early-onset Alzheimer's diagnosis. The condition involves progressive memory loss and cognitive decline. Her role involves potential caregiver responsibilities.",
+      "informational": "Early-onset Alzheimer's typically occurs in individuals under 65 and can progress more rapidly than traditional age-related dementia. Support resources include medical specialists, caregiver support groups, and memory care facilities.",
+      "procedural": "Standard medical protocols involve neurological assessments, medication management, and developing a long-term care plan. Legal documentation such as power of attorney and healthcare directives should be established. Periodic medical evaluations will track disease progression.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 79,
+      "triplet_id": 79,
+      "scenario": "Maya, a 29-year-old graphic designer, is struggling with ongoing imposter syndrome that has intensified after a recent job promotion. Despite consistently receiving positive feedback from her team, she feels overwhelmed by self-doubt and constantly fears that her colleagues will discover she's not as competent as they believe. She finds herself working late every night, meticulously checking her work and feeling anxious about potentially making a mistake that would expose her perceived inadequacies.",
+      "factual": "Maya is experiencing symptoms consistent with imposter syndrome following a professional advancement. Her work performance metrics indicate continued high-quality output despite her internal perception of inadequacy. Excessive work hours and repeated task verification suggest significant professional anxiety.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a fraud. Research indicates this phenomenon is common among high-achieving professionals, particularly after career transitions or promotions.",
+      "procedural": "Standard workplace interventions for performance anxiety include professional counseling, skills assessment, and structured performance review processes. Organizational human resources departments typically offer confidential support mechanisms for employees experiencing professional self-doubt.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 80,
+      "triplet_id": 80,
+      "scenario": "Maria, a first-generation college graduate, is struggling with imposter syndrome after being promoted to a senior role in her tech company. Despite her accomplishments, she constantly feels like she doesn't belong and fears her colleagues will discover she's not as competent as they think, which is causing her significant anxiety and self-doubt.",
+      "factual": "Maria has achieved a senior role in her tech company despite being a first-generation college graduate. Her current psychological state involves persistent self-doubt and anxiety about her professional competence, which is characteristic of imposter syndrome.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, despite evidence of their competence. First-generation college graduates often experience higher rates of imposter syndrome in professional environments, particularly in competitive fields like technology.",
+      "procedural": "When an employee experiences persistent professional self-doubt, standard organizational protocols typically recommend consulting human resources or engaging in professional development programs. Performance reviews and mentorship programs can help validate an employee's skills and provide structured feedback.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 81,
+      "triplet_id": 81,
+      "scenario": "Maria, a first-generation college graduate, is struggling with imposter syndrome after recently being promoted to a management role in her tech company. She feels like her background and modest upbringing make her less qualified than her Ivy League-educated peers, and she constantly second-guesses her decisions despite receiving positive performance reviews. Her anxiety about potentially being \"found out\" as not belonging is affecting her confidence and making her overwork to prove her worth.",
+      "factual": "Maria has been promoted to a management role in a tech company despite being a first-generation college graduate. Her professional performance has been positively reviewed, indicating objective competence in her position. Her internal perception differs from external performance metrics.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent fear of being exposed as a 'fraud'. First-generation professionals often experience higher rates of imposter syndrome due to perceived differences in educational and socioeconomic backgrounds.",
+      "procedural": "Performance evaluations typically involve quantitative metrics and qualitative assessments of professional competence. Career progression protocols generally require consistent demonstration of skills and achievement of designated performance benchmarks. Management track advancement follows standardized organizational assessment criteria.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 82,
+      "triplet_id": 82,
+      "scenario": "A young woman in her late twenties shares that she's struggling with persistent impostor syndrome at her tech startup, feeling like she constantly has to prove her worth despite being objectively successful. She describes feeling emotionally exhausted by the internal narrative that she doesn't truly belong, even though her colleagues respect her work, and she fears that one mistake will expose her as \"not good enough\" and undermine her entire career trajectory.",
+      "factual": "An individual in a professional technology environment is experiencing self-doubt regarding her professional capabilities. The subject demonstrates high achievement but experiences cognitive distortion about her professional competence. Performance metrics suggest her concerns are not aligned with objective workplace evaluations.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their accomplishments and have a persistent internalized fear of being exposed as a 'fraud'. Research indicates this phenomenon is particularly prevalent in high-achieving professionals, especially in competitive fields like technology.",
+      "procedural": "Standard organizational protocols typically address performance concerns through structured performance reviews, professional development opportunities, and mentorship programs. HR departments are equipped to provide resources and interventions for employees experiencing workplace psychological challenges.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 83,
+      "triplet_id": 83,
+      "scenario": "Sarah, a 29-year-old graphic designer, has been struggling with persistent feelings of imposter syndrome despite receiving consistent praise from her creative team. She secretly believes her professional successes are just lucky breaks and fears that someday everyone will realize she's not actually talented. Her anxiety about being \"found out\" is causing her to work increasingly longer hours and avoid sharing her creative ideas in team meetings.",
+      "factual": "Sarah is experiencing symptoms consistent with imposter syndrome, characterized by persistent self-doubt despite professional achievements. Her work performance remains objectively high, with positive feedback from her team. The psychological phenomenon is causing increased work hours and reduced professional engagement.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, despite evidence of competence. Research indicates it is common among high-achieving professionals, particularly in creative fields. Cognitive behavioral strategies can help manage these intrusive thought patterns.",
+      "procedural": "Standard workplace intervention protocols recommend documenting performance metrics and professional achievements to provide objective evidence of competence. Employee assistance programs typically offer confidential counseling and cognitive restructuring techniques. Performance reviews can be utilized to validate professional capabilities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 84,
+      "triplet_id": 84,
+      "scenario": "Maria, a first-generation college graduate from an immigrant family, is struggling with overwhelming imposter syndrome in her first professional job as a software engineer. Despite consistently receiving positive performance reviews, she feels like she doesn't truly belong and fears that her colleagues will eventually discover she's not as competent as they think. Her anxiety is so intense that she's started having panic attacks before important meetings and is considering quitting a job she worked extremely hard to obtain.",
+      "factual": "Maria is experiencing imposter syndrome symptoms in her professional role as a software engineer. Her performance reviews indicate consistent positive feedback, contradicting her internal perception of competence. The psychological distress is manifesting in physiological symptoms like panic attacks.",
+      "informational": "Imposter syndrome is a psychological pattern in which individuals doubt their skills and accomplishments, despite evidence of their competence. First-generation professionals and those from minority backgrounds are statistically more likely to experience these feelings. Professional development resources and workplace support systems can help mitigate these experiences.",
+      "procedural": "Standard workplace protocols for addressing performance anxiety typically involve consulting human resources departments or employee assistance programs. Professional counseling can provide cognitive behavioral strategies for managing imposter syndrome. Documenting performance metrics and maintaining open communication with supervisors are recommended steps.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 85,
+      "triplet_id": 85,
+      "scenario": "After years of struggling with undiagnosed anxiety and depression, Maria finally sought therapy and is beginning to understand how childhood experiences have shaped her patterns of self-criticism and relationship avoidance. She's starting to recognize that her constant people-pleasing and fear of conflict stem from feeling emotionally unseen as a child, but the process of confronting these realizations feels overwhelming and makes her question everything she thought she knew about herself.",
+      "factual": "Maria has identified psychological patterns related to childhood experiences. She is currently engaged in therapeutic intervention to address anxiety, depression, and interpersonal behavioral mechanisms. Her current mental health treatment involves exploring historical emotional dynamics.",
+      "informational": "Childhood emotional experiences frequently contribute to adult psychological coping strategies. Therapeutic approaches like cognitive behavioral therapy can help individuals recognize and modify learned behavioral patterns. Professional mental health support provides structured methods for understanding personal psychological development.",
+      "procedural": "Standard therapeutic protocols involve initial assessment, identification of core psychological patterns, and development of targeted intervention strategies. Treatment typically progresses through structured stages of self-exploration, pattern recognition, and behavioral modification. Regular session documentation and progress tracking are standard clinical procedures.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 86,
+      "triplet_id": 86,
+      "scenario": "A young woman in her late twenties reveals she's been struggling with persistent imposter syndrome in her tech career, feeling like she constantly has to overcompensate and prove herself in a male-dominated workplace. Despite having strong technical skills and multiple successful project deliveries, she experiences recurring anxiety and self-doubt, questioning whether her achievements are genuine or if she'll eventually be \"found out\" as incompetent.",
+      "factual": "Imposter syndrome is a documented psychological pattern observed in professional environments, particularly in fields with demographic disparities. The individual demonstrates technical competence despite experiencing internal cognitive distress about professional capabilities.",
+      "informational": "Research indicates imposter syndrome is prevalent in technology sectors, with women and minority professionals more frequently reporting such experiences. Psychological studies suggest these feelings do not correlate with actual professional performance or skill levels.",
+      "procedural": "Standard organizational interventions for addressing imposter syndrome include professional mentorship programs, skills validation assessments, and structured performance review processes. Typical workplace strategies involve documenting objective professional achievements and providing structured professional development opportunities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 87,
+      "triplet_id": 87,
+      "scenario": "Maria, a first-generation college graduate from an immigrant family, is struggling with impostor syndrome at her new tech job. Despite being objectively competent and having excellent performance reviews, she constantly feels like she doesn't truly belong and that someone will eventually \"discover\" she's not as skilled as her colleagues. Her anxiety about potentially disappointing her parents, who sacrificed so much for her education, compounds her internal pressure and self-doubt.",
+      "factual": "Maria is a first-generation college graduate working in a tech role. Performance metrics indicate she is performing competently. External evidence suggests her professional capabilities meet standard industry requirements.",
+      "informational": "Impostor syndrome is a psychological pattern in which individuals doubt their skills and accomplishments despite evidence of competence. First-generation professionals often experience higher rates of workplace anxiety and self-doubt compared to peers with generational professional backgrounds.",
+      "procedural": "Professional development protocols recommend documenting individual performance metrics, maintaining consistent communication with supervisors, and pursuing targeted skills training to validate professional competencies. Standard workplace resources typically include employee assistance programs and mentorship opportunities.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 88,
+      "triplet_id": 88,
+      "scenario": "A graduate student in her late 20s shares that she's struggling with imposter syndrome and constant anxiety about her academic performance, feeling like she doesn't truly belong in her program despite having strong grades and research credentials. Her feelings of self-doubt have become so overwhelming that she's started avoiding interactions with her advisor and peers, which is making her feel increasingly isolated and uncertain about her professional future.",
+      "factual": "The graduate student exhibits symptoms of imposter syndrome, characterized by persistent self-doubt despite objective academic achievements. Her current behavioral pattern involves social withdrawal and reduced professional engagement.",
+      "informational": "Imposter syndrome is a psychological phenomenon common among high-achieving professionals, particularly in academic settings. Research indicates that approximately 70% of individuals experience these feelings at some point in their career trajectory.",
+      "procedural": "Standard intervention protocols for addressing academic performance anxiety typically involve consultation with university counseling services and potential development of a structured professional support plan. Recommended steps include documenting performance metrics and scheduling regular progress reviews.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    },
+    {
+      "id": 89,
+      "triplet_id": 89,
+      "scenario": "Maya, a first-generation college student, is struggling with intense imposter syndrome after being accepted into a competitive graduate program. She constantly fears that her admission was a mistake and that she doesn't truly belong, despite having excellent academic credentials and strong recommendations from her professors. Her anxiety is causing her to second-guess her capabilities and is preventing her from fully engaging with her studies and new academic community.",
+      "factual": "Maya is a first-generation college student who has been admitted to a graduate program. Her academic record indicates qualification for the program. Current psychological factors are impacting her perception of her academic standing.",
+      "informational": "Imposter syndrome is a common psychological pattern among high-achieving individuals, particularly first-generation students. Research indicates that academic performance is typically not correlated with these internal perceptions of inadequacy.",
+      "procedural": "Graduate program administrators typically provide academic support resources for students experiencing adjustment challenges. Standard protocols include counseling referrals, academic advising, and peer mentorship programs to assist students in transitioning successfully.",
+      "control_type": "valence_stripped",
+      "attempt": 1
+    }
+  ]
+}
