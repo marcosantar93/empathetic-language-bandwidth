@@ -208,8 +208,10 @@ def main():
         else:
             for pod in pods:
                 status = pod.get('desiredStatus', 'UNKNOWN')
-                uptime = pod.get('runtime', {}).get('uptimeInSeconds', 0)
-                gpu = pod.get('machine', {}).get('gpuDisplayName', 'Unknown GPU')
+                runtime = pod.get('runtime') or {}
+                uptime = runtime.get('uptimeInSeconds', 0)
+                machine = pod.get('machine') or {}
+                gpu = machine.get('gpuDisplayName', 'Unknown GPU')
                 print(f"{pod['name']}: {status} ({uptime}s) - {gpu}")
                 print(f"  Pod ID: {pod['id']}")
         return
