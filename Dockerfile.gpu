@@ -12,5 +12,15 @@ RUN pip install --no-cache-dir -r requirements-gpu.txt
 # Copy code
 COPY . .
 
+# Accept HuggingFace token as build arg and set as env var
+ARG HF_TOKEN
+ENV HF_TOKEN=${HF_TOKEN}
+
+# Login to HuggingFace if token is provided
+RUN if [ -n "$HF_TOKEN" ]; then \
+        pip install -U "huggingface_hub[cli]" && \
+        huggingface-cli login --token $HF_TOKEN; \
+    fi
+
 # Default: run experiment
 CMD ["python", "experiments/tripartite/scripts/run_all_gpu.py"]

@@ -29,12 +29,12 @@ from tqdm import tqdm
 from transformer_lens import HookedTransformer
 
 
-# Model name mappings (TransformerLens compatible models only)
+# Model name mappings (TransformerLens compatible models with HF auth)
 MODEL_NAMES = {
-    'llama-3.1-8b': 'meta-llama/Llama-3.1-8B',  # Fixed: was Meta-Llama
+    'llama-3.1-8b': 'meta-llama/Llama-3.1-8B',
     'qwen2.5-7b': 'Qwen/Qwen2.5-7B',
     'mistral-7b': 'mistralai/Mistral-7B-v0.1',
-    'llama-3-8b': 'meta-llama/Meta-Llama-3-8B',  # Alternative model
+    'llama-3-8b': 'meta-llama/Meta-Llama-3-8B',
 }
 
 
