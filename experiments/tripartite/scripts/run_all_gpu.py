@@ -58,9 +58,12 @@ def extract_activations(models: list, data_dir: Path, output_dir: Path, device: 
     activations_dir = output_dir / 'activations'
     activations_dir.mkdir(parents=True, exist_ok=True)
 
+    # Get script directory
+    script_dir = Path(__file__).parent
+
     for model in models:
         cmd = [
-            'python', 'extract_activations.py',
+            'python', str(script_dir / 'extract_activations.py'),
             '--model', model,
             '--data-dir', str(data_dir),
             '--output', str(activations_dir),
@@ -76,9 +79,12 @@ def train_saes(models: list, activations_dir: Path, output_dir: Path, device: st
     saes_dir = output_dir / 'saes'
     saes_dir.mkdir(parents=True, exist_ok=True)
 
+    # Get script directory
+    script_dir = Path(__file__).parent
+
     for model in models:
         cmd = [
-            'python', 'train_saes.py',
+            'python', str(script_dir / 'train_saes.py'),
             '--model', model,
             '--activations', str(activations_dir),
             '--output', str(saes_dir),
@@ -94,9 +100,12 @@ def train_probes(models: list, activations_dir: Path, output_dir: Path, device: 
     probes_dir = output_dir / 'results' / 'experiment_b'
     probes_dir.mkdir(parents=True, exist_ok=True)
 
+    # Get script directory
+    script_dir = Path(__file__).parent
+
     for model in models:
         cmd = [
-            'python', 'train_probes.py',
+            'python', str(script_dir / 'train_probes.py'),
             '--model', model,
             '--activations', str(activations_dir),
             '--output', str(probes_dir),
@@ -109,8 +118,11 @@ def train_probes(models: list, activations_dir: Path, output_dir: Path, device: 
 
 def run_convergence_analysis(results_dir: Path):
     """Run convergence analysis."""
+    # Get script directory
+    script_dir = Path(__file__).parent
+
     cmd = [
-        'python', 'convergence_analysis.py',
+        'python', str(script_dir / 'convergence_analysis.py'),
         '--results-dir', str(results_dir)
     ]
 
