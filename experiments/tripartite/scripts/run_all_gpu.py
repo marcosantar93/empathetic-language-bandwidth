@@ -171,9 +171,9 @@ def main():
     parser = argparse.ArgumentParser(description='Run all tripartite empathy experiments')
     parser.add_argument('--models', type=str, default='all',
                         help='Comma-separated model names or "all"')
-    parser.add_argument('--data-dir', type=str, default='../data',
+    parser.add_argument('--data-dir', type=str, default=None,
                         help='Directory containing datasets')
-    parser.add_argument('--output-dir', type=str, default='..',
+    parser.add_argument('--output-dir', type=str, default=None,
                         help='Output directory (parent of activations, saes, results)')
     parser.add_argument('--skip-extraction', action='store_true',
                         help='Skip activation extraction (use existing)')
@@ -207,9 +207,12 @@ def main():
         print(f"Valid models: {', '.join(MODELS)}")
         sys.exit(1)
 
-    # Setup paths
-    data_dir = Path(args.data_dir)
-    output_dir = Path(args.output_dir)
+    # Setup paths - default to script's parent directory (experiments/tripartite/)
+    script_dir = Path(__file__).parent.resolve()
+    tripartite_dir = script_dir.parent  # Go up from scripts/ to experiments/tripartite/
+
+    data_dir = Path(args.data_dir) if args.data_dir else tripartite_dir / 'data'
+    output_dir = Path(args.output_dir) if args.output_dir else tripartite_dir
     activations_dir = output_dir / 'activations'
     results_dir = output_dir / 'results'
 
