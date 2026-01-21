@@ -25,11 +25,10 @@ import json
 
 
 MODELS = [
-    'gemma-2-9b',
     'llama-3.1-8b',
     'qwen2.5-7b',
     'mistral-7b',
-    'deepseek-r1-7b'
+    'llama-3-8b'
 ]
 
 

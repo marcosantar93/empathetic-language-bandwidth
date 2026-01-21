@@ -29,13 +29,12 @@ from tqdm import tqdm
 from transformer_lens import HookedTransformer
 
 
-# Model name mappings
+# Model name mappings (TransformerLens compatible models only)
 MODEL_NAMES = {
-    'gemma-2-9b': 'google/gemma-2-9b',
-    'llama-3.1-8b': 'meta-llama/Meta-Llama-3.1-8B',
+    'llama-3.1-8b': 'meta-llama/Llama-3.1-8B',  # Fixed: was Meta-Llama
     'qwen2.5-7b': 'Qwen/Qwen2.5-7B',
     'mistral-7b': 'mistralai/Mistral-7B-v0.1',
-    'deepseek-r1-7b': 'deepseek-ai/deepseek-coder-7b-base-v1.5'  # Placeholder - adjust when R1 available
+    'llama-3-8b': 'meta-llama/Meta-Llama-3-8B',  # Alternative model
 }
 
 
