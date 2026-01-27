@@ -1,0 +1,18 @@
+{
+  "start_time": "2026-01-27T23:27:06.657646",
+  "end_time": "2026-01-27T23:27:41.499417",
+  "duration_seconds": 34.841771,
+  "duration_hours": 0.009678269722222223,
+  "models_processed": [
+    "qwen2.5-7b"
+  ],
+  "n_models": 1,
+  "experiment": "tripartite_decomposition",
+  "version": "1.0",
+  "outputs": {
+    "activations": 1,
+    "saes": 1,
+    "probes": 2,
+    "convergence_report": true
+  }
+}
