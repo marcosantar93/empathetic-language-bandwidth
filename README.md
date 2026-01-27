@@ -207,15 +207,14 @@ See [FUTURE_EXPERIMENTS.md](docs/FUTURE_EXPERIMENTS.md) for 10 prioritized follo
 
 ## Citation
 
-If you use this work, please cite:
+If you use this code or methodology in your work, please cite this repository:
 
 ```bibtex
-@misc{santarcangelo2026empathy,
-  title={Measuring Empathetic Language Bandwidth in Large Language Models},
+@software{santarcangelo2026empathy,
   author={Santarcangelo, Marco},
+  title={Empathetic Language Bandwidth: Measuring Empathy Representations in LLMs},
   year={2026},
-  howpublished={\url{https://github.com/marcosantar93/empathetic-language-bandwidth}},
-  note={Crystallized Safety Project}
+  url={https://github.com/marcosantar93/empathetic-language-bandwidth}
 }
 ```
 
