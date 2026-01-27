@@ -64,10 +64,10 @@ def check_pod_detailed(pod_id):
 
 # Check our 4 pods
 pod_ids = [
-    '0dmxaxirompia4',  # llama-3.1-8b
-    'z2usg8oylni8qi',  # qwen2.5-7b
-    '847mx1mxvx11vt',  # mistral-7b
-    'yjj9qgsb6qidto',  # llama-3-8b
+    '6gjgmmi8li4aq0',  # llama-3.1-8b
+    '02126ik26px328',  # qwen2.5-7b
+    'tu6saazp5mv3y1',  # mistral-7b
+    'mlqee4qkgip0k6',  # llama-3-8b
 ]
 
 print("="*70)
