@@ -81,7 +81,7 @@ empathetic-language-bandwidth/
 
 ```bash
 # Clone the repository
-git clone https://github.com/[your-username]/empathetic-language-bandwidth.git
+git clone https://github.com/marcosantar93/empathetic-language-bandwidth.git
 cd empathetic-language-bandwidth
 
 # Install dependencies
@@ -214,7 +214,7 @@ If you use this work, please cite:
   title={Measuring Empathetic Language Bandwidth in Large Language Models},
   author={Santarcangelo, Marco},
   year={2026},
-  howpublished={\url{https://github.com/[your-username]/empathetic-language-bandwidth}},
+  howpublished={\url{https://github.com/marcosantar93/empathetic-language-bandwidth}},
   note={Crystallized Safety Project}
 }
 ```
@@ -241,7 +241,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 - **Website:** [marcosantar.com](https://marcosantar.com)
 - **Blog:** [marcosantar.com/blog](https://marcosantar.com/blog)
 
-For questions or collaboration: [open an issue](https://github.com/[your-username]/empathetic-language-bandwidth/issues)
+For questions or collaboration: [open an issue](https://github.com/marcosantar93/empathetic-language-bandwidth/issues)
 
 ---
 
