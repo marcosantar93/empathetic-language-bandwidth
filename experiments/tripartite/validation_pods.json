@@ -1,0 +1,14 @@
+[
+  {
+    "model": "qwen2.5-7b",
+    "pod_id": "xibkvpzya770lq"
+  },
+  {
+    "model": "llama-3-8b",
+    "pod_id": "2zv2hewdzixr80"
+  },
+  {
+    "model": "llama-3.1-8b",
+    "pod_id": "djgvzudw9z9f35"
+  }
+]

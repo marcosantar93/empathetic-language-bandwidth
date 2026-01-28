@@ -21,9 +21,11 @@ def load_model(model_name, device='cuda'):
 
     model_map = {
         'qwen2.5-7b': 'Qwen/Qwen2.5-7B',
+        'qwen1.5-7b': 'Qwen/Qwen1.5-7B',
         'mistral-7b': 'mistralai/Mistral-7B-v0.1',
         'llama-3-8b': 'meta-llama/Meta-Llama-3-8B',
         'llama-3.1-8b': 'meta-llama/Llama-3.1-8B',
+        'gemma-7b': 'google/gemma-7b',
     }
 
     hf_name = model_map.get(model_name, model_name)
