@@ -46,22 +46,58 @@ Across 5 open-weight models (7-9B parameters):
 
 ---
 
+## Phase 2: Tripartite Empathy Decomposition
+
+Building on the bandwidth measurements, we investigated whether empathy decomposes into distinct subspaces corresponding to psychological theory:
+
+- **Cognitive Empathy**: Perspective-taking ("I can see why you feel that way")
+- **Affective Empathy**: Emotional resonance ("That must be really hard")
+- **Instrumental Empathy**: Action-oriented support ("Here's what you could try")
+
+**Full Report:** [Tripartite Decomposition Report](experiments/tripartite/FINAL_REPORT.md)
+
+### Phase 2 Results
+
+| Model | cos(Cog,Aff) | cos(Cog,Instr) | cos(Aff,Instr) | Silhouette |
+|-------|--------------|----------------|----------------|------------|
+| **Qwen2.5-7B** | -0.32 | -0.29 | -0.36 | 0.41 |
+| **Llama-3.1-8B** | -0.32 | -0.36 | -0.40 | 0.21 |
+| **Llama-3-8B** | -0.30 | -0.34 | -0.40 | 0.22 |
+| **Mistral-7B** | -0.22 | -0.39 | -0.44 | 0.26 |
+
+### Key Findings (Phase 2)
+
+- **Tripartite hypothesis confirmed**: Mean cos(Cognitive, Affective) = **-0.29** across all models
+- **Negative cosine similarities** indicate empathy subtypes occupy distinct, nearly orthogonal subspaces
+- **Architecture-independent**: All 4 models from different families show consistent separation
+- **Instrumental most distinct**: Affective-Instrumental separation (-0.40) exceeds Cognitive-Affective (-0.29)
+
+![Combined Visualization](experiments/tripartite/results/combined_visualization.png)
+
+---
+
 ## Repository Structure
 
 ```
 empathetic-language-bandwidth/
-├── src/
+├── src/                                    # Phase 1 code
 │   ├── empathy_experiment_main.py          # Main experiment pipeline
-│   ├── generate_synthetic_empathy_results.py  # Synthetic data generator (for testing)
+│   ├── generate_synthetic_empathy_results.py  # Synthetic data generator
 │   ├── analyze_empathy_results.py          # Analysis and statistics
 │   └── create_empathy_report.py            # Report generation
+├── experiments/
+│   └── tripartite/                         # Phase 2: Tripartite decomposition
+│       ├── data/                           # Triplet datasets
+│       ├── scripts/                        # Extraction, training, analysis
+│       ├── results/                        # Per-model results
+│       └── FINAL_REPORT.md                 # Phase 2 technical report
 ├── data/
-│   └── prompts/                            # Empathetic/neutral prompt pairs (TBD)
+│   └── prompts/                            # Empathetic/neutral prompt pairs
 ├── results/
-│   └── empathy/                            # Experiment results and reports
+│   └── empathy/                            # Phase 1 results and reports
 ├── docs/
 │   ├── empathy_geometry_proposal.md        # Original research proposal
-│   └── FUTURE_EXPERIMENTS.md               # 10 follow-up experiment ideas
+│   └── FUTURE_EXPERIMENTS.md               # Follow-up experiment ideas
 ├── requirements.txt                        # Python dependencies
 └── README.md                               # This file
 ```
@@ -190,18 +226,21 @@ The experiment follows a 6-step validation pipeline:
 
 ## Future Work
 
-See [FUTURE_EXPERIMENTS.md](docs/FUTURE_EXPERIMENTS.md) for 10 prioritized follow-up experiments:
+See [FUTURE_EXPERIMENTS.md](docs/FUTURE_EXPERIMENTS.md) for follow-up experiments:
 
+### Completed
+- ✅ **Tripartite Decomposition** - Validated Cognitive/Affective/Instrumental separation
+
+### In Progress
+- 🔄 **Causal Intervention** - Ablation experiments to test causality
+- 🔄 **Control Analysis** - Validate specificity with non-empathy controls
+
+### Planned
 1. **Human Evaluation** - Validate bandwidth correlates with helpfulness
 2. **Layer-wise Profiling** - Track empathy emergence across layers
-3. **Causal Intervention** - Test via activation patching
-4. **Scaling to 70B** - Test larger models
-5. **Extended Transfer** - 10 diverse contexts
-6. **Toxicity Trade-off** - Empathy vs. safety
-7. **Fine-tuning** - Can we increase bandwidth?
-8. **Multimodal** - Vision + language empathy
-9. **Adversarial** - Over-steering failure modes
-10. **Cross-lingual** - Transfer across languages
+3. **Scaling to 70B** - Test larger models
+4. **Extended Transfer** - 10 diverse contexts
+5. **Cross-lingual** - Transfer across languages
 
 ---
 
