@@ -1,0 +1,18 @@
+{
+  "start_time": "2026-01-27T23:22:35.480492",
+  "end_time": "2026-01-27T23:26:52.173697",
+  "duration_seconds": 256.693205,
+  "duration_hours": 0.07130366805555555,
+  "models_processed": [
+    "mistral-7b"
+  ],
+  "n_models": 1,
+  "experiment": "tripartite_decomposition",
+  "version": "1.0",
+  "outputs": {
+    "activations": 1,
+    "saes": 1,
+    "probes": 2,
+    "convergence_report": true
+  }
+}

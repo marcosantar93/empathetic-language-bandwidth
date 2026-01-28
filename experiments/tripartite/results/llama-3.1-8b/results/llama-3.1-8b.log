@@ -1,0 +1,192 @@
+/usr/local/lib/python3.10/dist-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: 'Could not load this library: /usr/local/lib/python3.10/dist-packages/torchvision/image.so'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading datasets...
+Loaded 3 datasets with 240 total items
+Preparing prompts...
+Prepared 720 prompts for activation extraction
+
+Processing 1 model(s)
+
+============================================================
+Processing model: llama-3.1-8b
+============================================================
+
+Loading model: meta-llama/Llama-3.1-8B
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [01:59<05:58, 119.42s/it]Fetching 4 files: 100%|██████████| 4/4 [01:59<00:00, 29.85s/it] 
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.70s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.70s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.16s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model meta-llama/Llama-3.1-8B into HookedTransformer
+Model loaded: 32 layers, d_model=4096
+Extracting llama-3.1-8b:   0%|          | 0/90 [00:00<?, ?it/s]Extracting llama-3.1-8b:   1%|          | 1/90 [00:00<00:55,  1.60it/s]Extracting llama-3.1-8b:   2%|▏         | 2/90 [00:00<00:38,  2.26it/s]Extracting llama-3.1-8b:   3%|▎         | 3/90 [00:01<00:33,  2.64it/s]Extracting llama-3.1-8b:   4%|▍         | 4/90 [00:01<00:31,  2.75it/s]Extracting llama-3.1-8b:   6%|▌         | 5/90 [00:02<00:39,  2.17it/s]Extracting llama-3.1-8b:   7%|▋         | 6/90 [00:02<00:33,  2.47it/s]Extracting llama-3.1-8b:   8%|▊         | 7/90 [00:02<00:30,  2.69it/s]Extracting llama-3.1-8b:   9%|▉         | 8/90 [00:03<00:30,  2.71it/s]Extracting llama-3.1-8b:  10%|█         | 9/90 [00:03<00:29,  2.77it/s]Extracting llama-3.1-8b:  11%|█         | 10/90 [00:03<00:27,  2.88it/s]Extracting llama-3.1-8b:  12%|█▏        | 11/90 [00:04<00:26,  2.94it/s]Extracting llama-3.1-8b:  13%|█▎        | 12/90 [00:04<00:26,  2.93it/s]Extracting llama-3.1-8b:  14%|█▍        | 13/90 [00:04<00:25,  3.06it/s]Extracting llama-3.1-8b:  16%|█▌        | 14/90 [00:05<00:25,  3.00it/s]Extracting llama-3.1-8b:  17%|█▋        | 15/90 [00:05<00:31,  2.36it/s]Extracting llama-3.1-8b:  18%|█▊        | 16/90 [00:06<00:29,  2.51it/s]Extracting llama-3.1-8b:  19%|█▉        | 17/90 [00:06<00:28,  2.59it/s]Extracting llama-3.1-8b:  20%|██        | 18/90 [00:06<00:26,  2.72it/s]Extracting llama-3.1-8b:  21%|██        | 19/90 [00:07<00:25,  2.74it/s]Extracting llama-3.1-8b:  22%|██▏       | 20/90 [00:07<00:24,  2.87it/s]Extracting llama-3.1-8b:  23%|██▎       | 21/90 [00:07<00:23,  2.90it/s]Extracting llama-3.1-8b:  24%|██▍       | 22/90 [00:08<00:22,  2.99it/s]Extracting llama-3.1-8b:  26%|██▌       | 23/90 [00:08<00:22,  3.04it/s]Extracting llama-3.1-8b:  27%|██▋       | 24/90 [00:09<00:28,  2.29it/s]Extracting llama-3.1-8b:  28%|██▊       | 25/90 [00:09<00:26,  2.45it/s]Extracting llama-3.1-8b:  29%|██▉       | 26/90 [00:09<00:24,  2.63it/s]Extracting llama-3.1-8b:  30%|███       | 27/90 [00:10<00:23,  2.71it/s]Extracting llama-3.1-8b:  31%|███       | 28/90 [00:10<00:22,  2.81it/s]Extracting llama-3.1-8b:  32%|███▏      | 29/90 [00:10<00:20,  2.91it/s]Extracting llama-3.1-8b:  33%|███▎      | 30/90 [00:11<00:20,  2.96it/s]Extracting llama-3.1-8b:  34%|███▍      | 31/90 [00:11<00:19,  3.01it/s]Extracting llama-3.1-8b:  36%|███▌      | 32/90 [00:11<00:19,  2.97it/s]Extracting llama-3.1-8b:  37%|███▋      | 33/90 [00:12<00:19,  2.99it/s]Extracting llama-3.1-8b:  38%|███▊      | 34/90 [00:12<00:26,  2.08it/s]Extracting llama-3.1-8b:  39%|███▉      | 35/90 [00:13<00:23,  2.38it/s]Extracting llama-3.1-8b:  40%|████      | 36/90 [00:13<00:20,  2.61it/s]Extracting llama-3.1-8b:  41%|████      | 37/90 [00:13<00:18,  2.80it/s]Extracting llama-3.1-8b:  42%|████▏     | 38/90 [00:14<00:17,  3.00it/s]Extracting llama-3.1-8b:  43%|████▎     | 39/90 [00:14<00:16,  3.14it/s]Extracting llama-3.1-8b:  44%|████▍     | 40/90 [00:14<00:15,  3.27it/s]Extracting llama-3.1-8b:  46%|████▌     | 41/90 [00:14<00:14,  3.41it/s]Extracting llama-3.1-8b:  47%|████▋     | 42/90 [00:15<00:14,  3.40it/s]Extracting llama-3.1-8b:  48%|████▊     | 43/90 [00:15<00:20,  2.26it/s]Extracting llama-3.1-8b:  49%|████▉     | 44/90 [00:16<00:17,  2.57it/s]Extracting llama-3.1-8b:  50%|█████     | 45/90 [00:16<00:16,  2.76it/s]Extracting llama-3.1-8b:  51%|█████     | 46/90 [00:16<00:14,  2.98it/s]Extracting llama-3.1-8b:  52%|█████▏    | 47/90 [00:17<00:13,  3.08it/s]Extracting llama-3.1-8b:  53%|█████▎    | 48/90 [00:17<00:12,  3.26it/s]Extracting llama-3.1-8b:  54%|█████▍    | 49/90 [00:17<00:12,  3.28it/s]Extracting llama-3.1-8b:  56%|█████▌    | 50/90 [00:17<00:11,  3.38it/s]Extracting llama-3.1-8b:  57%|█████▋    | 51/90 [00:18<00:11,  3.45it/s]Extracting llama-3.1-8b:  58%|█████▊    | 52/90 [00:18<00:10,  3.60it/s]Extracting llama-3.1-8b:  59%|█████▉    | 53/90 [00:19<00:16,  2.25it/s]Extracting llama-3.1-8b:  60%|██████    | 54/90 [00:19<00:14,  2.56it/s]Extracting llama-3.1-8b:  61%|██████    | 55/90 [00:19<00:12,  2.73it/s]Extracting llama-3.1-8b:  62%|██████▏   | 56/90 [00:20<00:11,  2.89it/s]Extracting llama-3.1-8b:  63%|██████▎   | 57/90 [00:20<00:10,  3.02it/s]Extracting llama-3.1-8b:  64%|██████▍   | 58/90 [00:20<00:10,  3.16it/s]Extracting llama-3.1-8b:  66%|██████▌   | 59/90 [00:21<00:09,  3.28it/s]Extracting llama-3.1-8b:  67%|██████▋   | 60/90 [00:21<00:09,  3.32it/s]Extracting llama-3.1-8b:  68%|██████▊   | 61/90 [00:21<00:08,  3.26it/s]Extracting llama-3.1-8b:  69%|██████▉   | 62/90 [00:21<00:08,  3.40it/s]Extracting llama-3.1-8b:  70%|███████   | 63/90 [00:22<00:13,  2.03it/s]Extracting llama-3.1-8b:  71%|███████   | 64/90 [00:23<00:11,  2.26it/s]Extracting llama-3.1-8b:  72%|███████▏  | 65/90 [00:23<00:09,  2.50it/s]Extracting llama-3.1-8b:  73%|███████▎  | 66/90 [00:23<00:09,  2.66it/s]Extracting llama-3.1-8b:  74%|███████▍  | 67/90 [00:24<00:07,  2.89it/s]Extracting llama-3.1-8b:  76%|███████▌  | 68/90 [00:24<00:07,  3.01it/s]Extracting llama-3.1-8b:  77%|███████▋  | 69/90 [00:24<00:06,  3.23it/s]Extracting llama-3.1-8b:  78%|███████▊  | 70/90 [00:24<00:06,  3.26it/s]Extracting llama-3.1-8b:  79%|███████▉  | 71/90 [00:25<00:06,  3.15it/s]Extracting llama-3.1-8b:  80%|████████  | 72/90 [00:26<00:10,  1.79it/s]Extracting llama-3.1-8b:  81%|████████  | 73/90 [00:26<00:08,  2.08it/s]Extracting llama-3.1-8b:  82%|████████▏ | 74/90 [00:26<00:06,  2.36it/s]Extracting llama-3.1-8b:  83%|████████▎ | 75/90 [00:27<00:05,  2.55it/s]Extracting llama-3.1-8b:  84%|████████▍ | 76/90 [00:27<00:05,  2.75it/s]Extracting llama-3.1-8b:  86%|████████▌ | 77/90 [00:27<00:04,  2.91it/s]Extracting llama-3.1-8b:  87%|████████▋ | 78/90 [00:28<00:03,  3.04it/s]Extracting llama-3.1-8b:  88%|████████▊ | 79/90 [00:28<00:03,  3.13it/s]Extracting llama-3.1-8b:  89%|████████▉ | 80/90 [00:28<00:03,  3.14it/s]Extracting llama-3.1-8b:  90%|█████████ | 81/90 [00:29<00:02,  3.17it/s]Extracting llama-3.1-8b:  91%|█████████ | 82/90 [00:30<00:04,  1.82it/s]Extracting llama-3.1-8b:  92%|█████████▏| 83/90 [00:30<00:03,  2.11it/s]Extracting llama-3.1-8b:  93%|█████████▎| 84/90 [00:30<00:02,  2.37it/s]Extracting llama-3.1-8b:  94%|█████████▍| 85/90 [00:31<00:01,  2.59it/s]Extracting llama-3.1-8b:  96%|█████████▌| 86/90 [00:31<00:01,  2.78it/s]Extracting llama-3.1-8b:  97%|█████████▋| 87/90 [00:31<00:01,  2.93it/s]Extracting llama-3.1-8b:  98%|█████████▊| 88/90 [00:32<00:00,  3.02it/s]Extracting llama-3.1-8b:  99%|█████████▉| 89/90 [00:32<00:00,  3.11it/s]Extracting llama-3.1-8b: 100%|██████████| 90/90 [00:32<00:00,  3.19it/s]Extracting llama-3.1-8b: 100%|██████████| 90/90 [00:32<00:00,  2.76it/s]
+Saving activations to: /workspace/empathetic-language-bandwidth/experiments/tripartite/activations/llama-3.1-8b_activations.json
+✓ Saved 720 activation sets
+
+============================================================
+Activation extraction complete!
+Output directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/activations
+============================================================
+Found 1 activation file(s)
+
+============================================================
+Training SAE for: llama-3.1-8b
+============================================================
+Model: 32 layers, d_model=4096
+Training SAE on layer 16
+Prepared 720 activation samples
+
+Training SAE...
+  Epoch 10/100: Loss=0.0017, Recon=0.0010, Sparsity=0.0706
+  Epoch 20/100: Loss=0.0011, Recon=0.0007, Sparsity=0.0446
+  Epoch 30/100: Loss=0.0008, Recon=0.0006, Sparsity=0.0256
+  Epoch 40/100: Loss=0.0007, Recon=0.0005, Sparsity=0.0214
+  Epoch 50/100: Loss=0.0006, Recon=0.0004, Sparsity=0.0195
+  Epoch 60/100: Loss=0.0006, Recon=0.0004, Sparsity=0.0182
+  Epoch 70/100: Loss=0.0005, Recon=0.0004, Sparsity=0.0174
+  Epoch 80/100: Loss=0.0005, Recon=0.0003, Sparsity=0.0166
+  Epoch 90/100: Loss=0.0005, Recon=0.0003, Sparsity=0.0159
+  Epoch 100/100: Loss=0.0005, Recon=0.0003, Sparsity=0.0152
+
+Analyzing SAE clusters...
+
+Cluster Analysis:
+
+  2 clusters: Silhouette=0.211
+    Cluster 0 (n=180): {'response_1': 60, 'response_2': 60, 'response_3': 60}
+    Cluster 1 (n=540): {'cognitive': 90, 'affective': 90, 'instrumental': 90, 'factual': 90, 'informational': 90, 'procedural': 90}
+
+  3 clusters: Silhouette=0.195
+    Cluster 0 (n=136): {'response_3': 50, 'response_1': 42, 'response_2': 44}
+    Cluster 1 (n=389): {'cognitive': 70, 'affective': 62, 'instrumental': 52, 'factual': 69, 'informational': 70, 'procedural': 66}
+    Cluster 2 (n=195): {'instrumental': 38, 'affective': 28, 'cognitive': 20, 'response_1': 18, 'response_2': 16, 'response_3': 10, 'factual': 21, 'informational': 20, 'procedural': 24}
+
+  4 clusters: Silhouette=0.180
+    Cluster 0 (n=238): {'cognitive': 42, 'affective': 39, 'instrumental': 34, 'factual': 42, 'informational': 42, 'procedural': 39}
+    Cluster 1 (n=129): {'response_3': 47, 'response_1': 40, 'response_2': 42}
+    Cluster 2 (n=157): {'instrumental': 28, 'affective': 18, 'cognitive': 11, 'response_1': 20, 'response_2': 18, 'response_3': 13, 'factual': 17, 'informational': 13, 'procedural': 19}
+    Cluster 3 (n=196): {'cognitive': 37, 'affective': 33, 'instrumental': 28, 'factual': 31, 'informational': 35, 'procedural': 32}
+
+  5 clusters: Silhouette=0.174
+    Cluster 0 (n=141): {'instrumental': 34, 'affective': 27, 'cognitive': 19, 'factual': 22, 'informational': 19, 'procedural': 20}
+    Cluster 1 (n=230): {'cognitive': 42, 'affective': 36, 'instrumental': 32, 'factual': 42, 'informational': 41, 'procedural': 37}
+    Cluster 2 (n=120): {'response_3': 44, 'response_1': 37, 'response_2': 39}
+    Cluster 3 (n=169): {'cognitive': 29, 'affective': 27, 'instrumental': 24, 'factual': 26, 'informational': 30, 'procedural': 33}
+    Cluster 4 (n=60): {'response_1': 23, 'response_2': 21, 'response_3': 16}
+
+  6 clusters: Silhouette=0.185
+    Cluster 0 (n=59): {'cognitive': 11, 'affective': 9, 'instrumental': 9, 'factual': 10, 'informational': 10, 'procedural': 10}
+    Cluster 1 (n=135): {'instrumental': 33, 'affective': 27, 'cognitive': 17, 'factual': 20, 'informational': 18, 'procedural': 20}
+    Cluster 2 (n=122): {'response_3': 45, 'response_1': 38, 'response_2': 39}
+    Cluster 3 (n=58): {'response_1': 22, 'response_2': 21, 'response_3': 15}
+    Cluster 4 (n=119): {'cognitive': 20, 'affective': 18, 'instrumental': 17, 'factual': 19, 'informational': 21, 'procedural': 24}
+    Cluster 5 (n=227): {'cognitive': 42, 'affective': 36, 'instrumental': 31, 'factual': 41, 'informational': 41, 'procedural': 36}
+
+✓ Saved SAE to: /workspace/empathetic-language-bandwidth/experiments/tripartite/saes/llama-3.1-8b_layer16_sae.pt
+
+============================================================
+SAE training complete!
+============================================================
+Found 1 activation file(s)
+
+============================================================
+Training probe for: llama-3.1-8b
+============================================================
+Model: 32 layers, d_model=4096
+Training probe on layer 16
+Prepared 270 samples
+Split: Train=172, Val=44, Test=54
+
+Training probe...
+  Epoch 10/50: Train Loss=0.7958, Val Loss=0.7832, Val Acc=0.9318
+  Epoch 20/50: Train Loss=0.5590, Val Loss=0.5597, Val Acc=0.9773
+  Epoch 30/50: Train Loss=0.4005, Val Loss=0.4092, Val Acc=1.0000
+  Epoch 40/50: Train Loss=0.2971, Val Loss=0.3112, Val Acc=1.0000
+  Epoch 50/50: Train Loss=0.2292, Val Loss=0.2463, Val Acc=1.0000
+
+Evaluating probe...
+
+Results:
+  Accuracy: 1.0000
+  Macro AUROC: 1.0000
+  AUROC per class:
+    cognitive: 1.0000
+    affective: 1.0000
+    instrumental: 1.0000
+
+Separation metrics:
+  cosine_cognitive_affective: -0.3173
+  cosine_cognitive_instrumental: -0.3601
+  cosine_affective_instrumental: -0.4021
+
+✓ Saved results to: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/llama-3.1-8b_layer16_probe.json
+
+============================================================
+Probe training complete!
+Summary: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/probe_summary.json
+============================================================
+Traceback (most recent call last):
+  File "/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py", line 23, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+======================================================================
+TRIPARTITE EMPATHY DECOMPOSITION - GPU EXPERIMENTS
+======================================================================
+Start time: 2026-01-28 00:52:57.324722
+Models: llama-3.1-8b
+Data directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/data
+Output directory: /workspace/empathetic-language-bandwidth/experiments/tripartite
+Device: cuda
+======================================================================
+
+
+======================================================================
+STEP 1: ACTIVATION EXTRACTION
+======================================================================
+
+======================================================================
+Extracting activations: llama-3.1-8b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/extract_activations.py --model llama-3.1-8b --data-dir /workspace/empathetic-language-bandwidth/experiments/tripartite/data --output /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --batch-size 8 --device cuda
+
+
+✓ Extracting activations: llama-3.1-8b completed successfully
+
+
+======================================================================
+STEP 2: EXPERIMENT A - SAE TRAINING (Geometry-Driven)
+======================================================================
+
+======================================================================
+Training SAE: llama-3.1-8b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_saes.py --model llama-3.1-8b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/saes --epochs 100 --device cuda
+
+
+✓ Training SAE: llama-3.1-8b completed successfully
+
+
+======================================================================
+STEP 3: EXPERIMENT B - PROBE TRAINING (Theory-Driven)
+======================================================================
+
+======================================================================
+Training probe: llama-3.1-8b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_probes.py --model llama-3.1-8b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b --epochs 50 --device cuda
+
+
+✓ Training probe: llama-3.1-8b completed successfully
+
+
+======================================================================
+STEP 4: CONVERGENCE ANALYSIS
+======================================================================
+
+======================================================================
+Convergence analysis
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py --results-dir /workspace/empathetic-language-bandwidth/experiments/tripartite/results
+
+
+✗ Convergence analysis failed with exit code 1

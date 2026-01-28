@@ -1,0 +1,246 @@
+/usr/local/lib/python3.10/dist-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: 'Could not load this library: /usr/local/lib/python3.10/dist-packages/torchvision/image.so'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading datasets...
+Loaded 3 datasets with 240 total items
+Preparing prompts...
+Prepared 720 prompts for activation extraction
+
+Processing 1 model(s)
+
+============================================================
+Processing model: mistral-7b
+============================================================
+
+Loading model: mistralai/Mistral-7B-v0.1
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:24<00:24, 24.44s/it]Fetching 2 files: 100%|██████████| 2/2 [00:24<00:00, 12.22s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.38s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.39s/it]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model mistralai/Mistral-7B-v0.1 into HookedTransformer
+Model loaded: 32 layers, d_model=4096
+Extracting mistral-7b:   0%|          | 0/360 [00:00<?, ?it/s]Extracting mistral-7b:   0%|          | 1/360 [00:00<01:46,  3.37it/s]Extracting mistral-7b:   1%|          | 2/360 [00:00<01:54,  3.13it/s]Extracting mistral-7b:   1%|          | 3/360 [00:00<01:24,  4.22it/s]Extracting mistral-7b:   1%|          | 4/360 [00:00<01:08,  5.22it/s]Extracting mistral-7b:   1%|▏         | 5/360 [00:01<01:00,  5.85it/s]Extracting mistral-7b:   2%|▏         | 6/360 [00:01<00:54,  6.48it/s]Extracting mistral-7b:   2%|▏         | 7/360 [00:01<00:50,  6.95it/s]Extracting mistral-7b:   2%|▏         | 8/360 [00:01<00:48,  7.32it/s]Extracting mistral-7b:   2%|▎         | 9/360 [00:01<00:46,  7.61it/s]Extracting mistral-7b:   3%|▎         | 10/360 [00:01<00:44,  7.82it/s]Extracting mistral-7b:   3%|▎         | 11/360 [00:01<00:45,  7.67it/s]Extracting mistral-7b:   3%|▎         | 12/360 [00:02<01:01,  5.66it/s]Extracting mistral-7b:   4%|▎         | 13/360 [00:02<00:57,  6.04it/s]Extracting mistral-7b:   4%|▍         | 14/360 [00:02<00:54,  6.39it/s]Extracting mistral-7b:   4%|▍         | 15/360 [00:02<00:52,  6.62it/s]Extracting mistral-7b:   4%|▍         | 16/360 [00:02<00:50,  6.79it/s]Extracting mistral-7b:   5%|▍         | 17/360 [00:02<00:49,  6.97it/s]Extracting mistral-7b:   5%|▌         | 18/360 [00:02<00:48,  7.08it/s]Extracting mistral-7b:   5%|▌         | 19/360 [00:02<00:45,  7.44it/s]Extracting mistral-7b:   6%|▌         | 20/360 [00:03<00:44,  7.67it/s]Extracting mistral-7b:   6%|▌         | 21/360 [00:03<00:43,  7.86it/s]Extracting mistral-7b:   6%|▌         | 22/360 [00:03<01:02,  5.41it/s]Extracting mistral-7b:   6%|▋         | 23/360 [00:03<00:56,  5.97it/s]Extracting mistral-7b:   7%|▋         | 24/360 [00:03<00:51,  6.50it/s]Extracting mistral-7b:   7%|▋         | 25/360 [00:03<00:48,  6.98it/s]Extracting mistral-7b:   7%|▋         | 26/360 [00:04<00:45,  7.34it/s]Extracting mistral-7b:   8%|▊         | 27/360 [00:04<00:44,  7.55it/s]Extracting mistral-7b:   8%|▊         | 28/360 [00:04<00:44,  7.49it/s]Extracting mistral-7b:   8%|▊         | 29/360 [00:04<00:44,  7.40it/s]Extracting mistral-7b:   8%|▊         | 30/360 [00:04<00:46,  7.08it/s]Extracting mistral-7b:   9%|▊         | 31/360 [00:04<00:44,  7.46it/s]Extracting mistral-7b:   9%|▉         | 32/360 [00:05<01:05,  4.99it/s]Extracting mistral-7b:   9%|▉         | 33/360 [00:05<00:59,  5.49it/s]Extracting mistral-7b:   9%|▉         | 34/360 [00:05<00:53,  6.13it/s]Extracting mistral-7b:  10%|▉         | 35/360 [00:05<00:48,  6.66it/s]Extracting mistral-7b:  10%|█         | 36/360 [00:05<00:46,  7.03it/s]Extracting mistral-7b:  10%|█         | 37/360 [00:05<00:43,  7.36it/s]Extracting mistral-7b:  11%|█         | 38/360 [00:05<00:44,  7.29it/s]Extracting mistral-7b:  11%|█         | 39/360 [00:05<00:44,  7.27it/s]Extracting mistral-7b:  11%|█         | 40/360 [00:06<00:42,  7.53it/s]Extracting mistral-7b:  11%|█▏        | 41/360 [00:06<01:00,  5.27it/s]Extracting mistral-7b:  12%|█▏        | 42/360 [00:06<00:53,  5.92it/s]Extracting mistral-7b:  12%|█▏        | 43/360 [00:06<00:49,  6.44it/s]Extracting mistral-7b:  12%|█▏        | 44/360 [00:06<00:47,  6.65it/s]Extracting mistral-7b:  12%|█▎        | 45/360 [00:06<00:46,  6.81it/s]Extracting mistral-7b:  13%|█▎        | 46/360 [00:07<00:44,  7.11it/s]Extracting mistral-7b:  13%|█▎        | 47/360 [00:07<00:42,  7.40it/s]Extracting mistral-7b:  13%|█▎        | 48/360 [00:07<00:40,  7.69it/s]Extracting mistral-7b:  14%|█▎        | 49/360 [00:07<00:39,  7.90it/s]Extracting mistral-7b:  14%|█▍        | 50/360 [00:07<00:40,  7.70it/s]Extracting mistral-7b:  14%|█▍        | 51/360 [00:07<01:01,  5.03it/s]Extracting mistral-7b:  14%|█▍        | 52/360 [00:08<00:54,  5.70it/s]Extracting mistral-7b:  15%|█▍        | 53/360 [00:08<00:50,  6.11it/s]Extracting mistral-7b:  15%|█▌        | 54/360 [00:08<00:46,  6.63it/s]Extracting mistral-7b:  15%|█▌        | 55/360 [00:08<00:44,  6.80it/s]Extracting mistral-7b:  16%|█▌        | 56/360 [00:08<00:43,  6.94it/s]Extracting mistral-7b:  16%|█▌        | 57/360 [00:08<00:41,  7.37it/s]Extracting mistral-7b:  16%|█▌        | 58/360 [00:08<00:42,  7.09it/s]Extracting mistral-7b:  16%|█▋        | 59/360 [00:08<00:42,  7.15it/s]Extracting mistral-7b:  17%|█▋        | 60/360 [00:09<00:41,  7.20it/s]Extracting mistral-7b:  17%|█▋        | 61/360 [00:09<01:02,  4.80it/s]Extracting mistral-7b:  17%|█▋        | 62/360 [00:09<00:55,  5.33it/s]Extracting mistral-7b:  18%|█▊        | 63/360 [00:09<00:51,  5.82it/s]Extracting mistral-7b:  18%|█▊        | 64/360 [00:09<00:47,  6.22it/s]Extracting mistral-7b:  18%|█▊        | 65/360 [00:10<00:45,  6.47it/s]Extracting mistral-7b:  18%|█▊        | 66/360 [00:10<00:43,  6.71it/s]Extracting mistral-7b:  19%|█▊        | 67/360 [00:10<00:41,  7.14it/s]Extracting mistral-7b:  19%|█▉        | 68/360 [00:10<00:39,  7.45it/s]Extracting mistral-7b:  19%|█▉        | 69/360 [00:10<00:38,  7.61it/s]Extracting mistral-7b:  19%|█▉        | 70/360 [00:10<00:38,  7.47it/s]Extracting mistral-7b:  20%|█▉        | 71/360 [00:11<00:57,  5.00it/s]Extracting mistral-7b:  20%|██        | 72/360 [00:11<00:51,  5.65it/s]Extracting mistral-7b:  20%|██        | 73/360 [00:11<00:45,  6.26it/s]Extracting mistral-7b:  21%|██        | 74/360 [00:11<00:43,  6.54it/s]Extracting mistral-7b:  21%|██        | 75/360 [00:11<00:42,  6.72it/s]Extracting mistral-7b:  21%|██        | 76/360 [00:11<00:41,  6.85it/s]Extracting mistral-7b:  21%|██▏       | 77/360 [00:11<00:40,  6.98it/s]Extracting mistral-7b:  22%|██▏       | 78/360 [00:11<00:39,  7.10it/s]Extracting mistral-7b:  22%|██▏       | 79/360 [00:12<00:37,  7.45it/s]Extracting mistral-7b:  22%|██▏       | 80/360 [00:12<00:36,  7.71it/s]Extracting mistral-7b:  22%|██▎       | 81/360 [00:12<00:55,  5.03it/s]Extracting mistral-7b:  23%|██▎       | 82/360 [00:12<00:50,  5.51it/s]Extracting mistral-7b:  23%|██▎       | 83/360 [00:12<00:46,  5.96it/s]Extracting mistral-7b:  23%|██▎       | 84/360 [00:12<00:42,  6.49it/s]Extracting mistral-7b:  24%|██▎       | 85/360 [00:13<00:39,  6.97it/s]Extracting mistral-7b:  24%|██▍       | 86/360 [00:13<00:37,  7.35it/s]Extracting mistral-7b:  24%|██▍       | 87/360 [00:13<00:35,  7.61it/s]Extracting mistral-7b:  24%|██▍       | 88/360 [00:13<00:36,  7.52it/s]Extracting mistral-7b:  25%|██▍       | 89/360 [00:13<00:36,  7.47it/s]Extracting mistral-7b:  25%|██▌       | 90/360 [00:13<00:34,  7.72it/s]Extracting mistral-7b:  25%|██▌       | 91/360 [00:14<00:55,  4.87it/s]Extracting mistral-7b:  26%|██▌       | 92/360 [00:14<00:49,  5.37it/s]Extracting mistral-7b:  26%|██▌       | 93/360 [00:14<00:44,  5.98it/s]Extracting mistral-7b:  26%|██▌       | 94/360 [00:14<00:42,  6.31it/s]Extracting mistral-7b:  26%|██▋       | 95/360 [00:14<00:40,  6.56it/s]Extracting mistral-7b:  27%|██▋       | 96/360 [00:14<00:38,  6.78it/s]Extracting mistral-7b:  27%|██▋       | 97/360 [00:14<00:37,  6.92it/s]Extracting mistral-7b:  27%|██▋       | 98/360 [00:15<00:37,  6.96it/s]Extracting mistral-7b:  28%|██▊       | 99/360 [00:15<00:37,  7.02it/s]Extracting mistral-7b:  28%|██▊       | 100/360 [00:15<00:35,  7.34it/s]Extracting mistral-7b:  28%|██▊       | 101/360 [00:15<00:56,  4.59it/s]Extracting mistral-7b:  28%|██▊       | 102/360 [00:15<00:48,  5.29it/s]Extracting mistral-7b:  29%|██▊       | 103/360 [00:15<00:44,  5.77it/s]Extracting mistral-7b:  29%|██▉       | 104/360 [00:16<00:41,  6.17it/s]Extracting mistral-7b:  29%|██▉       | 105/360 [00:16<00:38,  6.65it/s]Extracting mistral-7b:  29%|██▉       | 106/360 [00:16<00:37,  6.86it/s]Extracting mistral-7b:  30%|██▉       | 107/360 [00:16<00:36,  6.94it/s]Extracting mistral-7b:  30%|███       | 108/360 [00:16<00:36,  6.98it/s]Extracting mistral-7b:  30%|███       | 109/360 [00:16<00:35,  7.06it/s]Extracting mistral-7b:  31%|███       | 110/360 [00:16<00:35,  7.09it/s]Extracting mistral-7b:  31%|███       | 111/360 [00:17<00:56,  4.38it/s]Extracting mistral-7b:  31%|███       | 112/360 [00:17<00:50,  4.93it/s]Extracting mistral-7b:  31%|███▏      | 113/360 [00:17<00:45,  5.41it/s]Extracting mistral-7b:  32%|███▏      | 114/360 [00:17<00:40,  6.01it/s]Extracting mistral-7b:  32%|███▏      | 115/360 [00:17<00:37,  6.54it/s]Extracting mistral-7b:  32%|███▏      | 116/360 [00:18<00:36,  6.78it/s]Extracting mistral-7b:  32%|███▎      | 117/360 [00:18<00:35,  6.94it/s]Extracting mistral-7b:  33%|███▎      | 118/360 [00:18<00:33,  7.27it/s]Extracting mistral-7b:  33%|███▎      | 119/360 [00:18<00:33,  7.20it/s]Extracting mistral-7b:  33%|███▎      | 120/360 [00:18<00:33,  7.25it/s]Extracting mistral-7b:  34%|███▎      | 121/360 [00:19<00:58,  4.10it/s]Extracting mistral-7b:  34%|███▍      | 122/360 [00:19<00:49,  4.79it/s]Extracting mistral-7b:  34%|███▍      | 123/360 [00:19<00:44,  5.36it/s]Extracting mistral-7b:  34%|███▍      | 124/360 [00:19<00:39,  5.99it/s]Extracting mistral-7b:  35%|███▍      | 125/360 [00:19<00:37,  6.34it/s]Extracting mistral-7b:  35%|███▌      | 126/360 [00:19<00:34,  6.82it/s]Extracting mistral-7b:  35%|███▌      | 127/360 [00:19<00:33,  6.95it/s]Extracting mistral-7b:  36%|███▌      | 128/360 [00:19<00:32,  7.05it/s]Extracting mistral-7b:  36%|███▌      | 129/360 [00:20<00:31,  7.37it/s]Extracting mistral-7b:  36%|███▌      | 130/360 [00:20<00:31,  7.35it/s]Extracting mistral-7b:  36%|███▋      | 131/360 [00:20<00:55,  4.15it/s]Extracting mistral-7b:  37%|███▋      | 132/360 [00:20<00:48,  4.72it/s]Extracting mistral-7b:  37%|███▋      | 133/360 [00:20<00:43,  5.24it/s]Extracting mistral-7b:  37%|███▋      | 134/360 [00:21<00:39,  5.72it/s]Extracting mistral-7b:  38%|███▊      | 135/360 [00:21<00:36,  6.15it/s]Extracting mistral-7b:  38%|███▊      | 136/360 [00:21<00:33,  6.68it/s]Extracting mistral-7b:  38%|███▊      | 137/360 [00:21<00:31,  7.09it/s]Extracting mistral-7b:  38%|███▊      | 138/360 [00:21<00:29,  7.44it/s]Extracting mistral-7b:  39%|███▊      | 139/360 [00:21<00:27,  8.01it/s]Extracting mistral-7b:  39%|███▉      | 140/360 [00:21<00:27,  8.06it/s]Extracting mistral-7b:  39%|███▉      | 141/360 [00:22<00:48,  4.50it/s]Extracting mistral-7b:  39%|███▉      | 142/360 [00:22<00:42,  5.17it/s]Extracting mistral-7b:  40%|███▉      | 143/360 [00:22<00:37,  5.80it/s]Extracting mistral-7b:  40%|████      | 144/360 [00:22<00:33,  6.41it/s]Extracting mistral-7b:  40%|████      | 145/360 [00:22<00:30,  7.13it/s]Extracting mistral-7b:  41%|████      | 146/360 [00:22<00:28,  7.43it/s]Extracting mistral-7b:  41%|████      | 147/360 [00:23<00:28,  7.42it/s]Extracting mistral-7b:  41%|████      | 148/360 [00:23<00:27,  7.66it/s]Extracting mistral-7b:  41%|████▏     | 149/360 [00:23<00:27,  7.81it/s]Extracting mistral-7b:  42%|████▏     | 150/360 [00:23<00:26,  7.93it/s]Extracting mistral-7b:  42%|████▏     | 151/360 [00:23<00:46,  4.54it/s]Extracting mistral-7b:  42%|████▏     | 152/360 [00:23<00:39,  5.26it/s]Extracting mistral-7b:  42%|████▎     | 153/360 [00:24<00:34,  5.94it/s]Extracting mistral-7b:  43%|████▎     | 154/360 [00:24<00:30,  6.71it/s]Extracting mistral-7b:  43%|████▎     | 155/360 [00:24<00:28,  7.12it/s]Extracting mistral-7b:  43%|████▎     | 156/360 [00:24<00:27,  7.47it/s]Extracting mistral-7b:  44%|████▎     | 157/360 [00:24<00:26,  7.75it/s]Extracting mistral-7b:  44%|████▍     | 158/360 [00:24<00:25,  7.91it/s]Extracting mistral-7b:  44%|████▍     | 159/360 [00:24<00:25,  8.02it/s]Extracting mistral-7b:  44%|████▍     | 160/360 [00:24<00:24,  8.09it/s]Extracting mistral-7b:  45%|████▍     | 161/360 [00:25<00:44,  4.48it/s]Extracting mistral-7b:  45%|████▌     | 162/360 [00:25<00:37,  5.34it/s]Extracting mistral-7b:  45%|████▌     | 163/360 [00:25<00:32,  6.00it/s]Extracting mistral-7b:  46%|████▌     | 164/360 [00:25<00:30,  6.53it/s]Extracting mistral-7b:  46%|████▌     | 165/360 [00:25<00:28,  6.77it/s]Extracting mistral-7b:  46%|████▌     | 166/360 [00:25<00:26,  7.45it/s]Extracting mistral-7b:  46%|████▋     | 167/360 [00:26<00:24,  7.98it/s]Extracting mistral-7b:  47%|████▋     | 168/360 [00:26<00:23,  8.02it/s]Extracting mistral-7b:  47%|████▋     | 169/360 [00:26<00:23,  8.10it/s]Extracting mistral-7b:  47%|████▋     | 170/360 [00:26<00:23,  8.15it/s]Extracting mistral-7b:  48%|████▊     | 171/360 [00:26<00:41,  4.51it/s]Extracting mistral-7b:  48%|████▊     | 172/360 [00:26<00:36,  5.20it/s]Extracting mistral-7b:  48%|████▊     | 173/360 [00:27<00:31,  5.86it/s]Extracting mistral-7b:  48%|████▊     | 174/360 [00:27<00:28,  6.44it/s]Extracting mistral-7b:  49%|████▊     | 175/360 [00:27<00:25,  7.17it/s]Extracting mistral-7b:  49%|████▉     | 176/360 [00:27<00:24,  7.49it/s]Extracting mistral-7b:  49%|████▉     | 177/360 [00:27<00:23,  7.78it/s]Extracting mistral-7b:  49%|████▉     | 178/360 [00:27<00:21,  8.29it/s]Extracting mistral-7b:  50%|████▉     | 179/360 [00:27<00:21,  8.26it/s]Extracting mistral-7b:  50%|█████     | 180/360 [00:27<00:22,  7.92it/s]Extracting mistral-7b:  50%|█████     | 181/360 [00:28<00:42,  4.20it/s]Extracting mistral-7b:  51%|█████     | 182/360 [00:28<00:36,  4.92it/s]Extracting mistral-7b:  51%|█████     | 183/360 [00:28<00:31,  5.63it/s]Extracting mistral-7b:  51%|█████     | 184/360 [00:28<00:28,  6.22it/s]Extracting mistral-7b:  51%|█████▏    | 185/360 [00:28<00:26,  6.54it/s]Extracting mistral-7b:  52%|█████▏    | 186/360 [00:29<00:23,  7.26it/s]Extracting mistral-7b:  52%|█████▏    | 187/360 [00:29<00:23,  7.26it/s]Extracting mistral-7b:  52%|█████▏    | 188/360 [00:29<00:23,  7.25it/s]Extracting mistral-7b:  52%|█████▎    | 189/360 [00:29<00:22,  7.54it/s]Extracting mistral-7b:  53%|█████▎    | 190/360 [00:29<00:20,  8.11it/s]Extracting mistral-7b:  53%|█████▎    | 191/360 [00:29<00:37,  4.46it/s]Extracting mistral-7b:  53%|█████▎    | 192/360 [00:30<00:32,  5.16it/s]Extracting mistral-7b:  54%|█████▎    | 193/360 [00:30<00:27,  5.99it/s]Extracting mistral-7b:  54%|█████▍    | 194/360 [00:30<00:25,  6.52it/s]Extracting mistral-7b:  54%|█████▍    | 195/360 [00:30<00:24,  6.73it/s]Extracting mistral-7b:  54%|█████▍    | 196/360 [00:30<00:23,  7.11it/s]Extracting mistral-7b:  55%|█████▍    | 197/360 [00:30<00:21,  7.43it/s]Extracting mistral-7b:  55%|█████▌    | 198/360 [00:30<00:20,  7.96it/s]Extracting mistral-7b:  55%|█████▌    | 199/360 [00:30<00:19,  8.38it/s]Extracting mistral-7b:  56%|█████▌    | 200/360 [00:31<00:19,  8.34it/s]Extracting mistral-7b:  56%|█████▌    | 201/360 [00:31<00:37,  4.24it/s]Extracting mistral-7b:  56%|█████▌    | 202/360 [00:31<00:31,  4.96it/s]Extracting mistral-7b:  56%|█████▋    | 203/360 [00:31<00:27,  5.65it/s]Extracting mistral-7b:  57%|█████▋    | 205/360 [00:31<00:21,  7.07it/s]Extracting mistral-7b:  57%|█████▋    | 206/360 [00:32<00:20,  7.60it/s]Extracting mistral-7b:  57%|█████▊    | 207/360 [00:32<00:19,  8.04it/s]Extracting mistral-7b:  58%|█████▊    | 208/360 [00:32<00:18,  8.38it/s]Extracting mistral-7b:  58%|█████▊    | 209/360 [00:32<00:17,  8.65it/s]Extracting mistral-7b:  58%|█████▊    | 210/360 [00:32<00:17,  8.59it/s]Extracting mistral-7b:  59%|█████▊    | 211/360 [00:33<00:35,  4.18it/s]Extracting mistral-7b:  59%|█████▉    | 212/360 [00:33<00:30,  4.88it/s]Extracting mistral-7b:  59%|█████▉    | 213/360 [00:33<00:26,  5.57it/s]Extracting mistral-7b:  59%|█████▉    | 214/360 [00:33<00:23,  6.20it/s]Extracting mistral-7b:  60%|█████▉    | 215/360 [00:33<00:21,  6.73it/s]Extracting mistral-7b:  60%|██████    | 216/360 [00:33<00:19,  7.40it/s]Extracting mistral-7b:  60%|██████    | 217/360 [00:33<00:18,  7.61it/s]Extracting mistral-7b:  61%|██████    | 218/360 [00:33<00:18,  7.52it/s]Extracting mistral-7b:  61%|██████    | 219/360 [00:34<00:18,  7.43it/s]Extracting mistral-7b:  61%|██████    | 220/360 [00:34<00:18,  7.71it/s]Extracting mistral-7b:  61%|██████▏   | 221/360 [00:34<00:34,  4.08it/s]Extracting mistral-7b:  62%|██████▏   | 222/360 [00:34<00:28,  4.80it/s]Extracting mistral-7b:  62%|██████▏   | 223/360 [00:34<00:24,  5.53it/s]Extracting mistral-7b:  62%|██████▏   | 224/360 [00:35<00:22,  6.15it/s]Extracting mistral-7b:  62%|██████▎   | 225/360 [00:35<00:20,  6.66it/s]Extracting mistral-7b:  63%|██████▎   | 226/360 [00:35<00:18,  7.33it/s]Extracting mistral-7b:  63%|██████▎   | 227/360 [00:35<00:17,  7.58it/s]Extracting mistral-7b:  63%|██████▎   | 228/360 [00:35<00:16,  7.82it/s]Extracting mistral-7b:  64%|██████▎   | 229/360 [00:35<00:15,  8.28it/s]Extracting mistral-7b:  64%|██████▍   | 230/360 [00:35<00:15,  8.34it/s]Extracting mistral-7b:  64%|██████▍   | 231/360 [00:36<00:32,  3.98it/s]Extracting mistral-7b:  64%|██████▍   | 232/360 [00:36<00:26,  4.81it/s]Extracting mistral-7b:  65%|██████▍   | 233/360 [00:36<00:23,  5.52it/s]Extracting mistral-7b:  65%|██████▌   | 234/360 [00:36<00:20,  6.15it/s]Extracting mistral-7b:  65%|██████▌   | 235/360 [00:36<00:18,  6.69it/s]Extracting mistral-7b:  66%|██████▌   | 236/360 [00:36<00:17,  7.15it/s]Extracting mistral-7b:  66%|██████▌   | 237/360 [00:36<00:16,  7.49it/s]Extracting mistral-7b:  66%|██████▌   | 238/360 [00:37<00:15,  7.73it/s]Extracting mistral-7b:  66%|██████▋   | 239/360 [00:37<00:15,  7.92it/s]Extracting mistral-7b:  67%|██████▋   | 240/360 [00:37<00:14,  8.04it/s]Extracting mistral-7b:  67%|██████▋   | 241/360 [00:37<00:30,  3.91it/s]Extracting mistral-7b:  67%|██████▋   | 242/360 [00:38<00:25,  4.64it/s]Extracting mistral-7b:  68%|██████▊   | 243/360 [00:38<00:22,  5.22it/s]Extracting mistral-7b:  68%|██████▊   | 244/360 [00:38<00:19,  5.91it/s]Extracting mistral-7b:  68%|██████▊   | 245/360 [00:38<00:17,  6.50it/s]Extracting mistral-7b:  68%|██████▊   | 246/360 [00:38<00:16,  6.97it/s]Extracting mistral-7b:  69%|██████▊   | 247/360 [00:38<00:14,  7.62it/s]Extracting mistral-7b:  69%|██████▉   | 248/360 [00:38<00:14,  7.86it/s]Extracting mistral-7b:  69%|██████▉   | 249/360 [00:38<00:13,  8.01it/s]Extracting mistral-7b:  69%|██████▉   | 250/360 [00:38<00:13,  8.44it/s]Extracting mistral-7b:  70%|██████▉   | 251/360 [00:39<00:27,  3.96it/s]Extracting mistral-7b:  70%|███████   | 252/360 [00:39<00:22,  4.70it/s]Extracting mistral-7b:  70%|███████   | 253/360 [00:39<00:19,  5.41it/s]Extracting mistral-7b:  71%|███████   | 254/360 [00:39<00:18,  5.89it/s]Extracting mistral-7b:  71%|███████   | 255/360 [00:40<00:16,  6.23it/s]Extracting mistral-7b:  71%|███████   | 256/360 [00:40<00:15,  6.75it/s]Extracting mistral-7b:  71%|███████▏  | 257/360 [00:40<00:14,  7.16it/s]Extracting mistral-7b:  72%|███████▏  | 258/360 [00:40<00:13,  7.48it/s]Extracting mistral-7b:  72%|███████▏  | 259/360 [00:40<00:12,  8.02it/s]Extracting mistral-7b:  72%|███████▏  | 260/360 [00:40<00:12,  8.19it/s]Extracting mistral-7b:  72%|███████▎  | 261/360 [00:41<00:27,  3.59it/s]Extracting mistral-7b:  73%|███████▎  | 262/360 [00:41<00:22,  4.32it/s]Extracting mistral-7b:  73%|███████▎  | 263/360 [00:41<00:19,  5.04it/s]Extracting mistral-7b:  73%|███████▎  | 264/360 [00:41<00:17,  5.57it/s]Extracting mistral-7b:  74%|███████▎  | 265/360 [00:41<00:14,  6.38it/s]Extracting mistral-7b:  74%|███████▍  | 266/360 [00:41<00:13,  7.10it/s]Extracting mistral-7b:  74%|███████▍  | 267/360 [00:41<00:12,  7.42it/s]Extracting mistral-7b:  74%|███████▍  | 268/360 [00:42<00:11,  7.72it/s]Extracting mistral-7b:  75%|███████▍  | 269/360 [00:42<00:11,  7.87it/s]Extracting mistral-7b:  75%|███████▌  | 270/360 [00:42<00:11,  7.96it/s]Extracting mistral-7b:  75%|███████▌  | 271/360 [00:42<00:22,  3.87it/s]Extracting mistral-7b:  76%|███████▌  | 272/360 [00:43<00:19,  4.60it/s]Extracting mistral-7b:  76%|███████▌  | 273/360 [00:43<00:16,  5.33it/s]Extracting mistral-7b:  76%|███████▌  | 274/360 [00:43<00:13,  6.17it/s]Extracting mistral-7b:  76%|███████▋  | 275/360 [00:43<00:12,  6.69it/s]Extracting mistral-7b:  77%|███████▋  | 276/360 [00:43<00:11,  7.15it/s]Extracting mistral-7b:  77%|███████▋  | 277/360 [00:43<00:11,  7.50it/s]Extracting mistral-7b:  77%|███████▋  | 278/360 [00:43<00:10,  7.72it/s]Extracting mistral-7b:  78%|███████▊  | 279/360 [00:43<00:10,  7.65it/s]Extracting mistral-7b:  78%|███████▊  | 280/360 [00:43<00:10,  7.60it/s]Extracting mistral-7b:  78%|███████▊  | 281/360 [00:44<00:23,  3.39it/s]Extracting mistral-7b:  78%|███████▊  | 282/360 [00:44<00:18,  4.21it/s]Extracting mistral-7b:  79%|███████▊  | 283/360 [00:44<00:15,  4.82it/s]Extracting mistral-7b:  79%|███████▉  | 284/360 [00:45<00:14,  5.38it/s]Extracting mistral-7b:  79%|███████▉  | 285/360 [00:45<00:12,  6.03it/s]Extracting mistral-7b:  79%|███████▉  | 286/360 [00:45<00:11,  6.58it/s]Extracting mistral-7b:  80%|███████▉  | 287/360 [00:45<00:10,  7.01it/s]Extracting mistral-7b:  80%|████████  | 288/360 [00:45<00:10,  7.08it/s]Extracting mistral-7b:  80%|████████  | 289/360 [00:45<00:09,  7.40it/s]Extracting mistral-7b:  81%|████████  | 290/360 [00:45<00:09,  7.67it/s]Extracting mistral-7b:  81%|████████  | 291/360 [00:46<00:20,  3.31it/s]Extracting mistral-7b:  81%|████████  | 292/360 [00:46<00:16,  4.12it/s]Extracting mistral-7b:  81%|████████▏ | 293/360 [00:46<00:13,  4.88it/s]Extracting mistral-7b:  82%|████████▏ | 294/360 [00:46<00:11,  5.59it/s]Extracting mistral-7b:  82%|████████▏ | 295/360 [00:46<00:10,  6.20it/s]Extracting mistral-7b:  82%|████████▏ | 296/360 [00:47<00:09,  6.74it/s]Extracting mistral-7b:  82%|████████▎ | 297/360 [00:47<00:08,  7.17it/s]Extracting mistral-7b:  83%|████████▎ | 298/360 [00:47<00:08,  7.49it/s]Extracting mistral-7b:  83%|████████▎ | 299/360 [00:47<00:07,  7.73it/s]Extracting mistral-7b:  83%|████████▎ | 300/360 [00:47<00:07,  7.87it/s]Extracting mistral-7b:  84%|████████▎ | 301/360 [00:48<00:16,  3.58it/s]Extracting mistral-7b:  84%|████████▍ | 302/360 [00:48<00:13,  4.22it/s]Extracting mistral-7b:  84%|████████▍ | 303/360 [00:48<00:11,  4.96it/s]Extracting mistral-7b:  84%|████████▍ | 304/360 [00:48<00:09,  5.81it/s]Extracting mistral-7b:  85%|████████▍ | 305/360 [00:48<00:08,  6.58it/s]Extracting mistral-7b:  85%|████████▌ | 306/360 [00:48<00:07,  7.26it/s]Extracting mistral-7b:  85%|████████▌ | 307/360 [00:48<00:07,  7.31it/s]Extracting mistral-7b:  86%|████████▌ | 308/360 [00:48<00:07,  7.34it/s]Extracting mistral-7b:  86%|████████▌ | 309/360 [00:49<00:06,  7.60it/s]Extracting mistral-7b:  86%|████████▌ | 310/360 [00:49<00:06,  8.11it/s]Extracting mistral-7b:  86%|████████▋ | 311/360 [00:49<00:13,  3.59it/s]Extracting mistral-7b:  87%|████████▋ | 312/360 [00:49<00:11,  4.31it/s]Extracting mistral-7b:  87%|████████▋ | 313/360 [00:50<00:09,  4.93it/s]Extracting mistral-7b:  87%|████████▋ | 314/360 [00:50<00:08,  5.49it/s]Extracting mistral-7b:  88%|████████▊ | 315/360 [00:50<00:07,  6.31it/s]Extracting mistral-7b:  88%|████████▊ | 316/360 [00:50<00:06,  7.04it/s]Extracting mistral-7b:  88%|████████▊ | 317/360 [00:50<00:05,  7.37it/s]Extracting mistral-7b:  88%|████████▊ | 318/360 [00:50<00:05,  7.95it/s]Extracting mistral-7b:  89%|████████▊ | 319/360 [00:50<00:05,  7.79it/s]Extracting mistral-7b:  89%|████████▉ | 320/360 [00:50<00:05,  7.90it/s]Extracting mistral-7b:  89%|████████▉ | 321/360 [00:51<00:10,  3.63it/s]Extracting mistral-7b:  89%|████████▉ | 322/360 [00:51<00:08,  4.36it/s]Extracting mistral-7b:  90%|████████▉ | 323/360 [00:51<00:07,  5.08it/s]Extracting mistral-7b:  90%|█████████ | 324/360 [00:51<00:06,  5.60it/s]Extracting mistral-7b:  90%|█████████ | 325/360 [00:52<00:05,  6.22it/s]Extracting mistral-7b:  91%|█████████ | 326/360 [00:52<00:05,  6.74it/s]Extracting mistral-7b:  91%|█████████ | 327/360 [00:52<00:04,  7.41it/s]Extracting mistral-7b:  91%|█████████ | 328/360 [00:52<00:04,  7.69it/s]Extracting mistral-7b:  91%|█████████▏| 329/360 [00:52<00:03,  7.88it/s]Extracting mistral-7b:  92%|█████████▏| 330/360 [00:52<00:03,  8.03it/s]Extracting mistral-7b:  92%|█████████▏| 331/360 [00:53<00:08,  3.52it/s]Extracting mistral-7b:  92%|█████████▏| 332/360 [00:53<00:06,  4.23it/s]Extracting mistral-7b:  92%|█████████▎| 333/360 [00:53<00:05,  4.94it/s]Extracting mistral-7b:  93%|█████████▎| 334/360 [00:53<00:04,  5.63it/s]Extracting mistral-7b:  93%|█████████▎| 335/360 [00:53<00:03,  6.26it/s]Extracting mistral-7b:  93%|█████████▎| 336/360 [00:53<00:03,  6.73it/s]Extracting mistral-7b:  94%|█████████▎| 337/360 [00:54<00:03,  6.90it/s]Extracting mistral-7b:  94%|█████████▍| 338/360 [00:54<00:03,  7.03it/s]Extracting mistral-7b:  94%|█████████▍| 339/360 [00:54<00:02,  7.38it/s]Extracting mistral-7b:  94%|█████████▍| 340/360 [00:54<00:02,  7.69it/s]Extracting mistral-7b:  95%|█████████▍| 341/360 [00:55<00:05,  3.53it/s]Extracting mistral-7b:  95%|█████████▌| 342/360 [00:55<00:04,  4.26it/s]Extracting mistral-7b:  95%|█████████▌| 343/360 [00:55<00:03,  4.99it/s]Extracting mistral-7b:  96%|█████████▌| 344/360 [00:55<00:02,  5.65it/s]Extracting mistral-7b:  96%|█████████▌| 345/360 [00:55<00:02,  6.25it/s]Extracting mistral-7b:  96%|█████████▌| 346/360 [00:55<00:02,  6.78it/s]Extracting mistral-7b:  96%|█████████▋| 347/360 [00:55<00:01,  7.19it/s]Extracting mistral-7b:  97%|█████████▋| 348/360 [00:55<00:01,  7.46it/s]Extracting mistral-7b:  97%|█████████▋| 349/360 [00:56<00:01,  7.67it/s]Extracting mistral-7b:  97%|█████████▋| 350/360 [00:56<00:01,  7.89it/s]Extracting mistral-7b:  98%|█████████▊| 351/360 [00:56<00:02,  3.48it/s]Extracting mistral-7b:  98%|█████████▊| 352/360 [00:56<00:01,  4.12it/s]Extracting mistral-7b:  98%|█████████▊| 353/360 [00:57<00:01,  4.84it/s]Extracting mistral-7b:  98%|█████████▊| 354/360 [00:57<00:01,  5.54it/s]Extracting mistral-7b:  99%|█████████▊| 355/360 [00:57<00:00,  6.17it/s]Extracting mistral-7b:  99%|█████████▉| 356/360 [00:57<00:00,  6.71it/s]Extracting mistral-7b:  99%|█████████▉| 357/360 [00:57<00:00,  7.11it/s]Extracting mistral-7b:  99%|█████████▉| 358/360 [00:57<00:00,  7.47it/s]Extracting mistral-7b: 100%|█████████▉| 359/360 [00:57<00:00,  7.77it/s]Extracting mistral-7b: 100%|██████████| 360/360 [00:57<00:00,  7.99it/s]Extracting mistral-7b: 100%|██████████| 360/360 [00:57<00:00,  6.22it/s]
+Saving activations to: /workspace/empathetic-language-bandwidth/experiments/tripartite/activations/mistral-7b_activations.json
+✓ Saved 720 activation sets
+
+============================================================
+Activation extraction complete!
+Output directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/activations
+============================================================
+Found 1 activation file(s)
+
+============================================================
+Training SAE for: mistral-7b
+============================================================
+Model: 32 layers, d_model=4096
+Training SAE on layer 16
+Prepared 720 activation samples
+
+Training SAE...
+  Epoch 10/100: Loss=0.0014, Recon=0.0005, Sparsity=0.0947
+  Epoch 20/100: Loss=0.0010, Recon=0.0003, Sparsity=0.0655
+  Epoch 30/100: Loss=0.0007, Recon=0.0003, Sparsity=0.0461
+  Epoch 40/100: Loss=0.0005, Recon=0.0002, Sparsity=0.0253
+  Epoch 50/100: Loss=0.0004, Recon=0.0002, Sparsity=0.0197
+  Epoch 60/100: Loss=0.0004, Recon=0.0002, Sparsity=0.0169
+  Epoch 70/100: Loss=0.0003, Recon=0.0002, Sparsity=0.0153
+  Epoch 80/100: Loss=0.0003, Recon=0.0002, Sparsity=0.0142
+  Epoch 90/100: Loss=0.0003, Recon=0.0002, Sparsity=0.0134
+  Epoch 100/100: Loss=0.0003, Recon=0.0002, Sparsity=0.0127
+
+Analyzing SAE clusters...
+
+Cluster Analysis:
+
+  2 clusters: Silhouette=0.259
+    Cluster 0 (n=180): {'response_1': 60, 'response_2': 60, 'response_3': 60}
+    Cluster 1 (n=540): {'cognitive': 90, 'affective': 90, 'instrumental': 90, 'factual': 90, 'informational': 90, 'procedural': 90}
+
+  3 clusters: Silhouette=0.238
+    Cluster 0 (n=180): {'response_1': 60, 'response_2': 60, 'response_3': 60}
+    Cluster 1 (n=234): {'cognitive': 40, 'affective': 42, 'instrumental': 27, 'factual': 43, 'informational': 43, 'procedural': 39}
+    Cluster 2 (n=306): {'instrumental': 63, 'cognitive': 50, 'affective': 48, 'informational': 47, 'procedural': 51, 'factual': 47}
+
+  4 clusters: Silhouette=0.207
+    Cluster 0 (n=178): {'response_1': 60, 'response_2': 59, 'response_3': 59}
+    Cluster 1 (n=164): {'cognitive': 42, 'affective': 43, 'instrumental': 29, 'informational': 16, 'factual': 16, 'procedural': 18}
+    Cluster 2 (n=265): {'instrumental': 54, 'cognitive': 45, 'affective': 43, 'informational': 42, 'procedural': 42, 'factual': 39}
+    Cluster 3 (n=113): {'instrumental': 7, 'cognitive': 3, 'affective': 4, 'response_2': 1, 'response_3': 1, 'factual': 35, 'informational': 32, 'procedural': 30}
+
+  5 clusters: Silhouette=0.204
+    Cluster 0 (n=44): {'instrumental': 19, 'cognitive': 1, 'response_3': 7, 'response_1': 8, 'procedural': 5, 'factual': 4}
+    Cluster 1 (n=239): {'cognitive': 44, 'affective': 43, 'instrumental': 36, 'informational': 42, 'procedural': 37, 'factual': 37}
+    Cluster 2 (n=113): {'instrumental': 7, 'cognitive': 3, 'affective': 3, 'response_2': 1, 'response_3': 1, 'factual': 35, 'informational': 32, 'procedural': 31}
+    Cluster 3 (n=163): {'response_1': 52, 'response_2': 59, 'response_3': 52}
+    Cluster 4 (n=161): {'cognitive': 42, 'affective': 44, 'instrumental': 28, 'informational': 16, 'factual': 14, 'procedural': 17}
+
+  6 clusters: Silhouette=0.148
+    Cluster 0 (n=163): {'instrumental': 47, 'cognitive': 39, 'affective': 39, 'informational': 20, 'factual': 9, 'procedural': 9}
+    Cluster 1 (n=56): {'response_1': 20, 'response_2': 25, 'response_3': 11}
+    Cluster 2 (n=157): {'cognitive': 39, 'affective': 42, 'instrumental': 30, 'informational': 16, 'factual': 15, 'procedural': 15}
+    Cluster 3 (n=124): {'response_1': 40, 'response_2': 35, 'response_3': 49}
+    Cluster 4 (n=100): {'cognitive': 6, 'instrumental': 6, 'affective': 5, 'factual': 28, 'informational': 29, 'procedural': 26}
+    Cluster 5 (n=120): {'instrumental': 7, 'cognitive': 6, 'affective': 4, 'factual': 38, 'informational': 25, 'procedural': 40}
+
+✓ Saved SAE to: /workspace/empathetic-language-bandwidth/experiments/tripartite/saes/mistral-7b_layer16_sae.pt
+
+============================================================
+SAE training complete!
+============================================================
+Found 1 activation file(s)
+
+============================================================
+Training probe for: mistral-7b
+============================================================
+Model: 32 layers, d_model=4096
+Training probe on layer 16
+Prepared 270 samples
+Split: Train=172, Val=44, Test=54
+
+Training probe...
+  Epoch 10/50: Train Loss=0.9048, Val Loss=0.9045, Val Acc=0.8409
+  Epoch 20/50: Train Loss=0.7277, Val Loss=0.7378, Val Acc=0.9545
+  Epoch 30/50: Train Loss=0.5886, Val Loss=0.6040, Val Acc=1.0000
+  Epoch 40/50: Train Loss=0.4817, Val Loss=0.5004, Val Acc=1.0000
+  Epoch 50/50: Train Loss=0.4000, Val Loss=0.4209, Val Acc=1.0000
+
+Evaluating probe...
+
+Results:
+  Accuracy: 0.9815
+  Macro AUROC: 1.0000
+  AUROC per class:
+    cognitive: 1.0000
+    affective: 1.0000
+    instrumental: 1.0000
+
+Separation metrics:
+  cosine_cognitive_affective: -0.2171
+  cosine_cognitive_instrumental: -0.3944
+  cosine_affective_instrumental: -0.4374
+
+✓ Saved results to: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/mistral-7b_layer16_probe.json
+
+============================================================
+Probe training complete!
+Summary: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/probe_summary.json
+============================================================
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:195: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:206: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:226: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:235: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+SAE directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/saes
+Probe directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b
+
+Found 1 model(s): mistral-7b
+
+============================================================
+Analyzing: mistral-7b
+============================================================
+  Layer: 16
+  Optimal SAE clusters: 2 (silhouette=0.259)
+
+  Convergence Metrics:
+    Optimal K: 2 (theory: 3)
+    K Match: False
+    Mean Cluster Purity: 0.250
+
+============================================================
+Creating Convergence Report
+============================================================
+
+✓ Saved convergence report: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/convergence_report.json
+
+Overall Summary:
+  Models analyzed: 1
+  K match rate: 0.00%
+  Mean cluster purity: 0.250
+  Conclusion: WEAK_CONVERGENCE
+✓ Saved visualization: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/convergence_visualization.png
+
+============================================================
+Convergence analysis complete!
+============================================================
+======================================================================
+TRIPARTITE EMPATHY DECOMPOSITION - GPU EXPERIMENTS
+======================================================================
+Start time: 2026-01-27 23:22:35.480492
+Models: mistral-7b
+Data directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/data
+Output directory: /workspace/empathetic-language-bandwidth/experiments/tripartite
+Device: cuda
+======================================================================
+
+
+======================================================================
+STEP 1: ACTIVATION EXTRACTION
+======================================================================
+
+======================================================================
+Extracting activations: mistral-7b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/extract_activations.py --model mistral-7b --data-dir /workspace/empathetic-language-bandwidth/experiments/tripartite/data --output /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --batch-size 2 --device cuda
+
+
+✓ Extracting activations: mistral-7b completed successfully
+
+
+======================================================================
+STEP 2: EXPERIMENT A - SAE TRAINING (Geometry-Driven)
+======================================================================
+
+======================================================================
+Training SAE: mistral-7b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_saes.py --model mistral-7b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/saes --epochs 100 --device cuda
+
+
+✓ Training SAE: mistral-7b completed successfully
+
+
+======================================================================
+STEP 3: EXPERIMENT B - PROBE TRAINING (Theory-Driven)
+======================================================================
+
+======================================================================
+Training probe: mistral-7b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_probes.py --model mistral-7b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b --epochs 50 --device cuda
+
+
+✓ Training probe: mistral-7b completed successfully
+
+
+======================================================================
+STEP 4: CONVERGENCE ANALYSIS
+======================================================================
+
+======================================================================
+Convergence analysis
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py --results-dir /workspace/empathetic-language-bandwidth/experiments/tripartite/results
+
+
+✓ Convergence analysis completed successfully
+
+
+======================================================================
+ALL EXPERIMENTS COMPLETE!
+======================================================================
+
+✓ Saved experiment summary: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_summary.json
+
+Duration: 0.07 hours
+Outputs:
+  Activations: 1
+  SAEs: 1
+  Probes: 2
+  Convergence report: True
+
+======================================================================
+SUCCESS - Ready for analysis and reporting
+======================================================================
