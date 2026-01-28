@@ -67,9 +67,9 @@ def run_control_analysis(model, data_dir, layer):
     print("="*60)
 
     with open(data_dir / 'triplets_filtered.json') as f:
-        empathy_data = json.load(f)
+        empathy_data = json.load(f)['triplets']
     with open(data_dir / 'controls_non_empathy.json') as f:
-        control_data = json.load(f)
+        control_data = json.load(f)['items']
 
     # Prepare empathy prompts
     empathy_prompts, empathy_labels = [], []
@@ -135,7 +135,7 @@ def run_multilayer_sweep(model, data_dir, layers):
     print("="*60)
 
     with open(data_dir / 'triplets_filtered.json') as f:
-        data = json.load(f)
+        data = json.load(f)['triplets']
 
     prompts, labels = [], []
     for item in data[:30]:
@@ -170,7 +170,7 @@ def run_auroc_analysis(model, data_dir, layer):
     print("="*60)
 
     with open(data_dir / 'triplets_filtered.json') as f:
-        data = json.load(f)
+        data = json.load(f)['triplets']
 
     prompts, labels = [], []
     for item in data[:60]:
