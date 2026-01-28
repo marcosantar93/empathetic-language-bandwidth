@@ -12,13 +12,17 @@ This study investigates whether empathetic language representations in LLMs deco
 
 ### Key Findings
 
-1. **Strong Separation Confirmed**: Mean cosine similarity between Cognitive and Affective empathy directions is **-0.29** across all models, indicating near-orthogonal subspaces (target: < 0.5).
+1. **Separation Confirmed but Non-Specific**: Mean cosine similarity between Cognitive and Affective empathy directions is **-0.29** across all models. However, **validation experiments revealed non-empathy controls show identical structure** (mean -0.49 for both conditions).
 
-2. **Consistent Across Architectures**: All 4 models (Qwen, Llama-3, Llama-3.1, Mistral) show negative cosine similarities, validating the tripartite hypothesis is architecture-independent.
+2. **Consistent Across Architectures**: All tested models show the same separation pattern, but this likely reflects general response distinctiveness rather than empathy-specific encoding.
 
-3. **Weak SAE-Probe Convergence**: SAE clustering identifies k=2 clusters vs. theoretical k=3, with mean silhouette score of 0.28, suggesting empathy structure is more complex than initially theorized.
+3. **Weak SAE-Probe Convergence**: SAE clustering identifies k=2 clusters vs. theoretical k=3, with mean silhouette score of 0.28.
 
-4. **Instrumental Empathy Most Distinct**: Affective-Instrumental separation (-0.40 mean) exceeds Cognitive-Affective separation (-0.29), indicating problem-solving responses occupy the most distinct subspace.
+4. **Critical Validation Finding**: Control analysis shows the tripartite separation is **not unique to empathy**—any set of distinct response types produces similar geometric structure.
+
+### Revised Conclusion
+
+The tripartite separation is real but not empathy-specific. This is an important methodological finding: geometric separation alone does not indicate concept-specific neural encoding. Future work should focus on causal validation and behavioral correlation.
 
 ---
 
@@ -141,9 +145,86 @@ Each scenario includes matched Cognitive, Affective, and Instrumental responses 
 
 ---
 
-## 4. Cross-Model Analysis
+## 4. Validation Experiments
 
-### 4.1 Consistency of Separation
+To strengthen the findings and test their specificity, we conducted three additional validation experiments on models supported by TransformerLens 1.17.0.
+
+### 4.1 Control Analysis: Empathy vs Non-Empathy Structure
+
+**Question**: Are the negative cosine similarities specific to empathy, or do they appear in any set of distinct response types?
+
+**Method**:
+- Extracted activations for both empathy triplets (Cognitive/Affective/Instrumental) and non-empathy controls (3 arbitrary response types per scenario)
+- Trained probes and computed cosine similarities for both conditions
+- Compared the structure
+
+**Results**:
+
+| Model | Empathy Mean cos | Control Mean cos | Difference |
+|-------|------------------|------------------|------------|
+| mistral-7b | **-0.484** | -0.490 | +0.006 |
+| llama-3-8b | **-0.488** | -0.493 | +0.005 |
+| gemma-7b | **-0.494** | -0.496 | +0.002 |
+| **Mean** | **-0.489** | **-0.493** | **+0.004** |
+
+**Critical Finding**: The non-empathy control condition shows nearly identical cosine structure to the empathy condition. This suggests:
+1. The negative correlations reflect **general response diversity**, not empathy-specific structure
+2. Any set of distinct response types will show similar separation
+3. The tripartite "separation" may be an artifact of response distinctiveness rather than empathy geometry
+
+### 4.2 Multi-Layer Sweep
+
+**Question**: At which layer does the Cognitive-Affective separation emerge?
+
+**Method**: Extracted activations at layers 4, 8, 12, 16, 20, and 24 for each model.
+
+**Results**:
+
+| Layer | mistral-7b | llama-3-8b | gemma-7b | Mean |
+|-------|------------|------------|----------|------|
+| 4 | -0.375 | -0.421 | -0.545 | -0.447 |
+| 8 | -0.533 | -0.554 | -0.571 | -0.553 |
+| 12 | -0.628 | -0.619 | -0.617 | -0.621 |
+| 16 | -0.735 | -0.701 | -0.646 | -0.694 |
+| 20 | **-0.775** | -0.678 | -0.728 | -0.727 |
+| 24 | -0.774 | — | **-0.769** | -0.771 |
+
+**Finding**: Separation increases monotonically with layer depth, peaking around layers 20-24. This is consistent with higher layers encoding more abstract, task-relevant features.
+
+### 4.3 AUROC Analysis
+
+**Question**: Can linear probes perfectly separate empathy subtypes?
+
+**Method**: 5-fold cross-validated AUROC for binary classification between each pair of empathy types.
+
+**Results**:
+
+| Model | Cog vs Aff | Cog vs Instr | Aff vs Instr | Mean |
+|-------|------------|--------------|--------------|------|
+| mistral-7b | 1.000 | 1.000 | 1.000 | **1.000** |
+| llama-3-8b | 1.000 | 1.000 | 1.000 | **1.000** |
+| gemma-7b | 1.000 | 1.000 | 1.000 | **1.000** |
+
+**Finding**: Perfect linear separability across all models and pairs. This confirms empathy subtypes are linearly decodable, though the control analysis suggests this may reflect response distinctiveness rather than empathy-specific encoding.
+
+### 4.4 Implications for Original Findings
+
+The validation experiments introduce important caveats:
+
+| Original Claim | Validation Finding | Revised Interpretation |
+|----------------|-------------------|------------------------|
+| Empathy subtypes occupy distinct subspaces | Control responses show same structure | May reflect response diversity, not empathy-specific geometry |
+| cos(Cog,Aff) < 0.5 confirms tripartite hypothesis | Control cosines equally negative | Separation not specific to empathy |
+| Architecture-independent pattern | Confirmed | Still valid |
+| Linear separability (AUROC=1.0) | Confirmed | Still valid |
+
+**Revised Conclusion**: While empathy subtypes are clearly distinguishable by linear probes, the control analysis reveals this separability is not unique to empathy. The negative cosine similarities appear to be a general property of any set of meaningfully distinct response types, rather than evidence for empathy-specific neural circuitry.
+
+---
+
+## 5. Cross-Model Analysis
+
+### 5.1 Consistency of Separation
 
 ```
 Cognitive-Affective Cosine Similarity by Model:
@@ -158,7 +239,7 @@ Mistral-7B    █████████████████████░
 
 **Finding**: Separation is consistent across all architectures, with Qwen showing the strongest and Mistral the weakest Cognitive-Affective distinction.
 
-### 4.2 Ranking of Separations
+### 5.2 Ranking of Separations
 
 Across all models, the empathy subtype pairs rank consistently:
 
@@ -168,7 +249,7 @@ Across all models, the empathy subtype pairs rank consistently:
 
 This suggests Instrumental (problem-solving) empathy is the most representationally distinct, while Cognitive and Affective share more features.
 
-### 4.3 Model Family Effects
+### 5.3 Model Family Effects
 
 | Family | Mean cos(Cog,Aff) | Mean Silhouette |
 |--------|-------------------|-----------------|
@@ -180,75 +261,92 @@ Qwen shows both the strongest probe separation and best SAE clustering, suggesti
 
 ---
 
-## 5. Discussion
+## 6. Discussion
 
-### 5.1 Support for Tripartite Hypothesis (H1: Confirmed)
+### 6.1 Revised Assessment of Tripartite Hypothesis
 
-The primary finding is strong: **empathy subtypes occupy distinct subspaces**. With mean cos(Cog, Aff) = -0.29, the null hypothesis of unified empathy representation is rejected. The negative values indicate the directions are not merely uncorrelated but actively point away from each other.
+The validation experiments significantly revise our interpretation:
 
-### 5.2 Weak SAE-Probe Convergence (H2: Partially Supported)
+**Original Claim**: Empathy subtypes occupy distinct subspaces (H1: Confirmed)
+**Revised Assessment**: **H1: Confirmed but non-specific**
 
-The failure of SAEs to recover k=3 clusters has several possible explanations:
+While empathy subtypes are indeed separable (cos(Cog, Aff) = -0.29), the control analysis reveals this separation is **not unique to empathy**. Non-empathy response types show identical cosine structure (mean -0.49 for both conditions). This suggests:
 
-1. **Dataset Limitation**: 240 samples may be insufficient for sparse feature learning
-2. **Hierarchical Structure**: Empathy may have nested structure (empathy vs. non-empathy at top level, then subtypes)
-3. **Feature Superposition**: SAE features may represent empathy at different granularities
+1. The negative cosines reflect **response distinctiveness**, not empathy-specific geometry
+2. Any sufficiently different response types would show similar separation
+3. The finding is real but less meaningful than initially claimed
 
-### 5.3 Architecture Independence (H3: Confirmed)
+### 6.2 What the Results Actually Show
 
-All 4 models from 3 different architecture families show the same pattern:
-- Negative Cognitive-Affective cosine
-- Negative Cognitive-Instrumental cosine
-- Negative Affective-Instrumental cosine
+| What We Found | What It Means |
+|---------------|---------------|
+| Negative cosines between empathy subtypes | Responses are distinguishable |
+| Same structure in non-empathy controls | Not empathy-specific |
+| Perfect AUROC (1.0) | Linear probes work |
+| Layer-depth correlation | Higher layers encode more abstract features |
 
-This strongly suggests the tripartite structure is learned from training data, not an artifact of specific architectures.
+### 6.3 SAE-Probe Convergence (H2: Partially Supported)
 
-### 5.4 Implications
+The failure of SAEs to recover k=3 clusters remains unexplained but is now less concerning given the control analysis suggests we may not have been measuring empathy-specific structure at all.
 
-1. **For Safety**: Empathy steering may need to target specific subtypes rather than "empathy" broadly
-2. **For Alignment**: Models distinguish perspective-taking from emotional support
-3. **For Applications**: Fine-tuning could enhance specific empathy types (e.g., more Cognitive for therapy bots, more Instrumental for support agents)
+### 6.4 Architecture Independence (H3: Confirmed)
+
+The consistency across architectures remains valid—all models show the same separation pattern. However, this may simply confirm that all models learn to distinguish different response types, not that they encode empathy specifically.
+
+### 6.5 Revised Implications
+
+1. **For Safety**: Empathy steering via direction vectors may work but is not targeting "empathy" specifically—just response style
+2. **For Alignment**: Models distinguish response types generally, not empathy subtypes specifically
+3. **For Methodology**: Control conditions are essential for validating specificity of geometric findings
 
 ---
 
-## 6. Conclusions
+## 7. Conclusions
 
-### 6.1 Summary of Findings
+### 7.1 Summary of Findings
 
 | Hypothesis | Status | Evidence |
 |------------|--------|----------|
-| H1: Separation | **Confirmed** | cos(Cog,Aff) = -0.29 < 0.5 |
+| H1: Separation | **Confirmed (non-specific)** | cos(Cog,Aff) = -0.29, but controls show same pattern |
 | H2: Convergence | **Partial** | SAE k=2 vs theory k=3 |
-| H3: Consistency | **Confirmed** | All 4 models show negative cosines |
+| H3: Consistency | **Confirmed** | All models show negative cosines |
+| **H4: Specificity** | **NOT Confirmed** | Control cosines match empathy cosines |
 
-### 6.2 Main Contributions
+### 7.2 Main Contributions
 
-1. **First empirical validation** that LLMs represent empathy subtypes in distinct subspaces
-2. **Cross-architecture confirmation** across Qwen, Llama, and Mistral families
-3. **Quantitative metrics** for measuring empathy representation geometry
-4. **Open methodology** for future replication and extension
+1. **Validation methodology**: Demonstrated importance of control conditions for geometric interpretability claims
+2. **Cross-architecture analysis**: Confirmed patterns are consistent but non-specific to empathy
+3. **Quantitative metrics**: Established framework for measuring representation geometry
+4. **Negative result**: Showed that cosine separation alone doesn't indicate concept-specific encoding
 
-### 6.3 Limitations
+### 7.3 Key Takeaway
+
+**The tripartite separation is real but not empathy-specific.** Linear probes can distinguish Cognitive, Affective, and Instrumental responses, but the same geometric structure appears for any set of distinct response types. This is a cautionary finding for representation engineering: geometric separation may reflect response distinctiveness rather than concept-specific neural circuitry.
+
+### 7.4 Limitations
 
 1. **Dataset size**: 240 samples limits SAE training quality
-2. **Single layer**: Only analyzed one layer per model
+2. **Single layer**: Only analyzed one layer per model (validation added multi-layer)
 3. **English only**: Results may not transfer to other languages
 4. **Model scale**: Only tested 7-8B models
+5. **Control scope**: Only tested one type of non-empathy control
 
 ---
 
-## 7. Future Work
+## 8. Future Work
 
-1. **Larger Dataset**: Generate 1000+ triplets to improve SAE convergence
-2. **Layer-wise Analysis**: Track empathy emergence across all layers
-3. **Causal Validation**: Ablation experiments to test if directions are causally involved
-4. **Scaling Laws**: Test whether larger models show stronger separation
-5. **Cross-lingual**: Validate in non-English languages
-6. **Human Evaluation**: Correlate geometric measures with human-rated empathy quality
+Given the control analysis findings, future work should focus on:
+
+1. **Finding Empathy-Specific Signatures**: Design experiments that isolate empathy from general response diversity
+2. **Causal Validation**: Ablation experiments to test if directions causally affect empathy quality
+3. **More Control Conditions**: Test multiple types of non-empathy controls to bound the specificity
+4. **Behavioral Correlation**: Correlate geometric measures with human-rated empathy to validate relevance
+5. **Steering Experiments**: Test whether steering along "empathy" directions actually increases empathy vs. just changing response style
+6. **Cross-concept Comparison**: Compare empathy geometry to other concepts (humor, formality, etc.) to establish baselines
 
 ---
 
-## 8. Appendix
+## 9. Appendix
 
 ### A. Statistical Summary
 
