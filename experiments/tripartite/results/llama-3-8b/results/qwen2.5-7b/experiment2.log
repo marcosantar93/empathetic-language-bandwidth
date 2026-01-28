@@ -1,0 +1,206 @@
+Found 1 activation file(s)
+
+============================================================
+Training SAE for: qwen2.5-7b
+============================================================
+Model: 28 layers, d_model=3584
+Training SAE on layer 14
+Prepared 720 activation samples
+
+Training SAE...
+  Epoch 10/100: Loss=0.0983, Recon=0.0594, Sparsity=3.8885
+  Epoch 20/100: Loss=0.0813, Recon=0.0468, Sparsity=3.4496
+  Epoch 30/100: Loss=0.0701, Recon=0.0395, Sparsity=3.0578
+  Epoch 40/100: Loss=0.0616, Recon=0.0342, Sparsity=2.7361
+  Epoch 50/100: Loss=0.0540, Recon=0.0301, Sparsity=2.3939
+  Epoch 60/100: Loss=0.0473, Recon=0.0269, Sparsity=2.0345
+  Epoch 70/100: Loss=0.0411, Recon=0.0246, Sparsity=1.6449
+  Epoch 80/100: Loss=0.0346, Recon=0.0220, Sparsity=1.2650
+  Epoch 90/100: Loss=0.0299, Recon=0.0205, Sparsity=0.9371
+  Epoch 100/100: Loss=0.0258, Recon=0.0188, Sparsity=0.6955
+
+Analyzing SAE clusters...
+
+Cluster Analysis:
+
+  2 clusters: Silhouette=0.411
+    Cluster 0 (n=514): {'cognitive': 90, 'affective': 90, 'instrumental': 90, 'response_3': 5, 'response_1': 1, 'response_2': 2, 'procedural': 80, 'factual': 79, 'informational': 77}
+    Cluster 1 (n=206): {'response_1': 59, 'response_2': 58, 'response_3': 55, 'factual': 11, 'informational': 13, 'procedural': 10}
+
+  3 clusters: Silhouette=0.281
+    Cluster 0 (n=183): {'cognitive': 8, 'affective': 5, 'instrumental': 7, 'factual': 55, 'informational': 56, 'procedural': 52}
+    Cluster 1 (n=175): {'response_1': 59, 'response_2': 59, 'response_3': 57}
+    Cluster 2 (n=362): {'cognitive': 82, 'affective': 85, 'instrumental': 83, 'response_1': 1, 'response_3': 3, 'response_2': 1, 'factual': 35, 'informational': 34, 'procedural': 38}
+
+  4 clusters: Silhouette=0.299
+    Cluster 0 (n=181): {'cognitive': 7, 'affective': 4, 'instrumental': 7, 'factual': 55, 'informational': 56, 'procedural': 52}
+    Cluster 1 (n=359): {'cognitive': 83, 'affective': 86, 'instrumental': 83, 'factual': 35, 'informational': 34, 'procedural': 38}
+    Cluster 2 (n=45): {'response_1': 15, 'response_2': 21, 'response_3': 9}
+    Cluster 3 (n=135): {'response_1': 45, 'response_2': 39, 'response_3': 51}
+
+  5 clusters: Silhouette=0.275
+    Cluster 0 (n=222): {'cognitive': 43, 'affective': 44, 'instrumental': 44, 'informational': 32, 'factual': 29, 'procedural': 30}
+    Cluster 1 (n=135): {'response_1': 45, 'response_2': 39, 'response_3': 51}
+    Cluster 2 (n=184): {'cognitive': 44, 'affective': 44, 'instrumental': 43, 'factual': 19, 'informational': 16, 'procedural': 18}
+    Cluster 3 (n=134): {'cognitive': 3, 'affective': 2, 'instrumental': 3, 'factual': 42, 'informational': 42, 'procedural': 42}
+    Cluster 4 (n=45): {'response_1': 15, 'response_2': 21, 'response_3': 9}
+
+  6 clusters: Silhouette=0.260
+    Cluster 0 (n=166): {'cognitive': 35, 'affective': 35, 'instrumental': 39, 'factual': 21, 'informational': 17, 'procedural': 19}
+    Cluster 1 (n=105): {'cognitive': 1, 'affective': 2, 'instrumental': 1, 'factual': 33, 'informational': 34, 'procedural': 34}
+    Cluster 2 (n=45): {'response_1': 15, 'response_2': 21, 'response_3': 9}
+    Cluster 3 (n=150): {'cognitive': 14, 'affective': 12, 'instrumental': 18, 'informational': 36, 'procedural': 35, 'factual': 35}
+    Cluster 4 (n=135): {'response_1': 45, 'response_2': 39, 'response_3': 51}
+    Cluster 5 (n=119): {'cognitive': 40, 'affective': 41, 'instrumental': 32, 'factual': 1, 'informational': 3, 'procedural': 2}
+
+✓ Saved SAE to: /workspace/empathetic-language-bandwidth/experiments/tripartite/saes/qwen2.5-7b_layer14_sae.pt
+
+============================================================
+SAE training complete!
+============================================================
+Found 1 activation file(s)
+
+============================================================
+Training probe for: qwen2.5-7b
+============================================================
+Model: 28 layers, d_model=3584
+Training probe on layer 14
+Prepared 270 samples
+Split: Train=172, Val=44, Test=54
+
+Training probe...
+  Epoch 10/50: Train Loss=0.5500, Val Loss=0.5397, Val Acc=0.8182
+  Epoch 20/50: Train Loss=0.2169, Val Loss=0.1982, Val Acc=1.0000
+  Epoch 30/50: Train Loss=0.1069, Val Loss=0.0998, Val Acc=1.0000
+  Epoch 40/50: Train Loss=0.0683, Val Loss=0.0648, Val Acc=1.0000
+  Epoch 50/50: Train Loss=0.0499, Val Loss=0.0483, Val Acc=1.0000
+
+Evaluating probe...
+
+Results:
+  Accuracy: 1.0000
+  Macro AUROC: 1.0000
+  AUROC per class:
+    cognitive: 1.0000
+    affective: 1.0000
+    instrumental: 1.0000
+
+Separation metrics:
+  cosine_cognitive_affective: -0.3221
+  cosine_cognitive_instrumental: -0.2869
+  cosine_affective_instrumental: -0.3608
+
+✓ Saved results to: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/qwen2.5-7b_layer14_probe.json
+
+============================================================
+Probe training complete!
+Summary: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b/probe_summary.json
+============================================================
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:195: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:206: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:226: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+/workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py:235: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(models, rotation=45)
+SAE directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/saes
+Probe directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b
+
+Found 1 model(s): qwen2.5-7b
+
+============================================================
+Analyzing: qwen2.5-7b
+============================================================
+  Layer: 14
+  Optimal SAE clusters: 2 (silhouette=0.411)
+
+  Convergence Metrics:
+    Optimal K: 2 (theory: 3)
+    K Match: False
+    Mean Cluster Purity: 0.231
+
+============================================================
+Creating Convergence Report
+============================================================
+
+✓ Saved convergence report: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/convergence_report.json
+
+Overall Summary:
+  Models analyzed: 1
+  K match rate: 0.00%
+  Mean cluster purity: 0.231
+  Conclusion: WEAK_CONVERGENCE
+✓ Saved visualization: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/convergence_visualization.png
+
+============================================================
+Convergence analysis complete!
+============================================================
+======================================================================
+TRIPARTITE EMPATHY DECOMPOSITION - GPU EXPERIMENTS
+======================================================================
+Start time: 2026-01-27 23:27:06.657646
+Models: qwen2.5-7b
+Data directory: /workspace/empathetic-language-bandwidth/experiments/tripartite/data
+Output directory: /workspace/empathetic-language-bandwidth/experiments/tripartite
+Device: cuda
+======================================================================
+
+Skipping activation extraction (using existing)
+
+
+======================================================================
+STEP 2: EXPERIMENT A - SAE TRAINING (Geometry-Driven)
+======================================================================
+
+======================================================================
+Training SAE: qwen2.5-7b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_saes.py --model qwen2.5-7b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/saes --epochs 100 --device cuda
+
+
+✓ Training SAE: qwen2.5-7b completed successfully
+
+
+======================================================================
+STEP 3: EXPERIMENT B - PROBE TRAINING (Theory-Driven)
+======================================================================
+
+======================================================================
+Training probe: qwen2.5-7b
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/train_probes.py --model qwen2.5-7b --activations /workspace/empathetic-language-bandwidth/experiments/tripartite/activations --output /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_b --epochs 50 --device cuda
+
+
+✓ Training probe: qwen2.5-7b completed successfully
+
+
+======================================================================
+STEP 4: CONVERGENCE ANALYSIS
+======================================================================
+
+======================================================================
+Convergence analysis
+======================================================================
+Command: python /workspace/empathetic-language-bandwidth/experiments/tripartite/scripts/convergence_analysis.py --results-dir /workspace/empathetic-language-bandwidth/experiments/tripartite/results
+
+
+✓ Convergence analysis completed successfully
+
+
+======================================================================
+ALL EXPERIMENTS COMPLETE!
+======================================================================
+
+✓ Saved experiment summary: /workspace/empathetic-language-bandwidth/experiments/tripartite/results/experiment_summary.json
+
+Duration: 0.01 hours
+Outputs:
+  Activations: 1
+  SAEs: 1
+  Probes: 2
+  Convergence report: True
+
+======================================================================
+SUCCESS - Ready for analysis and reporting
+======================================================================

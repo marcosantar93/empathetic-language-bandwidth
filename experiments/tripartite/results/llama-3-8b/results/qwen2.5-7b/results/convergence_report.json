@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "n_models": 1,
+    "k_match_rate": 0.0,
+    "mean_cluster_purity": 0.23075252162744134,
+    "mean_silhouette_score": 0.4106031656265259,
+    "convergence_conclusion": "WEAK_CONVERGENCE"
+  },
+  "per_model": {
+    "qwen2.5-7b": {
+      "optimal_k": 2,
+      "silhouette_score": 0.4106031656265259,
+      "theoretical_k": 3,
+      "k_match": false,
+      "cluster_composition": {
+        "cluster_purity": {
+          "0": {
+            "dominant_type": "cognitive",
+            "purity": 0.17509727626459143,
+            "distribution": {
+              "cognitive": 0.17509727626459143,
+              "affective": 0.17509727626459143,
+              "instrumental": 0.17509727626459143,
+              "response_3": 0.009727626459143969,
+              "response_1": 0.0019455252918287938,
+              "response_2": 0.0038910505836575876,
+              "procedural": 0.1556420233463035,
+              "factual": 0.15369649805447472,
+              "informational": 0.14980544747081712
+            }
+          },
+          "1": {
+            "dominant_type": "response_1",
+            "purity": 0.28640776699029125,
+            "distribution": {
+              "response_1": 0.28640776699029125,
+              "response_2": 0.2815533980582524,
+              "response_3": 0.2669902912621359,
+              "factual": 0.05339805825242718,
+              "informational": 0.06310679611650485,
+              "procedural": 0.04854368932038835
+            }
+          }
+        },
+        "mean_purity": 0.23075252162744134,
+        "high_purity_threshold": 0.7,
+        "high_purity_clusters": 0
+      },
+      "probe_separation": {
+        "cosine_cognitive_affective": -0.32212933897972107,
+        "cosine_cognitive_instrumental": -0.2869415879249573,
+        "cosine_affective_instrumental": -0.3608267605304718
+      }
+    }
+  }
+}

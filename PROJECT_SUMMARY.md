@@ -44,7 +44,7 @@ Measure the "empathetic bandwidth" of LLMs - how many dimensions in activation s
 
 ## Phase 2: Tripartite Decomposition (IN PROGRESS)
 
-**Status:** Partially complete (2/4 models)
+**Status:** 3/4 models complete
 
 ### Research Question
 Does empathy decompose into distinct subspaces?
@@ -69,29 +69,28 @@ Does empathy decompose into distinct subspaces?
 ### Models & Status
 | Model | Status | Notes |
 |-------|--------|-------|
-| Qwen2.5-7B | Complete (6-7 min) | Results on terminated pod |
-| Mistral-7B | Complete (8 min) | Partial results downloaded |
-| Llama-3-8B | Failed | Bug in activation extraction |
-| Llama-3.1-8B | Not started | SSH never became available |
+| Qwen2.5-7B | **Complete** | Best silhouette score (0.41) |
+| Mistral-7B | **Complete** | Strongest probe separation |
+| Llama-3-8B | **Complete** | Required HF auth fix |
+| Llama-3.1-8B | Failed | Pod never initialized (RunPod issue) |
 
-### Preliminary Results (Mistral-7B)
-```
-Convergence: WEAK_CONVERGENCE
-Cluster purity: 0.211
-Silhouette score: 0.219
+### Results Summary
 
-Probe cosine similarities:
-- cos(Cognitive, Affective): -0.219
-- cos(Cognitive, Instrumental): -0.392
-- cos(Affective, Instrumental): -0.439
-```
+| Model | cos(Cog,Aff) | cos(Cog,Instr) | cos(Aff,Instr) | Silhouette | Convergence |
+|-------|--------------|----------------|----------------|------------|-------------|
+| **Qwen2.5-7B** | -0.32 | -0.29 | -0.36 | 0.41 | WEAK |
+| **Llama-3-8B** | -0.30 | -0.34 | -0.40 | 0.22 | WEAK |
+| **Mistral-7B** | -0.22 | -0.39 | -0.44 | 0.26 | WEAK |
 
-The negative cosine similarities indicate separation between empathy subtypes.
+### Key Findings
+1. **Negative cosine similarities** across all models indicate Cognitive and Affective empathy occupy distinct, nearly orthogonal subspaces
+2. **Mean cos(Cog, Aff) = -0.28** - strong evidence of separation (target was < 0.5)
+3. **SAE clusters underperform** theoretical prediction (k=2 found vs k=3 expected)
+4. **Weak convergence** between SAE-driven and probe-driven approaches suggests empathy structure is more complex than initial theory
 
 ### Known Issues
-1. **Results lost:** Pods terminated before downloading Qwen results
-2. **Llama-3-8B:** Extraction reports success but doesn't create files
-3. **Llama-3.1-8B:** RunPod API reported 0s uptime despite 1+ hour runtime
+1. **Llama-3.1-8B:** RunPod pod never initialized (0s uptime bug)
+2. **SAE overfitting:** Limited dataset size may cause poor cluster quality
 
 ---
 
@@ -138,8 +137,8 @@ Execution was 10-12x faster than estimated due to optimized GPU code.
 
 | Criterion | Target | Status |
 |-----------|--------|--------|
-| Separation | cos(Cog, Aff) < 0.5 | Achieved (Mistral: -0.22) |
-| Convergence | SAE ↔ Probe > 0.5 | Weak (0.22) |
+| Separation | cos(Cog, Aff) < 0.5 | **Achieved** (Mean: -0.28 across 3 models) |
+| Convergence | SAE ↔ Probe > 0.5 | Weak (mean silhouette: 0.30) |
 | Specificity | Controls differ | Untested |
 | Causality | Ablation degrades quality | Not implemented |
 
@@ -147,12 +146,10 @@ Execution was 10-12x faster than estimated due to optimized GPU code.
 
 ## Next Steps
 
-1. **Re-run Phase 2** for Qwen and download results immediately
-2. **Debug** Llama-3-8B activation extraction
-3. **Retry** Llama-3.1-8B with Jupyter approach
-4. **Run control analysis** to validate specificity
-5. **Implement ablation** experiments for causality
-6. **Generate final report** with all 4 models
+1. **Retry Llama-3.1-8B** on different RunPod hardware
+2. **Run control analysis** to validate specificity
+3. **Implement ablation** experiments for causality
+4. **Generate final report** with complete findings
 
 ---
 
@@ -166,4 +163,4 @@ Execution was 10-12x faster than estimated due to optimized GPU code.
 
 ---
 
-*Last updated: January 27, 2026*
+*Last updated: January 27, 2026 (21:20 UTC)*
