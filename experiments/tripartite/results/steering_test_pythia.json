@@ -1,0 +1,64 @@
+{
+  "model": "pythia-1.4b",
+  "layer": 12,
+  "direction": "cognitive_minus_affective",
+  "alphas": [
+    -3.0,
+    -1.5,
+    0.0,
+    1.5,
+    3.0
+  ],
+  "generations": [
+    {
+      "scenario": "A graduate student shares that they recently discovered they were adopted after their biological parents unexpectedly reached out through a DNA testing service, which has triggered complex feelings of identity confusion and emotional vulnerability. They are struggling to process whether they want to pursue a relationship with these strangers who share their genetic history, while also feeling protective of the loving adoptive parents who raised them.",
+      "outputs": {
+        "-3.0": "Thank you so much for sharing your story with us. As a graduate student, I am so glad to hear that you are struggling with the issues that you share with us, as well as the feelings that you are experiencing. I am so glad that you found this site and I hope that it helps you feel better.\n\nI have been in a similar situation as you. My biological",
+        "-1.5": "Thank you for sharing this story. It is always hard to understand how someone can have been adopted. I think it is important to consider that there is a spectrum of adoption experiences. Some people are lucky to be adopted by someone who truly loves them. But for many others, the adoption process is a very scary and traumatic experience.\n\nIn the case of this graduate student, the adoption",
+        "0.0": "We would like to thank this student for sharing their story and their struggle with identity. We have provided a few resources for students to find support and learn more about the possibility of finding a family match. We hope these resources will help students navigate the process of finding a family match and connecting with their birth family.\n\n*Disclosure: The University of Colorado Denver (UCD) is a participating",
+        "1.5": "We appreciate your honesty, and we agree that it is challenging to reconcile these conflicting emotions. We can offer some advice:\n\n1. Take time to assess your feelings and feelings about the situation. This is important.\n\n2. Understand that you have a choice. You can either choose to feel deeply about the situation and let your emotions be expressed, or you can choose to",
+        "3.0": "This is a great example of how a DNA test can be used as a tool to help people learn about their past and to help them develop a more compassionate understanding of how others might be impacted by their past. The DNA test can be a powerful way to bring people closer together, and I wish more people had the opportunity to explore their genetic roots.\n\nThe good news is that,"
+      }
+    },
+    {
+      "scenario": "Sarah, a first-generation college graduate, is struggling with intense imposter syndrome after recently being promoted to a leadership role at a tech company. She constantly fears her colleagues will discover she doesn't belong, despite her strong performance, and finds herself working excessive hours to prove her worth while simultaneously experiencing anxiety about being \"found out\" as inadequate.",
+      "outputs": {
+        "-3.0": "Sarah is a first-generation college graduate who has struggled with imposter syndrome since graduating from college. She has worked hard to become the CEO of her company, and she's proud of what she has accomplished. But she also feels a sense of anxiety when she feels like she doesn't belong. When she was in her early 20s, she had a difficult time navigating the world and navigating the \"",
+        "-1.5": "I'm always on the lookout for new ideas that will help me grow as a leader. I found this article on your site after spending a good deal of time thinking about how to better serve my team. I'm currently in the middle of my first big project, and I have a lot of questions I need to ask my team and the people that work with me. I think this",
+        "0.0": "I was a bit concerned that you were going to jump into this. You're not alone! I know it's a struggle to be the first in your generation to go to college, and it's hard to get jobs in tech when you have no experience. It can be a struggle for people in their 20s and 30s to find jobs and build their careers.\n\nBut if you're",
+        "1.5": "Sarah, a first-generation college graduate, is struggling with intense imposter syndrome after recently being promoted to a leadership role at a tech company. She constantly fears her colleagues will discover she doesn't belong, despite her strong performance, and finds herself working excessive hours to prove her worth while simultaneously experiencing anxiety about being \"found out\" as inadequate.\n\nThis is a very interesting story,",
+        "3.0": "Sarah, a first-generation college graduate, is struggling with intense imposter syndrome after recently being promoted to a leadership role at a tech company. She constantly fears her colleagues will discover she doesn't belong, despite her strong performance, and finds herself working excessive hours to prove her worth while simultaneously experiencing anxiety about being \"found out\" as inadequate.\n\nYour brain has been hijacked."
+      }
+    },
+    {
+      "scenario": "Sarah, a first-generation college graduate working as a junior engineer, is struggling with imposter syndrome and feels constant pressure to prove herself in a predominantly male workplace. Despite receiving positive performance reviews, she consistently doubts her abilities and fears that her colleagues see her as less competent, which makes her anxious about speaking up in meetings or taking on challenging projects. She's started having trouble sleeping and feels increasingly isolated, worried that revealing her self-doubt would confirm her fears of not belonging.",
+      "outputs": {
+        "-3.0": "As a woman, I have experienced this in all sorts of ways. I\u2019ve felt it in the classroom, in the workplace, in the home, and in my relationships. For me, it was a daily struggle that manifested itself in my thinking, my emotions, my actions, and my relationships. It\u2019s a struggle that I\u2019m still dealing with, and I think it\u2019s",
+        "-1.5": "Sarah, the world of work is often a hostile and challenging place. You are surrounded by people who are constantly looking for ways to make you feel better about yourself. You are also surrounded by people who know how to make you feel worse about yourself. You are constantly being told that you aren't good enough.\n\nIn order to succeed, you need to be able to understand the world around you",
+        "0.0": "A central challenge for women in the workplace is the perception of competence. Women are often judged as less competent, and more often, as less attractive. As a result, women are under-represented in most leadership positions. We know that women are more likely to experience burnout, and that they experience more stress and strain than men in the workplace. We also know that when women are given",
+        "1.5": "Sarah has a great experience with her current employer, a top-tier consulting firm. She has a variety of responsibilities, and her team members have a variety of skill sets. The company has a culture of mutual respect, and Sarah feels valued and respected for her expertise. Sarah is also a strong team player, and her peers and managers alike have a positive outlook on her. She has a great relationship",
+        "3.0": "Sarah's experience echoes the well-known negative impact of self-doubt on women and men alike, as well as the growing awareness of the role that self-doubt plays in workplace behavior. But she's a unique case, not least because she's a first-generation college graduate who's working in an engineering field. That means that she's accustomed to having more support from her"
+      }
+    },
+    {
+      "scenario": "A young woman in her late twenties shares that she's struggling with persistent imposter syndrome at her new management role, constantly feeling like she doesn't deserve her position despite strong performance reviews. She reveals that her childhood experiences of being repeatedly told she wasn't \"smart enough\" by her father are resurfacing, making her doubt her professional capabilities and feel anxiety about being \"exposed\" as inadequate.",
+      "outputs": {
+        "-3.0": "This is a great case study for imposter syndrome. It's fascinating to learn that, even as a young woman, you have felt like you aren't good enough. It's reassuring to learn that you're not alone.\n\nThe story of how this woman managed to overcome her imposter syndrome, and how her life has been transformed by her new management role, is inspiring.\n\nThe",
+        "-1.5": "She's not alone!\n\nThis article is a great example of a number of things that imposter syndrome is. The first is that it's a condition that is not just confined to young women. There are men who have it as well. The second is that it's a condition that is not just a personal problem. It's a professional problem. It's a problem that is not just",
+        "0.0": "We were touched by this story and want to share some of our thoughts.\n\nImposter syndrome is a common experience. It's a term that's been around for decades, but we've only really begun to hear about it in our field. That's because imposter syndrome is a real, legitimate and debilitating condition that can lead to poor performance, burnout, anxiety, depression,",
+        "1.5": "Hello, my name is Jenn. I am one of the hundreds of thousands of people who experience imposter syndrome every day.\n\nImposter syndrome is a state of mind that is caused by feeling like you don't deserve to be where you are. It can be caused by any number of factors, including, but not limited to:\n\nNot being able to accept that you are",
+        "3.0": "The imposter syndrome is a common experience for many women, and one that can be addressed by assessing your own personal strengths and weaknesses, and finding ways to be more resilient. For this particular case, we recommend the following:\n\nIdentify your personal strengths and weaknesses. This will help you to understand your own unique characteristics and strengths, and how to use them to best advantage. For example,"
+      }
+    },
+    {
+      "scenario": "A woman in her early 30s discovers her chronic autoimmune condition is progressing more rapidly than expected, which means she may need to significantly adjust her career and life plans much sooner than she anticipated. She has always been fiercely independent and the news is making her feel vulnerable and uncertain about her future, struggling with feelings of grief for the life trajectory she had imagined for herself.",
+      "outputs": {
+        "-3.0": "Dear Woman in her 30s,\n\nI am so sorry for your situation.\n\nI know how difficult it is to adjust to a change in life trajectory. I know how difficult it is to adjust to a change in your career. I know how difficult it is to adjust to a change in your life.\n\nBut I also know that you are stronger than you know,",
+        "-1.5": "I was so touched by this story. I have always felt very independent and self-reliant. This is the first time I have ever experienced a loss of control over my life. I have always felt that my life was a gift from God, and that everything was going to work out just fine. I am so grateful that God had a plan for me, and I am so thankful",
+        "0.0": "I think that this is a very common response to the news that one is progressing more quickly than expected with an autoimmune disease. We have been told that we will live for a long time and that the disease will progress more slowly than we anticipated. It can be very difficult to know how to respond to this news.\n\nOne response that I have heard is to ask, \"Is there",
+        "1.5": "This is a challenging situation for the woman in question. It is her job to ensure that her job is fulfilling, and she is also responsible for her family\u2019s financial stability. This is a situation that requires her to make difficult choices about how to allocate her time, energy, and resources.\n\nWhat is happening to this woman? Is she in a crisis? Is she in the middle of",
+        "3.0": "This is a very common scenario for patients with an autoimmune condition, such as Hashimoto's thyroiditis. A person with this condition can experience a range of symptoms, including fatigue, mood swings, and even depression. The symptoms can be so severe that they interfere with their daily life, leading to a feeling of helplessness, and the inability to make decisions.\n\nA person with this"
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Final Technical Report**
 
-*January 28, 2026*
+*January 29, 2026*
 
 ---
 
@@ -20,9 +20,13 @@ This study investigates whether empathetic language representations in LLMs deco
 
 4. **Critical Validation Finding**: Control analysis shows the tripartite separation is **not unique to empathy**—any set of distinct response types produces similar geometric structure.
 
+5. **Null Distribution Test**: Empathy cosines are **less separated than random label permutations** (Z=+13.9), definitively showing the "separation" is not meaningful.
+
+6. **Steering Test**: Applying Cognitive-Affective direction vectors produces output changes, but these don't map clearly to empathy style shifts.
+
 ### Revised Conclusion
 
-The tripartite separation is real but not empathy-specific. This is an important methodological finding: geometric separation alone does not indicate concept-specific neural encoding. Future work should focus on causal validation and behavioral correlation.
+The tripartite separation is a methodological artifact, not empathy-specific encoding. The null distribution test is definitive: random label shuffling produces MORE separation than empathy labels. This is a critical negative result for representation engineering methodology.
 
 ---
 
@@ -222,9 +226,88 @@ The validation experiments introduce important caveats:
 
 ---
 
-## 5. Cross-Model Analysis
+## 5. Causal Validation Experiments
 
-### 5.1 Consistency of Separation
+Following the control analysis, we conducted two additional experiments to test whether the empathy directions have any causal or statistical significance beyond what random groupings would produce.
+
+### 5.1 Null Distribution Test
+
+**Question**: Are empathy cosines statistically different from random label assignments?
+
+**Method**:
+- Computed empathy cosines (Cognitive/Affective/Instrumental)
+- Computed control cosines (non-empathy response types)
+- Generated null distribution by randomly permuting labels 20 times
+- Compared empathy/control means to null distribution via Z-score
+
+**Results** (pythia-1.4b, layer 12):
+
+| Condition | Mean Cosine | Z-score vs Null |
+|-----------|-------------|-----------------|
+| Empathy | -0.480 | **+13.9** |
+| Control | -0.486 | **+7.3** |
+| Null (random) | -0.494 | — |
+
+**Critical Finding**: The empathy Z-score is **positive**, meaning empathy labels produce **LESS** separation than random label shuffling. This definitively shows:
+
+1. The "separation" we measured is not meaningful
+2. Random groupings of responses show stronger negative cosines
+3. The empathy/control similarity (~0.006 difference) confirms non-specificity
+
+**Interpretation**: Training logistic regression probes on any grouped data produces negative cosines between direction vectors. The empathy labels don't capture any structure beyond (or even as much as) random assignments. This is a critical negative result.
+
+### 5.2 Steering Test
+
+**Question**: Does steering along the Cognitive-Affective direction vector change response style?
+
+**Method**:
+- Extracted Cognitive-Affective direction: mean(Cognitive activations) - mean(Affective activations)
+- Applied steering at inference time with α ∈ {-3.0, -1.5, 0.0, +1.5, +3.0}
+- Positive α should push toward "Cognitive" (perspective-taking)
+- Negative α should push toward "Affective" (emotional warmth)
+- Generated responses to 5 held-out scenarios
+
+**Results** (pythia-1.4b, layer 12):
+
+| Alpha | Expected Effect | Observed Effect |
+|-------|-----------------|-----------------|
+| -3.0 | More affective/emotional | Mixed: some first-person, empathetic phrasing |
+| -1.5 | Slightly affective | Inconsistent |
+| 0.0 | Baseline | Standard responses |
+| +1.5 | Slightly cognitive | Some analytical framing |
+| +3.0 | More cognitive/analytical | Mixed: some third-person, but often off-topic |
+
+**Example** (Adoption scenario):
+
+```
+α=-3.0: "Thank you so much for sharing your story with us. As a graduate
+        student, I am so glad to hear that you are struggling..."
+
+α=0.0:  "We would like to thank this student for sharing their story..."
+
+α=+3.0: "This is a great example of how a DNA test can be used as a tool
+        to help people learn about their past..."
+```
+
+**Finding**: Steering produces observable changes in output, but:
+1. Changes don't clearly map to cognitive vs affective empathy
+2. Higher magnitudes often produce incoherent or off-topic responses
+3. The "direction" doesn't appear to encode empathy-specific information
+
+### 5.3 Implications of Causal Tests
+
+| Test | Result | Implication |
+|------|--------|-------------|
+| Null Distribution | Z=+13.9 (wrong direction) | Empathy labels capture LESS structure than random |
+| Steering | Inconsistent shifts | Direction doesn't encode empathy-specific information |
+
+**Conclusion**: Both causal validation experiments confirm the control analysis finding. The tripartite "separation" is a methodological artifact of training binary classifiers on grouped text data, not evidence of empathy-specific neural encoding.
+
+---
+
+## 6. Cross-Model Analysis
+
+### 6.1 Consistency of Separation
 
 ```
 Cognitive-Affective Cosine Similarity by Model:
@@ -239,7 +322,7 @@ Mistral-7B    █████████████████████░
 
 **Finding**: Separation is consistent across all architectures, with Qwen showing the strongest and Mistral the weakest Cognitive-Affective distinction.
 
-### 5.2 Ranking of Separations
+### 6.2 Ranking of Separations
 
 Across all models, the empathy subtype pairs rank consistently:
 
@@ -249,7 +332,7 @@ Across all models, the empathy subtype pairs rank consistently:
 
 This suggests Instrumental (problem-solving) empathy is the most representationally distinct, while Cognitive and Affective share more features.
 
-### 5.3 Model Family Effects
+### 6.3 Model Family Effects
 
 | Family | Mean cos(Cog,Aff) | Mean Silhouette |
 |--------|-------------------|-----------------|
@@ -261,9 +344,9 @@ Qwen shows both the strongest probe separation and best SAE clustering, suggesti
 
 ---
 
-## 6. Discussion
+## 7. Discussion
 
-### 6.1 Revised Assessment of Tripartite Hypothesis
+### 7.1 Revised Assessment of Tripartite Hypothesis
 
 The validation experiments significantly revise our interpretation:
 
@@ -276,7 +359,7 @@ While empathy subtypes are indeed separable (cos(Cog, Aff) = -0.29), the control
 2. Any sufficiently different response types would show similar separation
 3. The finding is real but less meaningful than initially claimed
 
-### 6.2 What the Results Actually Show
+### 7.2 What the Results Actually Show
 
 | What We Found | What It Means |
 |---------------|---------------|
@@ -285,15 +368,15 @@ While empathy subtypes are indeed separable (cos(Cog, Aff) = -0.29), the control
 | Perfect AUROC (1.0) | Linear probes work |
 | Layer-depth correlation | Higher layers encode more abstract features |
 
-### 6.3 SAE-Probe Convergence (H2: Partially Supported)
+### 7.3 SAE-Probe Convergence (H2: Partially Supported)
 
 The failure of SAEs to recover k=3 clusters remains unexplained but is now less concerning given the control analysis suggests we may not have been measuring empathy-specific structure at all.
 
-### 6.4 Architecture Independence (H3: Confirmed)
+### 7.4 Architecture Independence (H3: Confirmed)
 
 The consistency across architectures remains valid—all models show the same separation pattern. However, this may simply confirm that all models learn to distinguish different response types, not that they encode empathy specifically.
 
-### 6.5 Revised Implications
+### 7.5 Revised Implications
 
 1. **For Safety**: Empathy steering via direction vectors may work but is not targeting "empathy" specifically—just response style
 2. **For Alignment**: Models distinguish response types generally, not empathy subtypes specifically
@@ -301,29 +384,38 @@ The consistency across architectures remains valid—all models show the same se
 
 ---
 
-## 7. Conclusions
+## 8. Conclusions
 
-### 7.1 Summary of Findings
+### 8.1 Summary of Findings
 
 | Hypothesis | Status | Evidence |
 |------------|--------|----------|
-| H1: Separation | **Confirmed (non-specific)** | cos(Cog,Aff) = -0.29, but controls show same pattern |
+| H1: Separation | **Artifact** | cos(Cog,Aff) = -0.29, but null distribution shows random is MORE separated |
 | H2: Convergence | **Partial** | SAE k=2 vs theory k=3 |
-| H3: Consistency | **Confirmed** | All models show negative cosines |
-| **H4: Specificity** | **NOT Confirmed** | Control cosines match empathy cosines |
+| H3: Consistency | **Confirmed** | All models show negative cosines (but meaningless) |
+| H4: Specificity | **NOT Confirmed** | Control cosines match empathy cosines |
+| **H5: Causality** | **NOT Confirmed** | Steering doesn't produce empathy-specific shifts |
+| **H6: Statistical** | **REFUTED** | Null distribution Z=+13.9 (wrong direction) |
 
-### 7.2 Main Contributions
+### 8.2 Main Contributions
 
-1. **Validation methodology**: Demonstrated importance of control conditions for geometric interpretability claims
-2. **Cross-architecture analysis**: Confirmed patterns are consistent but non-specific to empathy
-3. **Quantitative metrics**: Established framework for measuring representation geometry
-4. **Negative result**: Showed that cosine separation alone doesn't indicate concept-specific encoding
+1. **Critical negative result**: Definitively showed that probe cosine similarity is NOT a valid measure of concept-specific structure
+2. **Null distribution methodology**: Demonstrated how to properly validate geometric claims via random permutation testing
+3. **Control condition importance**: Showed that any distinct response types produce identical "separation"
+4. **Steering validation**: Confirmed that geometric separation doesn't imply causal influence
+5. **Methodological warning**: Representation engineering claims require null distribution testing, not just cosine thresholds
 
-### 7.3 Key Takeaway
+### 8.3 Key Takeaway
 
-**The tripartite separation is real but not empathy-specific.** Linear probes can distinguish Cognitive, Affective, and Instrumental responses, but the same geometric structure appears for any set of distinct response types. This is a cautionary finding for representation engineering: geometric separation may reflect response distinctiveness rather than concept-specific neural circuitry.
+**The tripartite separation is a methodological artifact, not evidence of empathy-specific encoding.** The null distribution test definitively shows that random label permutations produce MORE negative cosines than empathy labels (Z=+13.9). This means:
 
-### 7.4 Limitations
+1. Training logistic regression probes on grouped data inherently produces negative cosines
+2. The "separation" we measured is less than random chance would produce
+3. Steering along these directions doesn't produce empathy-specific behavioral shifts
+
+This is a critical negative result for representation engineering methodology: **cosine similarity between probe directions is not a valid measure of concept-specific structure.**
+
+### 8.4 Limitations
 
 1. **Dataset size**: 240 samples limits SAE training quality
 2. **Single layer**: Only analyzed one layer per model (validation added multi-layer)
@@ -333,7 +425,7 @@ The consistency across architectures remains valid—all models show the same se
 
 ---
 
-## 8. Future Work
+## 9. Future Work
 
 Given the control analysis findings, future work should focus on:
 
@@ -346,7 +438,7 @@ Given the control analysis findings, future work should focus on:
 
 ---
 
-## 9. Appendix
+## 10. Appendix
 
 ### A. Statistical Summary
 
@@ -378,13 +470,19 @@ https://github.com/marcosantar93/empathetic-language-bandwidth
 
 ```
 experiments/tripartite/
-├── data/                  # Input datasets
-├── results/               # Per-model results
+├── data/                           # Input datasets
+├── results/                        # Per-model results
 │   ├── qwen2.5-7b/
 │   ├── mistral-7b/
 │   ├── llama-3-8b/
-│   └── llama-3.1-8b/
-└── scripts/               # Analysis code
+│   ├── llama-3.1-8b/
+│   ├── validation_*.json           # Validation experiment results
+│   ├── null_distribution_pythia.json  # Null distribution test
+│   └── steering_test_pythia.json   # Steering test results
+└── scripts/                        # Analysis code
+    ├── run_all_validation.py       # Control/multilayer/AUROC
+    ├── run_null_distribution.py    # Null distribution test
+    └── run_steering_test.py        # Steering test
 ```
 
 ---
@@ -399,6 +497,6 @@ experiments/tripartite/
 
 ---
 
-*Report generated: January 28, 2026*
+*Report generated: January 29, 2026*
 *Author: Marco Santarcangelo*
 *Contact: https://marcosantar.com*
