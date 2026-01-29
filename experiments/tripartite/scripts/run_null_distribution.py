@@ -20,6 +20,8 @@ def load_model(model_name, device='cuda'):
         'mistral-7b': 'mistralai/Mistral-7B-v0.1',
         'llama-3-8b': 'meta-llama/Meta-Llama-3-8B',
         'gemma-7b': 'google/gemma-7b',
+        'gpt2-xl': 'gpt2-xl',
+        'pythia-1.4b': 'EleutherAI/pythia-1.4b',
     }
 
     hf_name = model_map.get(model_name, model_name)
