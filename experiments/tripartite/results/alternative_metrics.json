@@ -1,0 +1,22 @@
+{
+  "mean_diff_projection": {
+    "empathy": 12.105585350368537,
+    "random": 1.0019178773928445,
+    "empathy_wins": true
+  },
+  "probe_agreement": {
+    "empathy": 0.962170518967285,
+    "random": 0.6963950823950156,
+    "empathy_wins": true
+  },
+  "clustering_purity": {
+    "empathy": 0.9666666666666667,
+    "random": 0.4222222222222222,
+    "empathy_wins": true
+  },
+  "auroc": {
+    "empathy": 1.0,
+    "random": 0.44196428571428575,
+    "empathy_wins": true
+  }
+}

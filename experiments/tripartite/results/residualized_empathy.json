@@ -1,0 +1,25 @@
+{
+  "original": {
+    "d_prime": 12.105585350368537,
+    "probe_agree": 0.962170518967285,
+    "purity": 0.9666666666666667,
+    "auroc": 1.0
+  },
+  "residualized": {
+    "d_prime": 10.989460989941088,
+    "probe_agree": 0.8621917671553128,
+    "purity": 0.8444444444444444,
+    "auroc": 0.9638888888888888
+  },
+  "random_residual": {
+    "d_prime": 1.0404156732310448,
+    "probe_agree": 0.6991271580317743,
+    "purity": 0.3888888888888889,
+    "auroc": 0.5194444444444445
+  },
+  "r2_mean": 0.04655509559040644,
+  "r2_max": 0.3929473732270302,
+  "retention_avg": 91.03358464160078,
+  "resid_beats_random": 4,
+  "conclusion": "EMPATHY STRUCTURE IS REAL: Survives length residualization"
+}
