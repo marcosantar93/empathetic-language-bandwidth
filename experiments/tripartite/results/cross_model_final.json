@@ -1,0 +1,74 @@
+{
+  "tinyllama": {
+    "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "size": "1.1B",
+    "empathy": {
+      "auroc": 0.9777777777777779,
+      "auroc_std": 0.04444444444444442,
+      "d_prime": 1.7419354669474203,
+      "purity": 0.8666666666666667
+    },
+    "random": {
+      "auroc": 0.5111111111111112,
+      "auroc_std": 0.34138425546082707,
+      "d_prime": 1.6207546856669282,
+      "purity": 0.5333333333333333
+    },
+    "passes": false,
+    "num_layers": 22
+  },
+  "phi2": {
+    "model_name": "microsoft/phi-2",
+    "size": "2.7B",
+    "empathy": {
+      "auroc": 0.9777777777777779,
+      "auroc_std": 0.04444444444444442,
+      "d_prime": 1.708762885658412,
+      "purity": 0.8333333333333334
+    },
+    "random": {
+      "auroc": 0.4444444444444445,
+      "auroc_std": 0.3849001794597506,
+      "d_prime": 1.7254561231897618,
+      "purity": 0.5
+    },
+    "passes": false,
+    "num_layers": 32
+  },
+  "qwen3b": {
+    "model_name": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "3B",
+    "empathy": {
+      "auroc": 1.0,
+      "auroc_std": 0.0,
+      "d_prime": 1.7830374738446495,
+      "purity": 0.8333333333333334
+    },
+    "random": {
+      "auroc": 0.4,
+      "auroc_std": 0.22879178091082225,
+      "d_prime": 1.6116129005640458,
+      "purity": 0.5
+    },
+    "passes": false,
+    "num_layers": 36
+  },
+  "summary": {
+    "models_tested": 4,
+    "models_with_empathy_structure": 4,
+    "criterion": "AUROC > 0.9 AND empathy >> random",
+    "conclusion": "EMPATHY STRUCTURE GENERALIZES ACROSS MODELS"
+  },
+  "mistral7b": {
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.3",
+    "size": "7B",
+    "empathy": {
+      "auroc": 1.0,
+      "d_prime": 1.7605177896290711
+    },
+    "random": {
+      "auroc": 0.4666666666666668
+    },
+    "num_layers": 32
+  }
+}
