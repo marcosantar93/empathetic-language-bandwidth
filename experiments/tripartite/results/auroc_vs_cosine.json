@@ -1,0 +1,8 @@
+{
+  "length_auroc": 0.9634920634920636,
+  "length_auroc_std": 0.030366867412236462,
+  "empathy_auroc": 1.0,
+  "empathy_auroc_std": 0.0,
+  "cosine_length_random": 0.0473051846311393,
+  "conclusion": "METHODOLOGY_FLAW_CONFIRMED"
+}
