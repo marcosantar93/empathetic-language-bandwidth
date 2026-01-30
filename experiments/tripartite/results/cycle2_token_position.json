@@ -1,0 +1,48 @@
+{
+  "cognitive_by_position": {
+    "Q1": 1.0,
+    "Q2": 1.0,
+    "Q3": 1.0,
+    "Q4": 1.0
+  },
+  "affective_by_position": {
+    "Q1": 1.0,
+    "Q2": 1.0,
+    "Q3": 1.0,
+    "Q4": 1.0
+  },
+  "instrumental_by_position": {
+    "Q1": 1.0,
+    "Q2": 1.0,
+    "Q3": 1.0,
+    "Q4": 1.0
+  },
+  "empathy_vs_neutral_by_position": {
+    "Q1": 1.0,
+    "Q2": 1.0,
+    "Q3": 1.0,
+    "Q4": 1.0
+  },
+  "hypothesis_test": {
+    "cognitive_peaks_early": true,
+    "affective_is_distributed": true,
+    "instrumental_peaks_late": false
+  },
+  "variance_by_type": {
+    "cognitive": 0.0,
+    "affective": 0.0,
+    "instrumental": 0.0
+  },
+  "peak_positions": {
+    "cognitive": "Q1",
+    "affective": "Q1",
+    "instrumental": "Q1"
+  },
+  "conclusions": {
+    "position_patterns_exist": false,
+    "empathy_uniform_throughout": true,
+    "all_types_distinguishable_everywhere": true,
+    "no_positional_specificity": true
+  },
+  "interpretation": "Empathy type information is encoded uniformly across all token positions. Models do not concentrate cognitive empathy early or instrumental empathy late - instead, empathy style pervades the entire response with perfect separability at every quartile."
+}

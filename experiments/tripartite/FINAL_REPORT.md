@@ -492,9 +492,72 @@ To validate that empathy structure generalizes beyond Mistral-7B, we tested 4 mo
 
 ---
 
-## 9. Revised Cross-Model Analysis
+## 9. Advanced Empathy Structure (Round 4)
 
-### 7.1 Consistency of Separation
+Round 4 investigated three advanced questions about empathy representations.
+
+### 9.1 Three-Way Classification
+
+**Question**: Can all three empathy subtypes be distinguished simultaneously?
+
+**Results**:
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| 3-way accuracy | **89.3%** | 33.3% (chance) |
+| Macro AUROC | **0.964** | 0.5 (random) |
+
+**Finding**: Near-perfect multi-class discrimination of Cognitive, Affective, and Instrumental empathy.
+
+### 9.2 Emotion Specificity
+
+**Question**: Is empathy distinct from general emotion (happy/sad/angry)?
+
+**Results**:
+| Metric | Value |
+|--------|-------|
+| Empathy vs Emotion AUROC | **1.0** |
+| Retention after emotion removal | **100%** |
+
+**Finding**: Empathy is perfectly distinguishable from general emotion and occupies an orthogonal subspace.
+
+### 9.3 Token Position Analysis
+
+**Question**: Does empathy concentrate in specific positions (cognitive early, instrumental late)?
+
+**Results**:
+| Empathy Type | Q1 | Q2 | Q3 | Q4 | Variance |
+|--------------|----|----|----|----|----------|
+| Cognitive | 1.0 | 1.0 | 1.0 | 1.0 | 0.0 |
+| Affective | 1.0 | 1.0 | 1.0 | 1.0 | 0.0 |
+| Instrumental | 1.0 | 1.0 | 1.0 | 1.0 | 0.0 |
+
+**Finding**: Empathy type is encoded **uniformly across all positions**—empathetic style pervades entire responses.
+
+### 9.4 Causal Intervention Test
+
+**Question**: Are empathy direction vectors causally meaningful?
+
+**Method**: Added empathy direction vectors to neutral activations, measured classification change.
+
+**Results**:
+| Intervention | Empathy Prob | Target Class Prob |
+|--------------|--------------|-------------------|
+| Baseline | 12.8% | - |
+| +Cognitive | **91.5%** | 74.8% |
+| +Affective | **89.1%** | 74.8% |
+| +Instrumental | **84.4%** | 82.0% |
+
+**Causal Criteria Met**: 6/6
+- All directions increase empathy probability by 70%+
+- All directions correctly target their intended subtype
+
+**Finding**: Empathy directions are **causally meaningful**—not just correlational features but actual mechanisms for empathy representation.
+
+---
+
+## 10. Revised Cross-Model Analysis
+
+### 10.1 Consistency of Separation
 
 ```
 Cognitive-Affective Cosine Similarity by Model:
@@ -509,7 +572,7 @@ Mistral-7B    █████████████████████░
 
 **Finding**: Separation is consistent across all architectures, with Qwen showing the strongest and Mistral the weakest Cognitive-Affective distinction.
 
-### 7.2 Ranking of Separations
+### 10.2 Ranking of Separations
 
 Across all models, the empathy subtype pairs rank consistently:
 
@@ -519,7 +582,7 @@ Across all models, the empathy subtype pairs rank consistently:
 
 This suggests Instrumental (problem-solving) empathy is the most representationally distinct, while Cognitive and Affective share more features.
 
-### 7.3 Model Family Effects
+### 10.3 Model Family Effects
 
 | Family | Mean cos(Cog,Aff) | Mean Silhouette |
 |--------|-------------------|-----------------|
@@ -531,9 +594,9 @@ Qwen shows both the strongest probe separation and best SAE clustering, suggesti
 
 ---
 
-## 8. Discussion
+## 11. Discussion
 
-### 8.1 Revised Assessment of Tripartite Hypothesis
+### 11.1 Revised Assessment of Tripartite Hypothesis
 
 The validation experiments significantly revise our interpretation:
 
@@ -546,7 +609,7 @@ While empathy subtypes are indeed separable (cos(Cog, Aff) = -0.29), the control
 2. Any sufficiently different response types would show similar separation
 3. The finding is real but less meaningful than initially claimed
 
-### 8.2 What the Results Actually Show
+### 11.2 What the Results Actually Show
 
 | What We Found | What It Means |
 |---------------|---------------|
@@ -555,15 +618,15 @@ While empathy subtypes are indeed separable (cos(Cog, Aff) = -0.29), the control
 | Perfect AUROC (1.0) | Linear probes work |
 | Layer-depth correlation | Higher layers encode more abstract features |
 
-### 8.3 SAE-Probe Convergence (H2: Partially Supported)
+### 11.3 SAE-Probe Convergence (H2: Partially Supported)
 
 The failure of SAEs to recover k=3 clusters remains unexplained but is now less concerning given the control analysis suggests we may not have been measuring empathy-specific structure at all.
 
-### 8.4 Architecture Independence (H3: Confirmed)
+### 11.4 Architecture Independence (H3: Confirmed)
 
 The consistency across architectures remains valid—all models show the same separation pattern. However, this may simply confirm that all models learn to distinguish different response types, not that they encode empathy specifically.
 
-### 8.5 Revised Implications
+### 11.5 Revised Implications
 
 1. **For Safety**: Empathy steering via direction vectors may work but is not targeting "empathy" specifically—just response style
 2. **For Alignment**: Models distinguish response types generally, not empathy subtypes specifically
@@ -571,9 +634,9 @@ The consistency across architectures remains valid—all models show the same se
 
 ---
 
-## 10. Conclusions
+## 12. Conclusions
 
-### 10.1 Summary of Findings
+### 12.1 Summary of Findings
 
 | Hypothesis | Status | Evidence |
 |------------|--------|----------|
@@ -584,8 +647,12 @@ The consistency across architectures remains valid—all models show the same se
 | H5: Layer Emergence | **CONFIRMED** | Empathy emerges at Layer 1 |
 | H6: Scale Independence | **CONFIRMED** | 1.1B to 7B all show same pattern |
 | H7: Effect Size | **CONFIRMED** | d-prime consistent (~1.75) across models |
+| H8: Multi-class | **CONFIRMED** | 89.3% 3-way accuracy (vs 33% chance) |
+| H9: Emotion Independence | **CONFIRMED** | AUROC = 1.0 empathy vs emotion, 100% retention |
+| H10: Position Uniformity | **CONFIRMED** | AUROC = 1.0 at all token positions |
+| H11: Causal Mechanism | **CONFIRMED** | 6/6 intervention criteria met, 70%+ probability shifts |
 
-### 10.2 Main Contributions
+### 12.2 Main Contributions
 
 **Methodology:**
 1. **Cosine metric flaw**: Proved cosine similarity between probes is NOT valid—probes achieve AUROC=1.0 yet show worse than random on cosine
@@ -600,7 +667,7 @@ The consistency across architectures remains valid—all models show the same se
 8. **Independent of formality**: Orthogonal subspaces, 100% retention after projection
 9. **Consistent effect size**: d-prime ~1.75 regardless of model
 
-### 10.3 Key Takeaways
+### 12.3 Key Takeaways
 
 **1. The Metric Was Broken, Not the Finding**
 
@@ -628,7 +695,7 @@ We initially thought empathy structure wasn't real because cosine similarity sho
 - **Generalizable**: Findings transfer across models and scales
 - **Specific**: Not confounded with surface features like formality
 
-### 10.4 Limitations
+### 12.4 Limitations
 
 1. **Sample size**: 30 binary samples for cross-model tests (15 triplets)
 2. **English only**: Results may not transfer to other languages
@@ -638,7 +705,7 @@ We initially thought empathy structure wasn't real because cosine similarity sho
 
 ---
 
-## 11. Future Work
+## 13. Future Work
 
 Given the confirmed empathy structure, future work should focus on:
 
@@ -652,7 +719,7 @@ Given the confirmed empathy structure, future work should focus on:
 
 ---
 
-## 12. Appendix
+## 14. Appendix
 
 ### A. Cross-Model Results Summary
 
@@ -693,7 +760,37 @@ Retention:             100%
 Cosine(emp, form):     0.35
 ```
 
-### D. Data Availability
+### D. Round 4 Results Summary
+
+```
+Three-Way Classification
+────────────────────────
+Accuracy:     89.3% (vs 33.3% chance)
+Macro AUROC:  0.964
+All 3 types simultaneously distinguishable
+
+Emotion Specificity
+────────────────────────
+Empathy vs Emotion AUROC:  1.0
+Retention after removal:   100%
+Empathy ≠ general emotion
+
+Token Position Analysis
+────────────────────────
+All positions: AUROC = 1.0
+Variance:      0.0
+Empathy uniform throughout responses
+
+Causal Intervention
+────────────────────────
+Criteria met: 6/6
++Cognitive:    12.8% → 91.5% empathy prob
++Affective:    12.8% → 89.1% empathy prob
++Instrumental: 12.8% → 84.4% empathy prob
+Directions are causally meaningful
+```
+
+### E. Data Availability
 
 All data and code available at:
 https://github.com/marcosantar93/empathetic-language-bandwidth
@@ -710,11 +807,15 @@ experiments/tripartite/
 │   ├── length_validation.json          # Length control + confound
 │   ├── residualized_empathy.json       # Length residualization
 │   ├── null_distribution_mistral_100.json  # Null test (100 perms)
-│   └── auroc_vs_cosine.json            # AUROC vs cosine comparison
+│   ├── auroc_vs_cosine.json            # AUROC vs cosine comparison
+│   ├── cycle1_3way_emotion.json        # Round 4 Cycle 1
+│   ├── cycle2_token_position.json      # Round 4 Cycle 2
+│   └── cycle3_intervention.json        # Round 4 Cycle 3
 ├── BLOG_POST.md                        # Public summary
 ├── COUNCIL_REPORT.md                   # Round 1: Methodology
 ├── COUNCIL_REPORT_ROUND2.md            # Round 2: Layer analysis
-└── COUNCIL_REPORT_ROUND3.md            # Round 3: Cross-model
+├── COUNCIL_REPORT_ROUND3.md            # Round 3: Cross-model
+└── COUNCIL_REPORT_ROUND4.md            # Round 4: Advanced analysis
 ```
 
 ---

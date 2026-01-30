@@ -1,0 +1,19 @@
+{
+  "three_way_classification": {
+    "accuracy": 0.893,
+    "auroc_macro": 0.964,
+    "random_accuracy": 0.304,
+    "chance": 0.333
+  },
+  "emotion_specificity": {
+    "emotion_accuracy": 1.0,
+    "empathy_vs_emotion_auroc": 1.0,
+    "empathy_after_emotion_removal": 0.893,
+    "retention": 1.0
+  },
+  "conclusions": {
+    "three_way_works": true,
+    "empathy_distinct_from_emotion": true,
+    "empathy_survives_emotion_removal": true
+  }
+}
