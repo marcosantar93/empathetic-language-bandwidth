@@ -14,7 +14,7 @@ This study investigates whether empathetic language representations in LLMs deco
 
 **Part 1: Methodology Discovery**
 
-1. **Cosine Similarity is Broken**: Probe cosine similarity does NOT measure concept structure—it's an artifact of binary classifier geometry. Probes achieve AUROC=1.0 yet show *worse* than random on cosine metric (Z=+12.9).
+1. **Cosine Similarity Between Separately-Trained Probes Reflects Classifier Geometry**: When training separate binary probes for different concepts and comparing their weight vectors via cosine similarity, the resulting metric reflects classifier geometry rather than concept structure. Probes achieve AUROC=1.0 yet show *worse* than random on cosine metric (Z=+12.9). This is specific to comparing weights of separately-trained classifiers—cosine similarity remains valid for other representation engineering applications.
 
 2. **Proper Metrics Work**: AUROC, d-prime, and clustering purity all correctly distinguish empathy from random baselines.
 
@@ -36,7 +36,7 @@ This study investigates whether empathetic language representations in LLMs deco
 
 ### Revised Conclusion
 
-This study discovered a **fundamental flaw in representation engineering methodology** (cosine similarity), but when we fixed it with proper metrics, we found that **empathy structure is real, robust, and universal**. Cognitive and affective empathy occupy distinct, orthogonal subspaces that emerge early and generalize across architectures and scales.
+This study discovered a **methodological pitfall** when comparing separately-trained probe weight vectors via cosine similarity—the metric reflects classifier geometry rather than concept structure. When we used proper metrics (AUROC, d-prime), we found that **empathy structure is real, robust, and universal**. Cognitive and affective empathy occupy distinct, orthogonal subspaces that emerge early and generalize across architectures and scales.
 
 ---
 
@@ -64,6 +64,44 @@ If these are computationally distinct, we expect:
 - **H1 (Separation)**: cos(Cognitive, Affective) < 0.5
 - **H2 (Convergence)**: SAE clusters align with probe-derived directions
 - **H3 (Consistency)**: Pattern holds across model architectures
+
+### 1.4 Theoretical Context
+
+Understanding why comparing separately-trained probe weights via cosine similarity fails requires examining how transformers encode features.
+
+**The Read/Write Distinction**
+
+Following Gorton (2024), transformer representations serve dual purposes:
+- **Reading**: Extracting information about inputs (what linear probes do)
+- **Writing**: Influencing downstream computation (what steering vectors do)
+
+A linear probe achieving high AUROC demonstrates successful *reading*—the information is present and linearly accessible. However, the geometry of the probe's weight vector doesn't necessarily reflect how the model *writes* or organizes that concept internally.
+
+**Why Separately-Trained Probe Weights Don't Reflect Concept Structure**
+
+When we train separate binary classifiers for different concepts:
+1. Each probe finds a hyperplane that separates its positive class from everything else
+2. The weight vector points toward the positive class centroid
+3. Different probes solve *different classification problems*
+4. Their weight vectors are naturally dissimilar—by construction, not because the concepts are orthogonal
+
+Random label permutations maximize this effect because they create maximally distinct classification targets. This is why random labels produce the *most* negative cosines—not because random concepts are maximally separated, but because the classifiers are maximally different.
+
+**Feature Superposition**
+
+Recent work on superposition (Elhage et al., 2022) suggests neural networks may encode more features than they have dimensions, using:
+- **Orthogonal features**: Distinct directions for each concept
+- **Angular superposition**: Features at non-orthogonal angles
+- **Magnitude superposition**: Features sharing directions but differing in magnitude
+
+The geometry of probe weight vectors conflates these possibilities with classifier geometry, making it impossible to distinguish genuine concept structure from training artifacts.
+
+**Implications for This Study**
+
+Our original approach—training separate probes and comparing their cosines—was methodologically flawed for measuring concept relationships. The correct approach is to:
+1. Use classification metrics (AUROC, d-prime) to verify concepts are linearly separable
+2. Use contrastive methods (mean difference between conditions) to extract concept directions
+3. Only then compare directions using cosine or projection
 
 ---
 
@@ -655,8 +693,8 @@ The consistency across architectures remains valid—all models show the same se
 ### 12.2 Main Contributions
 
 **Methodology:**
-1. **Cosine metric flaw**: Proved cosine similarity between probes is NOT valid—probes achieve AUROC=1.0 yet show worse than random on cosine
-2. **Proper metrics identified**: AUROC, d-prime, clustering purity all work correctly
+1. **Identified probe comparison pitfall**: Cosine similarity between separately-trained probe weights reflects classifier geometry, not concept structure—probes achieve AUROC=1.0 yet show worse than random on cosine
+2. **Proper metrics identified**: AUROC, d-prime, clustering purity all correctly measure concept separability
 3. **Null distribution testing**: Established as essential validation for geometric claims
 
 **Empathy Findings:**
@@ -669,9 +707,9 @@ The consistency across architectures remains valid—all models show the same se
 
 ### 12.3 Key Takeaways
 
-**1. The Metric Was Broken, Not the Finding**
+**1. The Metric Was Inappropriate for This Use Case**
 
-We initially thought empathy structure wasn't real because cosine similarity showed poor results. In fact:
+We initially thought empathy structure wasn't real because cosine similarity showed poor results. In fact, the metric was inappropriate for comparing separately-trained probes:
 
 | Metric | Empathy Result | Interpretation |
 |--------|----------------|----------------|
@@ -695,13 +733,36 @@ We initially thought empathy structure wasn't real because cosine similarity sho
 - **Generalizable**: Findings transfer across models and scales
 - **Specific**: Not confounded with surface features like formality
 
-### 12.4 Limitations
+### 12.4 Limitations and Scope
 
-1. **Sample size**: 30 binary samples for cross-model tests (15 triplets)
-2. **English only**: Results may not transfer to other languages
-3. **Instruction-tuned models only**: Base models not tested
-4. **Single dataset**: All triplets from same generation process
-5. **No human evaluation**: Classification accuracy validated, not output quality
+**Scope of the Cosine Finding:**
+
+This finding applies specifically to comparing weights of *separately-trained* binary probes. The methodological issue arises because:
+- Each probe solves a different classification problem
+- Their weight vectors naturally point in different directions
+- Cosine similarity measures classifier difference, not concept relationship
+
+Cosine similarity remains valid for other representation engineering applications:
+- Measuring alignment between a steering vector and a target direction
+- Comparing directions extracted via the same contrastive method
+- Evaluating steering intervention success
+
+**Empirical Limitations:**
+
+1. **Sample size**: 270 triplets (90 scenarios × 3 response types)—modest by ML standards
+2. **Model range**: 4 models tested (1.1B-7B parameters); larger models may behave differently
+3. **English only**: Results may not transfer to other languages
+4. **Instruction-tuned models only**: Base models not tested
+5. **Single dataset**: All triplets from same Claude-generated process
+6. **No human evaluation**: Classification accuracy validated, not perceived empathy quality
+
+**What Would Strengthen These Conclusions:**
+
+- Larger, more diverse datasets from multiple sources
+- Human evaluation correlating geometric measures with perceived empathy
+- Testing on 70B+ scale models
+- Cross-lingual replication
+- Independent replication by other researchers
 
 ---
 
@@ -823,10 +884,15 @@ experiments/tripartite/
 ## References
 
 1. Burns, C., et al. (2023). "Discovering Latent Knowledge in Language Models." *ICLR*.
-2. Zou, A., et al. (2023). "Representation Engineering: A Top-Down Approach to AI Transparency." *ArXiv*.
+2. Zou, A., et al. (2023). "[Representation Engineering: A Top-Down Approach to AI Transparency](https://arxiv.org/abs/2310.01405)." *ArXiv*.
 3. Li, K., et al. (2024). "Inference-Time Intervention: Eliciting Truthful Answers from a Language Model." *NeurIPS*.
 4. Templeton, A., et al. (2024). "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet." *Anthropic*.
 5. Davis, M. H. (1983). "Measuring individual differences in empathy: Evidence for a multidimensional approach." *Journal of Personality and Social Psychology*.
+6. Steck, H., et al. (2024). "[Is Cosine-Similarity of Embeddings Really About Similarity?](https://arxiv.org/abs/2403.05440)" *ArXiv*. — Shows cosine similarity can yield arbitrary and meaningless similarities depending on regularization choices.
+7. Park, K., et al. (2023). "[The Linear Representation Hypothesis and the Geometry of Large Language Models](https://arxiv.org/abs/2311.03658)." *ArXiv*. — Demonstrates that standard Euclidean inner product may not be appropriate for representation spaces; proposes causal inner product.
+8. Gorton, L. (2024). "[Non-linear Feature Representations in Steering Vectors](https://livgorton.com/non-linear-feature-reps)." — Discusses the read/write distinction in transformer representations and implications for steering.
+9. Elhage, N., et al. (2022). "Toy Models of Superposition." *Anthropic*. — Foundational work on how neural networks encode more features than dimensions.
+10. Wehner, J., et al. (2025). "[Representation Engineering for Large-Language Models: Survey and Research Challenges](https://arxiv.org/abs/2502.17601)." *ArXiv*. — Comprehensive survey of RepE methodology.
 
 ---
 
