@@ -116,21 +116,17 @@ empathetic-language-bandwidth/
 │   └── create_empathy_report.py            # Report generation
 ├── experiments/
 │   └── tripartite/                         # Phase 2: Tripartite decomposition
-│       ├── data/                           # Triplet datasets
-│       ├── scripts/                        # Extraction, training, analysis
-│       ├── results/                        # Experiment results
-│       │   ├── cross_model_final.json      # Cross-model generalization
-│       │   ├── layer_emergence.json        # Layer-by-layer analysis
-│       │   ├── empathy_independence.json   # Independence from formality
-│       │   └── ...                         # Additional results
+│       ├── data/                           # Triplet datasets (included)
+│       │   ├── triplets_filtered.json      # 90 scenarios × 3 empathy types
+│       │   └── controls_*.json             # Control conditions
+│       ├── scripts/                        # Runnable experiment scripts
+│       │   ├── run_all_validation.py       # Main validation suite
+│       │   ├── run_null_distribution.py    # Statistical null testing
+│       │   └── run_length_control.py       # Length control experiments
+│       ├── results/                        # Pre-computed results (20+ JSON files)
 │       ├── FINAL_REPORT.md                 # Full technical report
 │       ├── BLOG_POST.md                    # Public summary
-│       ├── COUNCIL_REPORT.md               # Round 1: Methodology
-│       ├── COUNCIL_REPORT_ROUND2.md        # Round 2: Layer analysis
-│       ├── COUNCIL_REPORT_ROUND3.md        # Round 3: Cross-model
-│       └── COUNCIL_REPORT_ROUND4.md        # Round 4: Advanced analysis
-├── data/
-│   └── prompts/                            # Empathetic/neutral prompt pairs
+│       └── COUNCIL_REPORT*.md              # Methodology validation (4 rounds)
 ├── results/
 │   └── empathy/                            # Phase 1 results and reports
 ├── docs/
@@ -194,6 +190,37 @@ python src/empathy_experiment_main.py --layer 24 --models all
 - GPU: 24GB+ VRAM (for 7-9B models)
 - Estimated runtime: 2-4 hours for all 5 models
 - Cost on cloud GPUs: ~$5-10 (AWS p3.2xlarge or equivalent)
+
+#### Option 3: Reproduce Phase 2 (Tripartite Empathy) Results
+
+Phase 2 investigates empathy decomposition into cognitive/affective/instrumental subtypes.
+
+```bash
+# Install GPU dependencies
+pip install -r requirements-gpu.txt
+
+# The data is already included:
+# - experiments/tripartite/data/triplets_filtered.json (90 scenarios × 3 response types)
+# - experiments/tripartite/data/controls_*.json (control conditions)
+
+# Run the main validation experiments (requires GPU with TransformerLens)
+cd experiments/tripartite
+python scripts/run_all_validation.py
+
+# Results will be saved to experiments/tripartite/results/
+```
+
+**Key scripts:**
+- `scripts/run_all_validation.py` - Runs control analysis, multi-layer sweep, AUROC tests
+- `scripts/run_null_distribution.py` - Generates null distribution for statistical validation
+- `scripts/run_length_control.py` - Tests length as a control feature
+
+**Pre-computed results:** All experiment results are in `experiments/tripartite/results/*.json`
+
+**Reports:**
+- `FINAL_REPORT.md` - Full technical report with all findings
+- `BLOG_POST.md` - Accessible summary
+- `COUNCIL_REPORT*.md` - Detailed methodology validation (4 rounds)
 
 ---
 
