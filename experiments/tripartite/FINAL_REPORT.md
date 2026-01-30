@@ -640,7 +640,7 @@ The consistency across architectures remains valid—all models show the same se
 
 | Hypothesis | Status | Evidence |
 |------------|--------|----------|
-| H1: Separation (cosine) | **Artifact** | Cosine metric is fundamentally broken |
+| H1: Separation (cosine) | **Artifact** | Cosine between separate probes reflects classifier geometry |
 | H2: Classification | **CONFIRMED** | AUROC = 1.0 across all models |
 | H3: Consistency | **CONFIRMED** | 4/4 models show empathy structure |
 | H4: Specificity | **CONFIRMED** | Independent of formality (100% retention) |
@@ -675,7 +675,7 @@ We initially thought empathy structure wasn't real because cosine similarity sho
 
 | Metric | Empathy Result | Interpretation |
 |--------|----------------|----------------|
-| Cosine Z-score | +12.9 (worse than random) | **Metric is broken** |
+| Cosine Z-score | +12.9 (worse than random) | **Reflects classifier geometry, not concept structure** |
 | AUROC | 1.0 (perfect) | **Structure is real** |
 | d-prime | 1.75 (consistent) | **Effect is robust** |
 

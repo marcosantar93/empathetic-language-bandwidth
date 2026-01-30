@@ -60,9 +60,11 @@ Building on the bandwidth measurements, we investigated whether empathy decompos
 
 ### Methodology Discovery
 
-We discovered that **cosine similarity between probe vectors is fundamentally broken** as a metric for concept structure. Probes achieve perfect classification (AUROC=1.0) yet show *worse* than random on cosine metrics (Z=+12.9).
+We discovered that **cosine similarity between separately-trained probe weight vectors** doesn't measure concept structure—it reflects classifier geometry. Probes achieve perfect classification (AUROC=1.0) yet show *worse* than random on cosine metrics (Z=+12.9).
 
-**The probes work. The metric doesn't.**
+**The probes work. The metric (for this use case) doesn't.**
+
+*Note: This finding is specific to comparing weights of separately-trained binary classifiers. Cosine similarity remains valid for other representation engineering tasks.*
 
 ### Phase 2 Results (Proper Metrics)
 
@@ -97,7 +99,7 @@ With correct metrics (AUROC, d-prime), empathy structure is **real, robust, and 
 
 ### Methodology Contribution
 
-> **Warning:** Cosine similarity between linear probe weight vectors is NOT a valid metric for concept structure. Studies using this metric should be re-evaluated.
+> **Caution:** Cosine similarity between *separately-trained* linear probe weight vectors reflects classifier geometry, not concept structure. This specific use case should be validated with proper metrics (AUROC, d-prime, null distribution testing).
 
 > **Fix:** Use cross-validated AUROC, d-prime, or clustering purity instead.
 

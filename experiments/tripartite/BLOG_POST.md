@@ -1,6 +1,6 @@
-# We Tried to Measure Empathy in LLMs. We Found a Flaw in the Methodology—Then Discovered Something Universal.
+# We Tried to Measure Empathy in LLMs. We Found a Methodological Pitfall—Then Discovered Something Universal.
 
-*How a failed experiment revealed a broken metric, and what we learned when we fixed it.*
+*How a failed experiment revealed a subtle issue with probe comparison, and what we learned when we fixed it.*
 
 ---
 
@@ -14,13 +14,15 @@ This matters for AI safety. If we can identify where empathy "lives" in a model,
 
 ## The Standard Approach
 
-We followed the representation engineering playbook:
+We followed what we *thought* was the representation engineering playbook:
 
 1. Generate scenarios with matched Cognitive, Affective, and Instrumental responses
 2. Extract activations from multiple LLMs
-3. Train linear probes to classify each empathy type
+3. Train **separate** binary linear probes to classify each empathy type (e.g., "cognitive vs. not cognitive")
 4. Measure cosine similarity between the probe weight vectors
 5. If cosine < 0.5, the concepts are "distinct"
+
+**Important note**: This approach—training separate binary classifiers and comparing their weight vectors—is subtly different from the standard RepE method of extracting concept directions via contrastive pairs. This distinction matters, as we'll see.
 
 Our initial results looked promising: **cos(Cognitive, Affective) = -0.29**. Negative cosine—the directions point in opposite directions! The empathy subtypes appear to occupy distinct subspaces!
 
@@ -87,15 +89,19 @@ But the cosine metric says they're WORSE than random.
 
 **The probes work. The metric doesn't.**
 
-## Why Cosines Fail
+## Why This Particular Use of Cosines Fails
 
 Here's the geometry: binary logistic regression finds a hyperplane that separates two classes. The weight vector points toward the positive class.
 
-When you train separate probes for different concepts, each probe's weights point toward its respective positive class. These directions are naturally different—that's the whole point. The resulting cosines are negative because the probes are solving different classification problems.
+When you train **separate** probes for different concepts, each probe's weights point toward its respective positive class. These directions are naturally different—that's the whole point. The resulting cosines are negative because the probes are solving different classification problems.
 
 Random label permutations maximize this effect because they create maximally distinct (if meaningless) classification targets. That's why random labels produce the MOST negative cosines.
 
 **The negative cosines reflect classifier geometry, not concept structure.**
+
+This finding aligns with recent work questioning cosine similarity in embedding spaces. [Steck et al. (2024)](https://arxiv.org/abs/2403.05440) showed that cosine similarity can yield "arbitrary and therefore meaningless similarities" depending on regularization choices. [Park et al.](https://arxiv.org/abs/2311.03658) demonstrated that the standard Euclidean inner product may not be appropriate for representation spaces, proposing a "causal inner product" that respects semantic structure.
+
+**Scope of this finding**: This issue is specific to comparing weights of *separately-trained* binary probes. Cosine similarity remains valid for other uses in representation engineering—for example, measuring alignment between a steering vector and a target direction extracted via the same contrastive method.
 
 ---
 
@@ -261,12 +267,14 @@ Adding the cognitive direction makes neutral text classify as cognitive empathy.
 
 ### For Representation Engineering
 
-The cosine similarity metric is broken. Don't use it for measuring concept relationships. Use instead:
+When comparing concepts via separately-trained probes, cosine similarity between weight vectors doesn't measure concept structure—it reflects classifier geometry. For this use case, prefer:
 
 1. **AUROC** for classification accuracy
 2. **D-prime** for effect size
 3. **Null distribution testing** for statistical validity
 4. **Control conditions** for specificity
+
+Note: This doesn't invalidate all uses of cosine similarity in representation engineering. Cosine remains useful for measuring alignment between directions extracted via the same method (e.g., contrastive mean differences).
 
 ### For Empathy in AI
 
@@ -294,13 +302,46 @@ You can study empathy (and likely other concepts) in small models:
 
 ---
 
+## Limitations and Scope
+
+Before drawing broad conclusions, some important caveats:
+
+**On the cosine finding:**
+- This applies specifically to comparing weights of *separately-trained* binary probes
+- Cosine similarity remains valid for other representation engineering tasks (e.g., measuring steering vector alignment)
+- We're not claiming cosine similarity is universally broken—just that this particular application has a geometric pitfall
+
+**On the empathy findings:**
+- Our dataset contains 270 triplets (90 scenarios × 3 response types)—modest by ML standards
+- We tested 4 models (1.1B-7B parameters); larger models may behave differently
+- All models were instruction-tuned; base models weren't tested
+- Human evaluation of steering effects wasn't performed
+- English-only data; cross-lingual generalization unknown
+
+**What would strengthen these conclusions:**
+- Larger, more diverse datasets
+- Human evaluation correlating geometric measures with perceived empathy
+- Testing on 70B+ models
+- Replication by independent researchers
+
+---
+
 ## The Journey
 
-We started trying to measure empathy decomposition. We discovered a broken methodology that probably affects many published results. When we fixed it, we found that empathy structure is real, robust, and universal.
+We started trying to measure empathy decomposition. We discovered a methodological pitfall in how we were comparing probe vectors. When we fixed it with proper metrics, we found that empathy structure is real, robust, and universal.
 
-The lesson: **stress-test your metrics**. When a metric gives you the answer you expect, that's exactly when you should question it hardest.
+The lesson: **stress-test your metrics**. When a metric gives you the answer you expect, that's exactly when you should question it hardest. Run control conditions. Check null distributions. And be precise about the scope of your claims.
 
 And sometimes, the failed experiment leads you somewhere more interesting than where you were headed.
+
+---
+
+## References
+
+- Steck, H., et al. (2024). "[Is Cosine-Similarity of Embeddings Really About Similarity?](https://arxiv.org/abs/2403.05440)" *ArXiv*.
+- Park, K., et al. (2023). "[The Linear Representation Hypothesis and the Geometry of Large Language Models](https://arxiv.org/abs/2311.03658)" *ArXiv*.
+- Zou, A., et al. (2023). "[Representation Engineering: A Top-Down Approach to AI Transparency](https://arxiv.org/abs/2310.01405)" *ArXiv*.
+- Wehner, J., et al. (2025). "[Representation Engineering for Large-Language Models: Survey and Research Challenges](https://arxiv.org/abs/2502.17601)" *ArXiv*.
 
 ---
 
@@ -311,7 +352,7 @@ And sometimes, the failed experiment leads you somewhere more interesting than w
 ---
 
 **TL;DR**:
-1. The standard metric (cosine similarity between probes) is broken—it reflects classifier geometry, not concept structure
+1. Cosine similarity between separately-trained probe weights reflects classifier geometry, not concept structure—use AUROC and d-prime instead for this use case
 2. With proper metrics, empathy subtypes ARE distinctly represented (AUROC = 1.0)
 3. Empathy emerges at Layer 1 and is independent of surface features like formality
 4. This generalizes across 4 models from 1.1B to 7B parameters

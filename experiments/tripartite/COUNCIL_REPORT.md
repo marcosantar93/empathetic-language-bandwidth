@@ -26,7 +26,7 @@ Each cycle followed this protocol:
 ## Cycle 1: Alternative Metrics Comparison
 
 ### Question
-If cosine similarity is broken, what metrics DO work?
+If cosine similarity (between separate probes) doesn't measure concept structure, what metrics DO work?
 
 ### Council Deliberation
 - **PI**: Proposed testing 4 alternative metrics from the literature
@@ -50,7 +50,7 @@ Computed 4 metrics for:
 | AUROC | **1.00** | 0.44 | YES |
 
 ### Finding
-**All 4 alternative metrics correctly distinguish empathy from random.** The cosine metric is specifically broken; proper metrics work.
+**All 4 alternative metrics correctly distinguish empathy from random.** Cosine between separately-trained probes reflects classifier geometry, not concept structure; proper metrics work.
 
 ---
 
@@ -144,7 +144,7 @@ Does empathy structure survive after removing length information from activation
 
 ### What We Established
 
-1. **Cosine similarity between probes is broken** - It doesn't measure concept structure
+1. **Cosine similarity between separately-trained probes reflects classifier geometry** - It doesn't measure concept structure in this use case
 2. **Four alternative metrics all work** - d-prime, probe agreement, clustering purity, AUROC
 3. **Length is a confound but not the explanation** - Only 4.7% variance, 91% structure survives
 4. **Empathy structure is REAL** - Not a length artifact, survives rigorous validation
